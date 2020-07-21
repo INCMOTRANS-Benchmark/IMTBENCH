@@ -1,0 +1,31 @@
+#using Tgg.*
+#using AttrCondDefLibrary.*
+
+#rule ConnectionInstanceToConnectionInstanceAtProcess 
+#extends ConnectionInstanceToConnectionInstance
+#with Tgg
+
+#source {
+	component_source:ComponentInstance{
+		++ -connectionInstance -> connection_source
+	}
+}
+
+#target {
+	component_target:ComponentInstance{
+		++ -connectionInstance -> connection_target
+	}
+}
+
+#correspondence {
+	comp2comp:CompToComp{
+		#src->component_source
+		#trg->component_target
+	}
+}
+
+#attributeConditions {
+
+}
+
+

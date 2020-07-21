@@ -1,0 +1,37 @@
+/**
+ */
+package aadl2.impl;
+
+import aadl2.Aadl2Package;
+import aadl2.VirtualBusSubcomponentType;
+
+import org.eclipse.emf.ecore.EClass;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Virtual Bus Subcomponent Type</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * @generated
+ */
+public abstract class VirtualBusSubcomponentTypeImpl extends SubcomponentTypeImpl implements VirtualBusSubcomponentType {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VirtualBusSubcomponentTypeImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return Aadl2Package.eINSTANCE.getVirtualBusSubcomponentType();
+	}
+
+} //VirtualBusSubcomponentTypeImpl

@@ -1,0 +1,156 @@
+package fr.tpt.mem4csd.mtbench.aadl2aadl.viatra
+
+import "http://aadl.info/AADL/2.0/instance"
+import "http://fr.tpt.mem4csd.mtbench.aadl2aadl.trace/aadl2aadl"
+
+pattern
+find_system(aadl2aadlref : Aadl2AadlTraceSpec, system : SystemInstance, systemRef : SystemInstance) {
+	Aadl2AadlTraceSpec.leftSystem(aadl2aadlref, system);
+	Aadl2AadlTraceSpec.rightSystem(aadl2aadlref, systemRef);
+
+}
+
+pattern
+find_component(aadl2aadlref : Aadl2AadlTraceSpec, trace : Aadl2AadlTrace, system : SystemInstance, systemref : SystemInstance, component : ComponentInstance) {
+	find is_in_trace(aadl2aadlref, trace, system, systemref);
+	SystemInstance.componentInstance(system, component);
+}
+
+pattern
+find_subcomponent(aadl2aadlref : Aadl2AadlTraceSpec, trace : Aadl2AadlTrace, component : ComponentInstance, componentref : ComponentInstance, subcomponent : ComponentInstance) {
+	find is_in_trace(aadl2aadlref, trace, component, componentref);
+	ComponentInstance.componentInstance(component, subcomponent);
+}
+
+pattern
+find_componentref(aadl2aadlref : Aadl2AadlTraceSpec, trace : Aadl2AadlTrace, component : ComponentInstance, componentref : ComponentInstance, element : InstanceObject) {
+	find is_in_trace(aadl2aadlref, trace, component, componentref);
+	ComponentInstance.componentInstance(componentref, element);
+}
+
+pattern
+find_connectionref(aadl2aadlref : Aadl2AadlTraceSpec, trace : Aadl2AadlTrace, component : ComponentInstance, componentref : ComponentInstance, connection : ConnectionInstance) {
+	find is_in_trace(aadl2aadlref, trace, component, componentref);
+	ComponentInstance.connectionInstance(componentref, connection);
+}
+
+pattern
+find_feature(aadl2aadlref : Aadl2AadlTraceSpec, trace : Aadl2AadlTrace, component : ComponentInstance, componentref : ComponentInstance, feature : FeatureInstance) {
+	find is_in_trace(aadl2aadlref, trace, component, componentref);
+	ComponentInstance.featureInstance(component, feature);
+	//TOFIX problem with the FeatureCategory
+	FeatureInstance.category(feature, ::parameter);
+} or {
+	find is_in_trace(aadl2aadlref, trace, component, componentref);
+	ComponentInstance.featureInstance(component, feature);
+	FeatureInstance.category(feature, ::busAccess);
+} or {
+	find is_in_trace(aadl2aadlref, trace, component, componentref);
+	ComponentInstance.featureInstance(component, feature);
+	FeatureInstance.category(feature, ::dataAccess);
+} or {
+	find is_in_trace(aadl2aadlref, trace, component, componentref);
+	ComponentInstance.featureInstance(component, feature);
+	FeatureInstance.category(feature, ::subprogramAccess);
+} or {
+	find is_in_trace(aadl2aadlref, trace, component, componentref);
+	ComponentInstance.category(component, ::device);
+	ComponentInstance.featureInstance(component, feature);
+}
+
+pattern
+find_portconnection_process(aadl2aadlref : Aadl2AadlTraceSpec, process : ComponentInstance, threadsource : ComponentInstance, threaddestination : ComponentInstance, featuresource : FeatureInstance, featuredestination : FeatureInstance, threadsourceref : ComponentInstance, threaddestinationref : ComponentInstance, processref : ComponentInstance, portconnection : ConnectionInstance) {
+	find is_in_trace(aadl2aadlref, _, process, processref);
+	ComponentInstance.category(process, ::process);
+	find is_in_trace(aadl2aadlref, _, threadsource, threadsourceref);
+	ComponentInstance.category(threadsource, ::thread);
+	ComponentInstance.featureInstance(threadsource, featuresource);
+	ComponentInstance.componentInstance(process, threadsource);
+	find is_in_trace(aadl2aadlref, _, threaddestination, threaddestinationref);
+	ComponentInstance.category(threaddestination, ::thread);
+	ComponentInstance.featureInstance(threaddestination, featuredestination);
+	ComponentInstance.componentInstance(process, threaddestination);
+	ComponentInstance.connectionInstance(process, portconnection);
+	ConnectionInstance.kind(portconnection, ::portConnection);
+	ConnectionInstance.source(portconnection, featuresource);
+	ConnectionInstance.destination(portconnection, featuredestination);
+}
+
+pattern
+find_otherconnection_system(aadl2aadlref : Aadl2AadlTraceSpec, system : SystemInstance, systemref : SystemInstance, source : ConnectionInstanceEnd, destination : ConnectionInstanceEnd, sourceref : ConnectionInstanceEnd, destinationref : ConnectionInstanceEnd, connection : ConnectionInstance) {
+	Aadl2AadlTraceSpec.leftSystem(aadl2aadlref, system);
+	Aadl2AadlTraceSpec.rightSystem(aadl2aadlref, systemref);
+
+	find is_in_trace(aadl2aadlref, _, source, sourceref);
+	find is_in_trace(aadl2aadlref, _, destination, destinationref);
+	ConnectionInstance.kind(connection, ::accessConnection);
+	ComponentInstance.connectionInstance(system, connection);
+	ConnectionInstance.source(connection, source);
+	ConnectionInstance.destination(connection, destination);
+}
+
+pattern
+find_otherconnection(aadl2aadlref : Aadl2AadlTraceSpec, component : ComponentInstance, componentref : ComponentInstance, source : ConnectionInstanceEnd, destination : ConnectionInstanceEnd, sourceref : ConnectionInstanceEnd, destinationref : ConnectionInstanceEnd, connection : ConnectionInstance) {
+
+	find is_in_trace(aadl2aadlref, _, component, componentref);
+	find is_in_trace(aadl2aadlref, _, source, sourceref);
+	find is_in_trace(aadl2aadlref, _, destination, destinationref);
+	ConnectionInstance.kind(connection, ::accessConnection);
+
+	ComponentInstance.connectionInstance(component, connection);
+	ConnectionInstance.source(connection, source);
+	ConnectionInstance.destination(connection, destination);
+}
+
+pattern
+find_portconnection_system(aadl2aadlref : Aadl2AadlTraceSpec, system : SystemInstance, processsource : ComponentInstance, threadsource : ComponentInstance, featuresource : FeatureInstance, processdestination : ComponentInstance, threaddestination : ComponentInstance, featuredestination : FeatureInstance, processsourceref : ComponentInstance, threadsourceref : ComponentInstance, processdestinationref : ComponentInstance, threaddestinationref : ComponentInstance, portconnection : ConnectionInstance, portconnectionrefsource : ConnectionReference, portconnectionrefdestination : ConnectionReference) {
+	find is_in_trace(aadl2aadlref, _, processsource, processsourceref);
+	find is_in_trace(aadl2aadlref, _, processdestination, processdestinationref);
+	find is_in_trace(aadl2aadlref, _, threadsource, threadsourceref);
+	find is_in_trace(aadl2aadlref, _, threaddestination, threaddestinationref);
+	ComponentInstance.category(processsource, ::process);
+	ComponentInstance.category(processdestination, ::process);
+	ComponentInstance.category(threadsource, ::thread);
+	ComponentInstance.featureInstance(threadsource, featuresource);
+	ComponentInstance.componentInstance(processsource, threadsource);
+	ComponentInstance.category(threaddestination, ::thread);
+	ComponentInstance.featureInstance(threaddestination, featuredestination);
+	ComponentInstance.componentInstance(processdestination, threaddestination);
+	ComponentInstance.connectionInstance(system, portconnection);
+	ConnectionInstance.kind(portconnection, ::portConnection);
+	ConnectionInstance.connectionReference(portconnection, portconnectionrefsource);
+	ConnectionInstance.connectionReference(portconnection, portconnectionrefdestination);
+	ConnectionReference.source(portconnectionrefsource, featuresource);
+	ConnectionReference.destination(portconnectionrefdestination, featuredestination);
+}
+
+pattern
+find_portconnection_system_Grp(aadl2aadlref : Aadl2AadlTraceSpec, system : SystemInstance, processsource : ComponentInstance, threadsource : ComponentInstance, featuresource : FeatureInstance, featureGrpsource : FeatureInstance, processdestination : ComponentInstance, threaddestination : ComponentInstance, featuredestination : FeatureInstance, featureGrpdestination : FeatureInstance, processsourceref : ComponentInstance, threadsourceref : ComponentInstance, processdestinationref : ComponentInstance, threaddestinationref : ComponentInstance, portconnection : ConnectionInstance, portconnectionrefsource : ConnectionReference, portconnectionrefdestination : ConnectionReference) {
+	find is_in_trace(aadl2aadlref, _, processsource, processsourceref);
+	find is_in_trace(aadl2aadlref, _, processdestination, processdestinationref);
+	find is_in_trace(aadl2aadlref, _, threadsource, threadsourceref);
+	find is_in_trace(aadl2aadlref, _, threaddestination, threaddestinationref);
+	ComponentInstance.category(processsource, ::process);
+	ComponentInstance.category(processdestination, ::process);
+	ComponentInstance.category(threadsource, ::thread);
+	ComponentInstance.featureInstance(threadsource, featureGrpsource);
+	FeatureInstance.featureInstance(featureGrpsource, featuresource);
+	ComponentInstance.componentInstance(processsource, threadsource);
+	ComponentInstance.category(threaddestination, ::thread);
+	ComponentInstance.featureInstance(threaddestination, featureGrpdestination);
+	FeatureInstance.featureInstance(featureGrpdestination, featuredestination);
+	ComponentInstance.componentInstance(processdestination, threaddestination);
+	ComponentInstance.connectionInstance(system, portconnection);
+	ConnectionInstance.kind(portconnection, ::portConnection);
+	ConnectionInstance.connectionReference(portconnection, portconnectionrefsource);
+	ConnectionInstance.connectionReference(portconnection, portconnectionrefdestination);
+	ConnectionReference.source(portconnectionrefsource, featuresource);
+	ConnectionReference.destination(portconnectionrefdestination, featuredestination);
+}
+
+pattern
+is_in_trace(aadl2aadlref : Aadl2AadlTraceSpec, trace : Aadl2AadlTrace, aadlElement : InstanceObject, aadlrefElement : InstanceObject) {
+	Aadl2AadlTraceSpec.traces(aadl2aadlref, trace);
+	Aadl2AadlTrace.leftInstance(trace, aadlElement);
+	Aadl2AadlTrace.rightInstance(trace, aadlrefElement);
+}

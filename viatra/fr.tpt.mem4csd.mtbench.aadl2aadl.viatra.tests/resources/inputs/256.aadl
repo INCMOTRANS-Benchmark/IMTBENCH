@@ -1,0 +1,1393 @@
+package PC256
+public
+	----------
+	-- Data --
+	----------
+	data Alpha_Type
+
+	end Alpha_Type;
+
+	-----------------
+	-- Subprograms --
+	-----------------
+	subprogram Produce_Spg
+		features
+			Data_Source: out parameter Alpha_Type;
+
+	end Produce_Spg;
+
+	subprogram Consume_Spg
+		features
+			Data_Sink: in parameter Alpha_Type;
+
+	end Consume_Spg;
+
+	-------------
+	-- Threads --
+	-------------
+	thread P
+		features
+			Data_Source: out data port Alpha_Type;
+
+	end P;
+
+	thread implementation P.Impl
+		calls
+			Mycall: {
+				P_Spg: subprogram Produce_Spg;
+			};
+		connections
+			Z1: parameter P_Spg.Data_Source -> Data_Source;
+	end P.Impl;
+
+	thread Q
+		features
+			Data_Sink: in data port Alpha_Type;
+
+	end Q;
+
+	thread implementation Q.Impl
+		calls
+			Mycall: {
+				Q_Spg: subprogram Consume_Spg;
+			};
+		connections
+			Z2: parameter Data_Sink -> Q_Spg.Data_Sink;
+	end Q.Impl;
+
+	---------
+	-- Bus --
+	---------
+	bus Ethernet_Bus
+	end Ethernet_Bus;
+
+	---------------
+	-- Processor --
+	---------------
+	processor the_processor
+		features
+			ETH: requires bus access Ethernet_Bus;
+	end the_processor;
+
+	---------------
+	-- Processes --
+	---------------
+	process A
+		features
+			Alpha: out data port Alpha_Type;
+	end A;
+
+	process implementation A.Impl
+		subcomponents
+			Producer: thread P.Impl;
+		connections
+			Z3: port Producer.Data_Source -> Alpha;
+	end A.Impl;
+
+	process B
+		features
+			Beta: in data port Alpha_Type;
+	end B;
+
+	process implementation B.Impl
+		subcomponents
+			Consumer: thread Q.Impl;
+		connections
+			Z4: port Beta -> Consumer.Data_Sink;
+	end B.Impl;
+
+	------------
+	-- System --
+	------------
+	system PC_Simple
+	end PC_Simple;
+
+	system implementation PC_Simple.Native
+		subcomponents
+			T: data Alpha_Type;
+
+			pr_A_1: process A.Impl;
+			pr_B_1: process B.Impl;
+
+			pr_A_2: process A.Impl;
+			pr_B_2: process B.Impl;
+
+			pr_A_3: process A.Impl;
+			pr_B_3: process B.Impl;
+
+			pr_A_4: process A.Impl;
+			pr_B_4: process B.Impl;
+
+			pr_A_5: process A.Impl;
+			pr_B_5: process B.Impl;
+
+			pr_A_6: process A.Impl;
+			pr_B_6: process B.Impl;
+
+			pr_A_7: process A.Impl;
+			pr_B_7: process B.Impl;
+
+			pr_A_8: process A.Impl;
+			pr_B_8: process B.Impl;
+
+			pr_A_9: process A.Impl;
+			pr_B_9: process B.Impl;
+
+			pr_A_10: process A.Impl;
+			pr_B_10: process B.Impl;
+
+			pr_A_11: process A.Impl;
+			pr_B_11: process B.Impl;
+
+			pr_A_12: process A.Impl;
+			pr_B_12: process B.Impl;
+
+			pr_A_13: process A.Impl;
+			pr_B_13: process B.Impl;
+
+			pr_A_14: process A.Impl;
+			pr_B_14: process B.Impl;
+
+			pr_A_15: process A.Impl;
+			pr_B_15: process B.Impl;
+
+			pr_A_16: process A.Impl;
+			pr_B_16: process B.Impl;
+
+			pr_A_17: process A.Impl;
+			pr_B_17: process B.Impl;
+
+			pr_A_18: process A.Impl;
+			pr_B_18: process B.Impl;
+
+			pr_A_19: process A.Impl;
+			pr_B_19: process B.Impl;
+
+			pr_A_20: process A.Impl;
+			pr_B_20: process B.Impl;
+
+			pr_A_21: process A.Impl;
+			pr_B_21: process B.Impl;
+
+			pr_A_22: process A.Impl;
+			pr_B_22: process B.Impl;
+
+			pr_A_23: process A.Impl;
+			pr_B_23: process B.Impl;
+
+			pr_A_24: process A.Impl;
+			pr_B_24: process B.Impl;
+
+			pr_A_25: process A.Impl;
+			pr_B_25: process B.Impl;
+
+			pr_A_26: process A.Impl;
+			pr_B_26: process B.Impl;
+
+			pr_A_27: process A.Impl;
+			pr_B_27: process B.Impl;
+
+			pr_A_28: process A.Impl;
+			pr_B_28: process B.Impl;
+
+			pr_A_29: process A.Impl;
+			pr_B_29: process B.Impl;
+
+			pr_A_30: process A.Impl;
+			pr_B_30: process B.Impl;
+
+			pr_A_31: process A.Impl;
+			pr_B_31: process B.Impl;
+
+			pr_A_32: process A.Impl;
+			pr_B_32: process B.Impl;
+
+			pr_A_33: process A.Impl;
+			pr_B_33: process B.Impl;
+
+			pr_A_34: process A.Impl;
+			pr_B_34: process B.Impl;
+
+			pr_A_35: process A.Impl;
+			pr_B_35: process B.Impl;
+
+			pr_A_36: process A.Impl;
+			pr_B_36: process B.Impl;
+
+			pr_A_37: process A.Impl;
+			pr_B_37: process B.Impl;
+
+			pr_A_38: process A.Impl;
+			pr_B_38: process B.Impl;
+
+			pr_A_39: process A.Impl;
+			pr_B_39: process B.Impl;
+
+			pr_A_40: process A.Impl;
+			pr_B_40: process B.Impl;
+
+			pr_A_41: process A.Impl;
+			pr_B_41: process B.Impl;
+
+			pr_A_42: process A.Impl;
+			pr_B_42: process B.Impl;
+
+			pr_A_43: process A.Impl;
+			pr_B_43: process B.Impl;
+
+			pr_A_44: process A.Impl;
+			pr_B_44: process B.Impl;
+
+			pr_A_45: process A.Impl;
+			pr_B_45: process B.Impl;
+
+			pr_A_46: process A.Impl;
+			pr_B_46: process B.Impl;
+
+			pr_A_47: process A.Impl;
+			pr_B_47: process B.Impl;
+
+			pr_A_48: process A.Impl;
+			pr_B_48: process B.Impl;
+
+			pr_A_49: process A.Impl;
+			pr_B_49: process B.Impl;
+
+			pr_A_50: process A.Impl;
+			pr_B_50: process B.Impl;
+
+			pr_A_51: process A.Impl;
+			pr_B_51: process B.Impl;
+
+			pr_A_52: process A.Impl;
+			pr_B_52: process B.Impl;
+
+			pr_A_53: process A.Impl;
+			pr_B_53: process B.Impl;
+
+			pr_A_54: process A.Impl;
+			pr_B_54: process B.Impl;
+
+			pr_A_55: process A.Impl;
+			pr_B_55: process B.Impl;
+
+			pr_A_56: process A.Impl;
+			pr_B_56: process B.Impl;
+
+			pr_A_57: process A.Impl;
+			pr_B_57: process B.Impl;
+
+			pr_A_58: process A.Impl;
+			pr_B_58: process B.Impl;
+
+			pr_A_59: process A.Impl;
+			pr_B_59: process B.Impl;
+
+			pr_A_60: process A.Impl;
+			pr_B_60: process B.Impl;
+
+			pr_A_61: process A.Impl;
+			pr_B_61: process B.Impl;
+
+			pr_A_62: process A.Impl;
+			pr_B_62: process B.Impl;
+
+			pr_A_63: process A.Impl;
+			pr_B_63: process B.Impl;
+
+			pr_A_64: process A.Impl;
+			pr_B_64: process B.Impl;
+
+			pr_A_65: process A.Impl;
+			pr_B_65: process B.Impl;
+
+			pr_A_66: process A.Impl;
+			pr_B_66: process B.Impl;
+
+			pr_A_67: process A.Impl;
+			pr_B_67: process B.Impl;
+
+			pr_A_68: process A.Impl;
+			pr_B_68: process B.Impl;
+
+			pr_A_69: process A.Impl;
+			pr_B_69: process B.Impl;
+
+			pr_A_70: process A.Impl;
+			pr_B_70: process B.Impl;
+
+			pr_A_71: process A.Impl;
+			pr_B_71: process B.Impl;
+
+			pr_A_72: process A.Impl;
+			pr_B_72: process B.Impl;
+
+			pr_A_73: process A.Impl;
+			pr_B_73: process B.Impl;
+
+			pr_A_74: process A.Impl;
+			pr_B_74: process B.Impl;
+
+			pr_A_75: process A.Impl;
+			pr_B_75: process B.Impl;
+
+			pr_A_76: process A.Impl;
+			pr_B_76: process B.Impl;
+
+			pr_A_77: process A.Impl;
+			pr_B_77: process B.Impl;
+
+			pr_A_78: process A.Impl;
+			pr_B_78: process B.Impl;
+
+			pr_A_79: process A.Impl;
+			pr_B_79: process B.Impl;
+
+			pr_A_80: process A.Impl;
+			pr_B_80: process B.Impl;
+
+			pr_A_81: process A.Impl;
+			pr_B_81: process B.Impl;
+
+			pr_A_82: process A.Impl;
+			pr_B_82: process B.Impl;
+
+			pr_A_83: process A.Impl;
+			pr_B_83: process B.Impl;
+
+			pr_A_84: process A.Impl;
+			pr_B_84: process B.Impl;
+
+			pr_A_85: process A.Impl;
+			pr_B_85: process B.Impl;
+
+			pr_A_86: process A.Impl;
+			pr_B_86: process B.Impl;
+
+			pr_A_87: process A.Impl;
+			pr_B_87: process B.Impl;
+
+			pr_A_88: process A.Impl;
+			pr_B_88: process B.Impl;
+
+			pr_A_89: process A.Impl;
+			pr_B_89: process B.Impl;
+
+			pr_A_90: process A.Impl;
+			pr_B_90: process B.Impl;
+
+			pr_A_91: process A.Impl;
+			pr_B_91: process B.Impl;
+
+			pr_A_92: process A.Impl;
+			pr_B_92: process B.Impl;
+
+			pr_A_93: process A.Impl;
+			pr_B_93: process B.Impl;
+
+			pr_A_94: process A.Impl;
+			pr_B_94: process B.Impl;
+
+			pr_A_95: process A.Impl;
+			pr_B_95: process B.Impl;
+
+			pr_A_96: process A.Impl;
+			pr_B_96: process B.Impl;
+
+			pr_A_97: process A.Impl;
+			pr_B_97: process B.Impl;
+
+			pr_A_98: process A.Impl;
+			pr_B_98: process B.Impl;
+
+			pr_A_99: process A.Impl;
+			pr_B_99: process B.Impl;
+
+			pr_A_100: process A.Impl;
+			pr_B_100: process B.Impl;
+
+			pr_A_101: process A.Impl;
+			pr_B_101: process B.Impl;
+
+			pr_A_102: process A.Impl;
+			pr_B_102: process B.Impl;
+
+			pr_A_103: process A.Impl;
+			pr_B_103: process B.Impl;
+
+			pr_A_104: process A.Impl;
+			pr_B_104: process B.Impl;
+
+			pr_A_105: process A.Impl;
+			pr_B_105: process B.Impl;
+
+			pr_A_106: process A.Impl;
+			pr_B_106: process B.Impl;
+
+			pr_A_107: process A.Impl;
+			pr_B_107: process B.Impl;
+
+			pr_A_108: process A.Impl;
+			pr_B_108: process B.Impl;
+
+			pr_A_109: process A.Impl;
+			pr_B_109: process B.Impl;
+
+			pr_A_110: process A.Impl;
+			pr_B_110: process B.Impl;
+
+			pr_A_111: process A.Impl;
+			pr_B_111: process B.Impl;
+
+			pr_A_112: process A.Impl;
+			pr_B_112: process B.Impl;
+
+			pr_A_113: process A.Impl;
+			pr_B_113: process B.Impl;
+
+			pr_A_114: process A.Impl;
+			pr_B_114: process B.Impl;
+
+			pr_A_115: process A.Impl;
+			pr_B_115: process B.Impl;
+
+			pr_A_116: process A.Impl;
+			pr_B_116: process B.Impl;
+
+			pr_A_117: process A.Impl;
+			pr_B_117: process B.Impl;
+
+			pr_A_118: process A.Impl;
+			pr_B_118: process B.Impl;
+
+			pr_A_119: process A.Impl;
+			pr_B_119: process B.Impl;
+
+			pr_A_120: process A.Impl;
+			pr_B_120: process B.Impl;
+
+			pr_A_121: process A.Impl;
+			pr_B_121: process B.Impl;
+
+			pr_A_122: process A.Impl;
+			pr_B_122: process B.Impl;
+
+			pr_A_123: process A.Impl;
+			pr_B_123: process B.Impl;
+
+			pr_A_124: process A.Impl;
+			pr_B_124: process B.Impl;
+
+			pr_A_125: process A.Impl;
+			pr_B_125: process B.Impl;
+
+			pr_A_126: process A.Impl;
+			pr_B_126: process B.Impl;
+
+			pr_A_127: process A.Impl;
+			pr_B_127: process B.Impl;
+
+			pr_A_128: process A.Impl;
+			pr_B_128: process B.Impl;
+
+			pr_A_129: process A.Impl;
+			pr_B_129: process B.Impl;
+
+			pr_A_130: process A.Impl;
+			pr_B_130: process B.Impl;
+
+			pr_A_131: process A.Impl;
+			pr_B_131: process B.Impl;
+
+			pr_A_132: process A.Impl;
+			pr_B_132: process B.Impl;
+
+			pr_A_133: process A.Impl;
+			pr_B_133: process B.Impl;
+
+			pr_A_134: process A.Impl;
+			pr_B_134: process B.Impl;
+
+			pr_A_135: process A.Impl;
+			pr_B_135: process B.Impl;
+
+			pr_A_136: process A.Impl;
+			pr_B_136: process B.Impl;
+
+			pr_A_137: process A.Impl;
+			pr_B_137: process B.Impl;
+
+			pr_A_138: process A.Impl;
+			pr_B_138: process B.Impl;
+
+			pr_A_139: process A.Impl;
+			pr_B_139: process B.Impl;
+
+			pr_A_140: process A.Impl;
+			pr_B_140: process B.Impl;
+
+			pr_A_141: process A.Impl;
+			pr_B_141: process B.Impl;
+
+			pr_A_142: process A.Impl;
+			pr_B_142: process B.Impl;
+
+			pr_A_143: process A.Impl;
+			pr_B_143: process B.Impl;
+
+			pr_A_144: process A.Impl;
+			pr_B_144: process B.Impl;
+
+			pr_A_145: process A.Impl;
+			pr_B_145: process B.Impl;
+
+			pr_A_146: process A.Impl;
+			pr_B_146: process B.Impl;
+
+			pr_A_147: process A.Impl;
+			pr_B_147: process B.Impl;
+
+			pr_A_148: process A.Impl;
+			pr_B_148: process B.Impl;
+
+			pr_A_149: process A.Impl;
+			pr_B_149: process B.Impl;
+
+			pr_A_150: process A.Impl;
+			pr_B_150: process B.Impl;
+
+			pr_A_151: process A.Impl;
+			pr_B_151: process B.Impl;
+
+			pr_A_152: process A.Impl;
+			pr_B_152: process B.Impl;
+
+			pr_A_153: process A.Impl;
+			pr_B_153: process B.Impl;
+
+			pr_A_154: process A.Impl;
+			pr_B_154: process B.Impl;
+
+			pr_A_155: process A.Impl;
+			pr_B_155: process B.Impl;
+
+			pr_A_156: process A.Impl;
+			pr_B_156: process B.Impl;
+
+			pr_A_157: process A.Impl;
+			pr_B_157: process B.Impl;
+
+			pr_A_158: process A.Impl;
+			pr_B_158: process B.Impl;
+
+			pr_A_159: process A.Impl;
+			pr_B_159: process B.Impl;
+
+			pr_A_160: process A.Impl;
+			pr_B_160: process B.Impl;
+
+			pr_A_161: process A.Impl;
+			pr_B_161: process B.Impl;
+
+			pr_A_162: process A.Impl;
+			pr_B_162: process B.Impl;
+
+			pr_A_163: process A.Impl;
+			pr_B_163: process B.Impl;
+
+			pr_A_164: process A.Impl;
+			pr_B_164: process B.Impl;
+
+			pr_A_165: process A.Impl;
+			pr_B_165: process B.Impl;
+
+			pr_A_166: process A.Impl;
+			pr_B_166: process B.Impl;
+
+			pr_A_167: process A.Impl;
+			pr_B_167: process B.Impl;
+
+			pr_A_168: process A.Impl;
+			pr_B_168: process B.Impl;
+
+			pr_A_169: process A.Impl;
+			pr_B_169: process B.Impl;
+
+			pr_A_170: process A.Impl;
+			pr_B_170: process B.Impl;
+
+			pr_A_171: process A.Impl;
+			pr_B_171: process B.Impl;
+
+			pr_A_172: process A.Impl;
+			pr_B_172: process B.Impl;
+
+			pr_A_173: process A.Impl;
+			pr_B_173: process B.Impl;
+
+			pr_A_174: process A.Impl;
+			pr_B_174: process B.Impl;
+
+			pr_A_175: process A.Impl;
+			pr_B_175: process B.Impl;
+
+			pr_A_176: process A.Impl;
+			pr_B_176: process B.Impl;
+
+			pr_A_177: process A.Impl;
+			pr_B_177: process B.Impl;
+
+			pr_A_178: process A.Impl;
+			pr_B_178: process B.Impl;
+
+			pr_A_179: process A.Impl;
+			pr_B_179: process B.Impl;
+
+			pr_A_180: process A.Impl;
+			pr_B_180: process B.Impl;
+
+			pr_A_181: process A.Impl;
+			pr_B_181: process B.Impl;
+
+			pr_A_182: process A.Impl;
+			pr_B_182: process B.Impl;
+
+			pr_A_183: process A.Impl;
+			pr_B_183: process B.Impl;
+
+			pr_A_184: process A.Impl;
+			pr_B_184: process B.Impl;
+
+			pr_A_185: process A.Impl;
+			pr_B_185: process B.Impl;
+
+			pr_A_186: process A.Impl;
+			pr_B_186: process B.Impl;
+
+			pr_A_187: process A.Impl;
+			pr_B_187: process B.Impl;
+
+			pr_A_188: process A.Impl;
+			pr_B_188: process B.Impl;
+
+			pr_A_189: process A.Impl;
+			pr_B_189: process B.Impl;
+
+			pr_A_190: process A.Impl;
+			pr_B_190: process B.Impl;
+
+			pr_A_191: process A.Impl;
+			pr_B_191: process B.Impl;
+
+			pr_A_192: process A.Impl;
+			pr_B_192: process B.Impl;
+
+			pr_A_193: process A.Impl;
+			pr_B_193: process B.Impl;
+
+			pr_A_194: process A.Impl;
+			pr_B_194: process B.Impl;
+
+			pr_A_195: process A.Impl;
+			pr_B_195: process B.Impl;
+
+			pr_A_196: process A.Impl;
+			pr_B_196: process B.Impl;
+
+			pr_A_197: process A.Impl;
+			pr_B_197: process B.Impl;
+
+			pr_A_198: process A.Impl;
+			pr_B_198: process B.Impl;
+
+			pr_A_199: process A.Impl;
+			pr_B_199: process B.Impl;
+
+			pr_A_200: process A.Impl;
+			pr_B_200: process B.Impl;
+
+			pr_A_201: process A.Impl;
+			pr_B_201: process B.Impl;
+
+			pr_A_202: process A.Impl;
+			pr_B_202: process B.Impl;
+
+			pr_A_203: process A.Impl;
+			pr_B_203: process B.Impl;
+
+			pr_A_204: process A.Impl;
+			pr_B_204: process B.Impl;
+
+			pr_A_205: process A.Impl;
+			pr_B_205: process B.Impl;
+
+			pr_A_206: process A.Impl;
+			pr_B_206: process B.Impl;
+
+			pr_A_207: process A.Impl;
+			pr_B_207: process B.Impl;
+
+			pr_A_208: process A.Impl;
+			pr_B_208: process B.Impl;
+
+			pr_A_209: process A.Impl;
+			pr_B_209: process B.Impl;
+
+			pr_A_210: process A.Impl;
+			pr_B_210: process B.Impl;
+
+			pr_A_211: process A.Impl;
+			pr_B_211: process B.Impl;
+
+			pr_A_212: process A.Impl;
+			pr_B_212: process B.Impl;
+
+			pr_A_213: process A.Impl;
+			pr_B_213: process B.Impl;
+
+			pr_A_214: process A.Impl;
+			pr_B_214: process B.Impl;
+
+			pr_A_215: process A.Impl;
+			pr_B_215: process B.Impl;
+
+			pr_A_216: process A.Impl;
+			pr_B_216: process B.Impl;
+
+			pr_A_217: process A.Impl;
+			pr_B_217: process B.Impl;
+
+			pr_A_218: process A.Impl;
+			pr_B_218: process B.Impl;
+
+			pr_A_219: process A.Impl;
+			pr_B_219: process B.Impl;
+
+			pr_A_220: process A.Impl;
+			pr_B_220: process B.Impl;
+
+			pr_A_221: process A.Impl;
+			pr_B_221: process B.Impl;
+
+			pr_A_222: process A.Impl;
+			pr_B_222: process B.Impl;
+
+			pr_A_223: process A.Impl;
+			pr_B_223: process B.Impl;
+
+			pr_A_224: process A.Impl;
+			pr_B_224: process B.Impl;
+
+			pr_A_225: process A.Impl;
+			pr_B_225: process B.Impl;
+
+			pr_A_226: process A.Impl;
+			pr_B_226: process B.Impl;
+
+			pr_A_227: process A.Impl;
+			pr_B_227: process B.Impl;
+
+			pr_A_228: process A.Impl;
+			pr_B_228: process B.Impl;
+
+			pr_A_229: process A.Impl;
+			pr_B_229: process B.Impl;
+
+			pr_A_230: process A.Impl;
+			pr_B_230: process B.Impl;
+
+			pr_A_231: process A.Impl;
+			pr_B_231: process B.Impl;
+
+			pr_A_232: process A.Impl;
+			pr_B_232: process B.Impl;
+
+			pr_A_233: process A.Impl;
+			pr_B_233: process B.Impl;
+
+			pr_A_234: process A.Impl;
+			pr_B_234: process B.Impl;
+
+			pr_A_235: process A.Impl;
+			pr_B_235: process B.Impl;
+
+			pr_A_236: process A.Impl;
+			pr_B_236: process B.Impl;
+
+			pr_A_237: process A.Impl;
+			pr_B_237: process B.Impl;
+
+			pr_A_238: process A.Impl;
+			pr_B_238: process B.Impl;
+
+			pr_A_239: process A.Impl;
+			pr_B_239: process B.Impl;
+
+			pr_A_240: process A.Impl;
+			pr_B_240: process B.Impl;
+
+			pr_A_241: process A.Impl;
+			pr_B_241: process B.Impl;
+
+			pr_A_242: process A.Impl;
+			pr_B_242: process B.Impl;
+
+			pr_A_243: process A.Impl;
+			pr_B_243: process B.Impl;
+
+			pr_A_244: process A.Impl;
+			pr_B_244: process B.Impl;
+
+			pr_A_245: process A.Impl;
+			pr_B_245: process B.Impl;
+
+			pr_A_246: process A.Impl;
+			pr_B_246: process B.Impl;
+
+			pr_A_247: process A.Impl;
+			pr_B_247: process B.Impl;
+
+			pr_A_248: process A.Impl;
+			pr_B_248: process B.Impl;
+
+			pr_A_249: process A.Impl;
+			pr_B_249: process B.Impl;
+
+			pr_A_250: process A.Impl;
+			pr_B_250: process B.Impl;
+
+			pr_A_251: process A.Impl;
+			pr_B_251: process B.Impl;
+
+			pr_A_252: process A.Impl;
+			pr_B_252: process B.Impl;
+
+			pr_A_253: process A.Impl;
+			pr_B_253: process B.Impl;
+
+			pr_A_254: process A.Impl;
+			pr_B_254: process B.Impl;
+
+			pr_A_255: process A.Impl;
+			pr_B_255: process B.Impl;
+
+			pr_A_256: process A.Impl;
+			pr_B_256: process B.Impl;
+
+			CPU: processor the_processor;
+			the_bus: bus Ethernet_Bus;
+		connections
+			Z1: port pr_A_1.Alpha -> pr_B_1.Beta;
+
+			Z2: port pr_A_2.Alpha -> pr_B_2.Beta;
+
+			Z3: port pr_A_3.Alpha -> pr_B_3.Beta;
+
+			Z4: port pr_A_4.Alpha -> pr_B_4.Beta;
+
+			Z5: port pr_A_5.Alpha -> pr_B_5.Beta;
+
+			Z6: port pr_A_6.Alpha -> pr_B_6.Beta;
+
+			Z7: port pr_A_7.Alpha -> pr_B_7.Beta;
+
+			Z8: port pr_A_8.Alpha -> pr_B_8.Beta;
+
+			Z9: port pr_A_9.Alpha -> pr_B_9.Beta;
+
+			Z10: port pr_A_10.Alpha -> pr_B_10.Beta;
+
+			Z11: port pr_A_11.Alpha -> pr_B_11.Beta;
+
+			Z12: port pr_A_12.Alpha -> pr_B_12.Beta;
+
+			Z13: port pr_A_13.Alpha -> pr_B_13.Beta;
+
+			Z14: port pr_A_14.Alpha -> pr_B_14.Beta;
+
+			Z15: port pr_A_15.Alpha -> pr_B_15.Beta;
+
+			Z16: port pr_A_16.Alpha -> pr_B_16.Beta;
+
+			Z17: port pr_A_17.Alpha -> pr_B_17.Beta;
+
+			Z18: port pr_A_18.Alpha -> pr_B_18.Beta;
+
+			Z19: port pr_A_19.Alpha -> pr_B_19.Beta;
+
+			Z20: port pr_A_20.Alpha -> pr_B_20.Beta;
+
+			Z21: port pr_A_21.Alpha -> pr_B_21.Beta;
+
+			Z22: port pr_A_22.Alpha -> pr_B_22.Beta;
+
+			Z23: port pr_A_23.Alpha -> pr_B_23.Beta;
+
+			Z24: port pr_A_24.Alpha -> pr_B_24.Beta;
+
+			Z25: port pr_A_25.Alpha -> pr_B_25.Beta;
+
+			Z26: port pr_A_26.Alpha -> pr_B_26.Beta;
+
+			Z27: port pr_A_27.Alpha -> pr_B_27.Beta;
+
+			Z28: port pr_A_28.Alpha -> pr_B_28.Beta;
+
+			Z29: port pr_A_29.Alpha -> pr_B_29.Beta;
+
+			Z30: port pr_A_30.Alpha -> pr_B_30.Beta;
+
+			Z31: port pr_A_31.Alpha -> pr_B_31.Beta;
+
+			Z32: port pr_A_32.Alpha -> pr_B_32.Beta;
+
+			Z33: port pr_A_33.Alpha -> pr_B_33.Beta;
+
+			Z34: port pr_A_34.Alpha -> pr_B_34.Beta;
+
+			Z35: port pr_A_35.Alpha -> pr_B_35.Beta;
+
+			Z36: port pr_A_36.Alpha -> pr_B_36.Beta;
+
+			Z37: port pr_A_37.Alpha -> pr_B_37.Beta;
+
+			Z38: port pr_A_38.Alpha -> pr_B_38.Beta;
+
+			Z39: port pr_A_39.Alpha -> pr_B_39.Beta;
+			Z40: port pr_A_40.Alpha -> pr_B_40.Beta;
+
+			Z41: port pr_A_41.Alpha -> pr_B_41.Beta;
+
+			Z42: port pr_A_42.Alpha -> pr_B_42.Beta;
+
+			Z43: port pr_A_43.Alpha -> pr_B_43.Beta;
+
+			Z44: port pr_A_44.Alpha -> pr_B_44.Beta;
+
+			Z45: port pr_A_45.Alpha -> pr_B_45.Beta;
+
+			Z46: port pr_A_46.Alpha -> pr_B_46.Beta;
+
+			Z47: port pr_A_47.Alpha -> pr_B_47.Beta;
+
+			Z48: port pr_A_48.Alpha -> pr_B_48.Beta;
+
+			Z49: port pr_A_49.Alpha -> pr_B_49.Beta;
+
+			Z50: port pr_A_50.Alpha -> pr_B_50.Beta;
+
+			Z51: port pr_A_51.Alpha -> pr_B_51.Beta;
+
+			Z52: port pr_A_52.Alpha -> pr_B_52.Beta;
+
+			Z53: port pr_A_53.Alpha -> pr_B_53.Beta;
+
+			Z54: port pr_A_54.Alpha -> pr_B_54.Beta;
+
+			Z55: port pr_A_55.Alpha -> pr_B_55.Beta;
+
+			Z56: port pr_A_56.Alpha -> pr_B_56.Beta;
+
+			Z57: port pr_A_57.Alpha -> pr_B_57.Beta;
+
+			Z58: port pr_A_58.Alpha -> pr_B_58.Beta;
+
+			Z59: port pr_A_59.Alpha -> pr_B_59.Beta;
+
+			Z60: port pr_A_60.Alpha -> pr_B_60.Beta;
+
+			Z61: port pr_A_61.Alpha -> pr_B_61.Beta;
+
+			Z62: port pr_A_62.Alpha -> pr_B_62.Beta;
+
+			Z63: port pr_A_63.Alpha -> pr_B_63.Beta;
+
+			Z64: port pr_A_64.Alpha -> pr_B_64.Beta;
+
+			Z65: port pr_A_65.Alpha -> pr_B_65.Beta;
+
+			Z66: port pr_A_66.Alpha -> pr_B_66.Beta;
+
+			Z67: port pr_A_67.Alpha -> pr_B_67.Beta;
+
+			Z68: port pr_A_68.Alpha -> pr_B_68.Beta;
+
+			Z69: port pr_A_69.Alpha -> pr_B_69.Beta;
+
+			Z70: port pr_A_70.Alpha -> pr_B_70.Beta;
+
+			Z71: port pr_A_71.Alpha -> pr_B_71.Beta;
+
+			Z72: port pr_A_72.Alpha -> pr_B_72.Beta;
+
+			Z73: port pr_A_73.Alpha -> pr_B_73.Beta;
+
+			Z74: port pr_A_74.Alpha -> pr_B_74.Beta;
+
+			Z75: port pr_A_75.Alpha -> pr_B_75.Beta;
+
+			Z76: port pr_A_76.Alpha -> pr_B_76.Beta;
+
+			Z77: port pr_A_77.Alpha -> pr_B_77.Beta;
+
+			Z78: port pr_A_78.Alpha -> pr_B_78.Beta;
+
+			Z79: port pr_A_79.Alpha -> pr_B_79.Beta;
+
+			Z80: port pr_A_80.Alpha -> pr_B_80.Beta;
+
+			Z81: port pr_A_81.Alpha -> pr_B_81.Beta;
+
+			Z82: port pr_A_82.Alpha -> pr_B_82.Beta;
+
+			Z83: port pr_A_83.Alpha -> pr_B_83.Beta;
+
+			Z84: port pr_A_84.Alpha -> pr_B_84.Beta;
+
+			Z85: port pr_A_85.Alpha -> pr_B_85.Beta;
+
+			Z86: port pr_A_86.Alpha -> pr_B_86.Beta;
+
+			Z87: port pr_A_87.Alpha -> pr_B_87.Beta;
+
+			Z88: port pr_A_88.Alpha -> pr_B_88.Beta;
+
+			Z89: port pr_A_89.Alpha -> pr_B_89.Beta;
+
+			Z90: port pr_A_90.Alpha -> pr_B_90.Beta;
+
+			Z91: port pr_A_91.Alpha -> pr_B_91.Beta;
+
+			Z92: port pr_A_92.Alpha -> pr_B_92.Beta;
+
+			Z93: port pr_A_93.Alpha -> pr_B_93.Beta;
+
+			Z94: port pr_A_94.Alpha -> pr_B_94.Beta;
+
+			Z95: port pr_A_95.Alpha -> pr_B_95.Beta;
+
+			Z96: port pr_A_96.Alpha -> pr_B_96.Beta;
+
+			Z97: port pr_A_97.Alpha -> pr_B_97.Beta;
+
+			Z98: port pr_A_98.Alpha -> pr_B_98.Beta;
+
+			Z99: port pr_A_99.Alpha -> pr_B_99.Beta;
+
+			Z100: port pr_A_100.Alpha -> pr_B_100.Beta;
+
+			Z101: port pr_A_101.Alpha -> pr_B_101.Beta;
+
+			Z102: port pr_A_102.Alpha -> pr_B_102.Beta;
+
+			Z103: port pr_A_103.Alpha -> pr_B_103.Beta;
+
+			Z104: port pr_A_104.Alpha -> pr_B_104.Beta;
+
+			Z105: port pr_A_105.Alpha -> pr_B_105.Beta;
+
+			Z106: port pr_A_106.Alpha -> pr_B_106.Beta;
+
+			Z107: port pr_A_107.Alpha -> pr_B_107.Beta;
+
+			Z108: port pr_A_108.Alpha -> pr_B_108.Beta;
+
+			Z109: port pr_A_109.Alpha -> pr_B_109.Beta;
+
+			Z110: port pr_A_110.Alpha -> pr_B_110.Beta;
+
+			Z111: port pr_A_111.Alpha -> pr_B_111.Beta;
+
+			Z112: port pr_A_112.Alpha -> pr_B_112.Beta;
+
+			Z113: port pr_A_113.Alpha -> pr_B_113.Beta;
+
+			Z114: port pr_A_114.Alpha -> pr_B_114.Beta;
+
+			Z115: port pr_A_115.Alpha -> pr_B_115.Beta;
+
+			Z116: port pr_A_116.Alpha -> pr_B_116.Beta;
+
+			Z117: port pr_A_117.Alpha -> pr_B_117.Beta;
+
+			Z118: port pr_A_118.Alpha -> pr_B_118.Beta;
+
+			Z119: port pr_A_119.Alpha -> pr_B_119.Beta;
+
+			Z120: port pr_A_120.Alpha -> pr_B_120.Beta;
+
+			Z121: port pr_A_121.Alpha -> pr_B_121.Beta;
+
+			Z122: port pr_A_122.Alpha -> pr_B_122.Beta;
+
+			Z123: port pr_A_123.Alpha -> pr_B_123.Beta;
+
+			Z124: port pr_A_124.Alpha -> pr_B_124.Beta;
+
+			Z125: port pr_A_125.Alpha -> pr_B_125.Beta;
+
+			Z126: port pr_A_126.Alpha -> pr_B_126.Beta;
+
+			Z127: port pr_A_127.Alpha -> pr_B_127.Beta;
+
+			Z128: port pr_A_128.Alpha -> pr_B_128.Beta;
+
+			Z129: port pr_A_129.Alpha -> pr_B_129.Beta;
+
+			Z130: port pr_A_130.Alpha -> pr_B_130.Beta;
+
+			Z131: port pr_A_131.Alpha -> pr_B_131.Beta;
+
+			Z132: port pr_A_132.Alpha -> pr_B_132.Beta;
+
+			Z133: port pr_A_133.Alpha -> pr_B_133.Beta;
+
+			Z134: port pr_A_134.Alpha -> pr_B_134.Beta;
+
+			Z135: port pr_A_135.Alpha -> pr_B_135.Beta;
+
+			Z136: port pr_A_136.Alpha -> pr_B_136.Beta;
+
+			Z137: port pr_A_137.Alpha -> pr_B_137.Beta;
+
+			Z138: port pr_A_138.Alpha -> pr_B_138.Beta;
+
+			Z139: port pr_A_139.Alpha -> pr_B_139.Beta;
+
+			Z140: port pr_A_140.Alpha -> pr_B_140.Beta;
+
+			Z141: port pr_A_141.Alpha -> pr_B_141.Beta;
+
+			Z142: port pr_A_142.Alpha -> pr_B_142.Beta;
+
+			Z143: port pr_A_143.Alpha -> pr_B_143.Beta;
+
+			Z144: port pr_A_144.Alpha -> pr_B_144.Beta;
+
+			Z145: port pr_A_145.Alpha -> pr_B_145.Beta;
+
+			Z146: port pr_A_146.Alpha -> pr_B_146.Beta;
+
+			Z147: port pr_A_147.Alpha -> pr_B_147.Beta;
+
+			Z148: port pr_A_148.Alpha -> pr_B_148.Beta;
+
+			Z149: port pr_A_149.Alpha -> pr_B_149.Beta;
+
+			Z150: port pr_A_150.Alpha -> pr_B_150.Beta;
+
+			Z151: port pr_A_151.Alpha -> pr_B_151.Beta;
+
+			Z152: port pr_A_152.Alpha -> pr_B_152.Beta;
+
+			Z153: port pr_A_153.Alpha -> pr_B_153.Beta;
+
+			Z154: port pr_A_154.Alpha -> pr_B_154.Beta;
+
+			Z155: port pr_A_155.Alpha -> pr_B_155.Beta;
+
+			Z156: port pr_A_156.Alpha -> pr_B_156.Beta;
+
+			Z157: port pr_A_157.Alpha -> pr_B_157.Beta;
+
+			Z158: port pr_A_158.Alpha -> pr_B_158.Beta;
+
+			Z159: port pr_A_159.Alpha -> pr_B_159.Beta;
+
+			Z160: port pr_A_160.Alpha -> pr_B_160.Beta;
+
+			Z161: port pr_A_161.Alpha -> pr_B_161.Beta;
+
+			Z162: port pr_A_162.Alpha -> pr_B_162.Beta;
+
+			Z163: port pr_A_163.Alpha -> pr_B_163.Beta;
+
+			Z164: port pr_A_164.Alpha -> pr_B_164.Beta;
+
+			Z165: port pr_A_165.Alpha -> pr_B_165.Beta;
+
+			Z166: port pr_A_166.Alpha -> pr_B_166.Beta;
+
+			Z167: port pr_A_167.Alpha -> pr_B_167.Beta;
+
+			Z168: port pr_A_168.Alpha -> pr_B_168.Beta;
+
+			Z169: port pr_A_169.Alpha -> pr_B_169.Beta;
+
+			Z170: port pr_A_170.Alpha -> pr_B_170.Beta;
+
+			Z171: port pr_A_171.Alpha -> pr_B_171.Beta;
+
+			Z172: port pr_A_172.Alpha -> pr_B_172.Beta;
+
+			Z173: port pr_A_173.Alpha -> pr_B_173.Beta;
+
+			Z174: port pr_A_174.Alpha -> pr_B_174.Beta;
+
+			Z175: port pr_A_175.Alpha -> pr_B_175.Beta;
+
+			Z176: port pr_A_176.Alpha -> pr_B_176.Beta;
+
+			Z177: port pr_A_177.Alpha -> pr_B_177.Beta;
+
+			Z178: port pr_A_178.Alpha -> pr_B_178.Beta;
+
+			Z179: port pr_A_179.Alpha -> pr_B_179.Beta;
+
+			Z180: port pr_A_180.Alpha -> pr_B_180.Beta;
+
+			Z181: port pr_A_181.Alpha -> pr_B_181.Beta;
+
+			Z182: port pr_A_182.Alpha -> pr_B_182.Beta;
+
+			Z183: port pr_A_183.Alpha -> pr_B_183.Beta;
+
+			Z184: port pr_A_184.Alpha -> pr_B_184.Beta;
+
+			Z185: port pr_A_185.Alpha -> pr_B_185.Beta;
+
+			Z186: port pr_A_186.Alpha -> pr_B_186.Beta;
+
+			Z187: port pr_A_187.Alpha -> pr_B_187.Beta;
+
+			Z188: port pr_A_188.Alpha -> pr_B_188.Beta;
+
+			Z189: port pr_A_189.Alpha -> pr_B_189.Beta;
+
+			Z190: port pr_A_190.Alpha -> pr_B_190.Beta;
+
+			Z191: port pr_A_191.Alpha -> pr_B_191.Beta;
+
+			Z192: port pr_A_192.Alpha -> pr_B_192.Beta;
+
+			Z193: port pr_A_193.Alpha -> pr_B_193.Beta;
+
+			Z194: port pr_A_194.Alpha -> pr_B_194.Beta;
+
+			Z195: port pr_A_195.Alpha -> pr_B_195.Beta;
+
+			Z196: port pr_A_196.Alpha -> pr_B_196.Beta;
+
+			Z197: port pr_A_197.Alpha -> pr_B_197.Beta;
+
+			Z198: port pr_A_198.Alpha -> pr_B_198.Beta;
+
+			Z199: port pr_A_199.Alpha -> pr_B_199.Beta;
+
+			Z200: port pr_A_200.Alpha -> pr_B_200.Beta;
+
+			Z201: port pr_A_201.Alpha -> pr_B_201.Beta;
+
+			Z202: port pr_A_202.Alpha -> pr_B_202.Beta;
+
+			Z203: port pr_A_203.Alpha -> pr_B_203.Beta;
+
+			Z204: port pr_A_204.Alpha -> pr_B_204.Beta;
+
+			Z205: port pr_A_205.Alpha -> pr_B_205.Beta;
+
+			Z206: port pr_A_206.Alpha -> pr_B_206.Beta;
+
+			Z207: port pr_A_207.Alpha -> pr_B_207.Beta;
+
+			Z208: port pr_A_208.Alpha -> pr_B_208.Beta;
+
+			Z209: port pr_A_209.Alpha -> pr_B_209.Beta;
+
+			Z210: port pr_A_210.Alpha -> pr_B_210.Beta;
+
+			Z211: port pr_A_211.Alpha -> pr_B_211.Beta;
+
+			Z212: port pr_A_212.Alpha -> pr_B_212.Beta;
+
+			Z213: port pr_A_213.Alpha -> pr_B_213.Beta;
+
+			Z214: port pr_A_214.Alpha -> pr_B_214.Beta;
+
+			Z215: port pr_A_215.Alpha -> pr_B_215.Beta;
+
+			Z216: port pr_A_216.Alpha -> pr_B_216.Beta;
+
+			Z217: port pr_A_217.Alpha -> pr_B_217.Beta;
+
+			Z218: port pr_A_218.Alpha -> pr_B_218.Beta;
+
+			Z219: port pr_A_219.Alpha -> pr_B_219.Beta;
+
+			Z220: port pr_A_220.Alpha -> pr_B_220.Beta;
+
+			Z221: port pr_A_221.Alpha -> pr_B_221.Beta;
+
+			Z222: port pr_A_222.Alpha -> pr_B_222.Beta;
+
+			Z223: port pr_A_223.Alpha -> pr_B_223.Beta;
+
+			Z224: port pr_A_224.Alpha -> pr_B_224.Beta;
+
+			Z225: port pr_A_225.Alpha -> pr_B_225.Beta;
+
+			Z226: port pr_A_226.Alpha -> pr_B_226.Beta;
+
+			Z227: port pr_A_227.Alpha -> pr_B_227.Beta;
+
+			Z228: port pr_A_228.Alpha -> pr_B_228.Beta;
+
+			Z229: port pr_A_229.Alpha -> pr_B_229.Beta;
+
+			Z230: port pr_A_230.Alpha -> pr_B_230.Beta;
+
+			Z231: port pr_A_231.Alpha -> pr_B_231.Beta;
+
+			Z232: port pr_A_232.Alpha -> pr_B_232.Beta;
+
+			Z233: port pr_A_233.Alpha -> pr_B_233.Beta;
+
+			Z234: port pr_A_234.Alpha -> pr_B_234.Beta;
+
+			Z235: port pr_A_235.Alpha -> pr_B_235.Beta;
+
+			Z236: port pr_A_236.Alpha -> pr_B_236.Beta;
+
+			Z237: port pr_A_237.Alpha -> pr_B_237.Beta;
+
+			Z238: port pr_A_238.Alpha -> pr_B_238.Beta;
+
+			Z239: port pr_A_239.Alpha -> pr_B_239.Beta;
+
+			Z240: port pr_A_240.Alpha -> pr_B_240.Beta;
+
+			Z241: port pr_A_241.Alpha -> pr_B_241.Beta;
+
+			Z242: port pr_A_242.Alpha -> pr_B_242.Beta;
+
+			Z243: port pr_A_243.Alpha -> pr_B_243.Beta;
+
+			Z244: port pr_A_244.Alpha -> pr_B_244.Beta;
+
+			Z245: port pr_A_245.Alpha -> pr_B_245.Beta;
+
+			Z246: port pr_A_246.Alpha -> pr_B_246.Beta;
+
+			Z247: port pr_A_247.Alpha -> pr_B_247.Beta;
+
+			Z248: port pr_A_248.Alpha -> pr_B_248.Beta;
+
+			Z249: port pr_A_249.Alpha -> pr_B_249.Beta;
+
+			Z250: port pr_A_250.Alpha -> pr_B_250.Beta;
+
+			Z251: port pr_A_251.Alpha -> pr_B_251.Beta;
+
+			Z252: port pr_A_252.Alpha -> pr_B_252.Beta;
+
+			Z253: port pr_A_253.Alpha -> pr_B_253.Beta;
+
+			Z254: port pr_A_254.Alpha -> pr_B_254.Beta;
+
+			Z255: port pr_A_255.Alpha -> pr_B_255.Beta;
+
+			Z256: port pr_A_256.Alpha -> pr_B_256.Beta;
+
+	end PC_Simple.Native;
+
+end PC256;

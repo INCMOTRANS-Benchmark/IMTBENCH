@@ -1,0 +1,1633 @@
+<?xml version="1.0" encoding="ASCII"?>
+<IBeXLanguage:IBeXPatternSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:IBeXLanguage="platform:/resource/org.emoflon.ibex.common/model/Common.ecore">
+  <contextPatterns xsi:type="IBeXLanguage:IBeXContextPattern" name="ComponentToComponent__FWD">
+    <injectivityConstraints values="//@contextPatterns.0/@signatureNodes.1 //@contextPatterns.0/@signatureNodes.2"/>
+    <localEdges sourceNode="//@contextPatterns.0/@signatureNodes.0" targetNode="//@contextPatterns.0/@signatureNodes.1">
+      <type href="../model/Tgg.ecore#//SystemToSystem/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.0/@signatureNodes.0" targetNode="//@contextPatterns.0/@signatureNodes.2">
+      <type href="../model/Tgg.ecore#//SystemToSystem/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.0/@signatureNodes.1" targetNode="//@contextPatterns.0/@signatureNodes.3">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <signatureNodes name="s2s" outgoingEdges="//@contextPatterns.0/@localEdges.0 //@contextPatterns.0/@localEdges.1">
+      <type href="../model/Tgg.ecore#//SystemToSystem"/>
+    </signatureNodes>
+    <signatureNodes name="system_source" incomingEdges="//@contextPatterns.0/@localEdges.0" outgoingEdges="//@contextPatterns.0/@localEdges.2">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </signatureNodes>
+    <signatureNodes name="system_target" incomingEdges="//@contextPatterns.0/@localEdges.1">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </signatureNodes>
+    <signatureNodes name="component_source" incomingEdges="//@contextPatterns.0/@localEdges.2">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXLanguage:IBeXContextPattern" name="ConnectionInstanceToConnectionInstanceAtProcess__FWD">
+    <injectivityConstraints values="//@contextPatterns.1/@signatureNodes.1 //@contextPatterns.1/@signatureNodes.5"/>
+    <injectivityConstraints values="//@contextPatterns.1/@signatureNodes.1 //@contextPatterns.1/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.1/@signatureNodes.1 //@contextPatterns.1/@signatureNodes.2"/>
+    <injectivityConstraints values="//@contextPatterns.1/@signatureNodes.1 //@contextPatterns.1/@signatureNodes.7"/>
+    <injectivityConstraints values="//@contextPatterns.1/@signatureNodes.1 //@contextPatterns.1/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.1/@signatureNodes.5 //@contextPatterns.1/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.1/@signatureNodes.5 //@contextPatterns.1/@signatureNodes.2"/>
+    <injectivityConstraints values="//@contextPatterns.1/@signatureNodes.5 //@contextPatterns.1/@signatureNodes.7"/>
+    <injectivityConstraints values="//@contextPatterns.1/@signatureNodes.5 //@contextPatterns.1/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.1/@signatureNodes.6 //@contextPatterns.1/@signatureNodes.2"/>
+    <injectivityConstraints values="//@contextPatterns.1/@signatureNodes.6 //@contextPatterns.1/@signatureNodes.7"/>
+    <injectivityConstraints values="//@contextPatterns.1/@signatureNodes.6 //@contextPatterns.1/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.1/@signatureNodes.2 //@contextPatterns.1/@signatureNodes.7"/>
+    <injectivityConstraints values="//@contextPatterns.1/@signatureNodes.2 //@contextPatterns.1/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.1/@signatureNodes.7 //@contextPatterns.1/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.1/@signatureNodes.0 //@contextPatterns.1/@signatureNodes.3"/>
+    <injectivityConstraints values="//@contextPatterns.1/@signatureNodes.0 //@contextPatterns.1/@signatureNodes.4"/>
+    <injectivityConstraints values="//@contextPatterns.1/@signatureNodes.3 //@contextPatterns.1/@signatureNodes.4"/>
+    <localEdges sourceNode="//@contextPatterns.1/@signatureNodes.0" targetNode="//@contextPatterns.1/@signatureNodes.1">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.1/@signatureNodes.0" targetNode="//@contextPatterns.1/@signatureNodes.2">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.1/@signatureNodes.3" targetNode="//@contextPatterns.1/@signatureNodes.5">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.1/@signatureNodes.3" targetNode="//@contextPatterns.1/@signatureNodes.7">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.1/@signatureNodes.4" targetNode="//@contextPatterns.1/@signatureNodes.6">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.1/@signatureNodes.4" targetNode="//@contextPatterns.1/@signatureNodes.8">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.1/@signatureNodes.1" targetNode="//@contextPatterns.1/@signatureNodes.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.1/@signatureNodes.5" targetNode="//@contextPatterns.1/@signatureNodes.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd/dstConnectionInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.1/@signatureNodes.6" targetNode="//@contextPatterns.1/@signatureNodes.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd/srcConnectionInstance"/>
+    </localEdges>
+    <signatureNodes name="comp2comp" outgoingEdges="//@contextPatterns.1/@localEdges.0 //@contextPatterns.1/@localEdges.1">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="component_source" incomingEdges="//@contextPatterns.1/@localEdges.0" outgoingEdges="//@contextPatterns.1/@localEdges.6">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="component_target" incomingEdges="//@contextPatterns.1/@localEdges.1">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="e2e1" outgoingEdges="//@contextPatterns.1/@localEdges.2 //@contextPatterns.1/@localEdges.3">
+      <type href="../model/Tgg.ecore#//End2End"/>
+    </signatureNodes>
+    <signatureNodes name="e2e2" outgoingEdges="//@contextPatterns.1/@localEdges.4 //@contextPatterns.1/@localEdges.5">
+      <type href="../model/Tgg.ecore#//End2End"/>
+    </signatureNodes>
+    <signatureNodes name="s_destination" incomingEdges="//@contextPatterns.1/@localEdges.2" outgoingEdges="//@contextPatterns.1/@localEdges.7">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </signatureNodes>
+    <signatureNodes name="s_source" incomingEdges="//@contextPatterns.1/@localEdges.4" outgoingEdges="//@contextPatterns.1/@localEdges.8">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </signatureNodes>
+    <signatureNodes name="t_destination" incomingEdges="//@contextPatterns.1/@localEdges.3">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </signatureNodes>
+    <signatureNodes name="t_source" incomingEdges="//@contextPatterns.1/@localEdges.5">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </signatureNodes>
+    <signatureNodes name="connection_source" incomingEdges="//@contextPatterns.1/@localEdges.6 //@contextPatterns.1/@localEdges.7 //@contextPatterns.1/@localEdges.8">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </signatureNodes>
+    <csps name="UserDefined_not_port_connection" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.tgg">
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.1/@signatureNodes.9">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+      </values>
+    </csps>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXLanguage:IBeXContextPattern" name="ConnectionInstanceToConnectionInstanceAtSystem__FWD">
+    <injectivityConstraints values="//@contextPatterns.2/@signatureNodes.3 //@contextPatterns.2/@signatureNodes.4"/>
+    <injectivityConstraints values="//@contextPatterns.2/@signatureNodes.3 //@contextPatterns.2/@signatureNodes.5"/>
+    <injectivityConstraints values="//@contextPatterns.2/@signatureNodes.3 //@contextPatterns.2/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.2/@signatureNodes.3 //@contextPatterns.2/@signatureNodes.7"/>
+    <injectivityConstraints values="//@contextPatterns.2/@signatureNodes.3 //@contextPatterns.2/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.2/@signatureNodes.4 //@contextPatterns.2/@signatureNodes.5"/>
+    <injectivityConstraints values="//@contextPatterns.2/@signatureNodes.4 //@contextPatterns.2/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.2/@signatureNodes.4 //@contextPatterns.2/@signatureNodes.7"/>
+    <injectivityConstraints values="//@contextPatterns.2/@signatureNodes.4 //@contextPatterns.2/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.2/@signatureNodes.5 //@contextPatterns.2/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.2/@signatureNodes.5 //@contextPatterns.2/@signatureNodes.7"/>
+    <injectivityConstraints values="//@contextPatterns.2/@signatureNodes.5 //@contextPatterns.2/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.2/@signatureNodes.6 //@contextPatterns.2/@signatureNodes.7"/>
+    <injectivityConstraints values="//@contextPatterns.2/@signatureNodes.6 //@contextPatterns.2/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.2/@signatureNodes.7 //@contextPatterns.2/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.2/@signatureNodes.0 //@contextPatterns.2/@signatureNodes.1"/>
+    <localEdges sourceNode="//@contextPatterns.2/@signatureNodes.0" targetNode="//@contextPatterns.2/@signatureNodes.3">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.2/@signatureNodes.0" targetNode="//@contextPatterns.2/@signatureNodes.7">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.2/@signatureNodes.1" targetNode="//@contextPatterns.2/@signatureNodes.4">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.2/@signatureNodes.1" targetNode="//@contextPatterns.2/@signatureNodes.8">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.2/@signatureNodes.2" targetNode="//@contextPatterns.2/@signatureNodes.5">
+      <type href="../model/Tgg.ecore#//SystemToSystem/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.2/@signatureNodes.2" targetNode="//@contextPatterns.2/@signatureNodes.6">
+      <type href="../model/Tgg.ecore#//SystemToSystem/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.2/@signatureNodes.3" targetNode="//@contextPatterns.2/@signatureNodes.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd/dstConnectionInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.2/@signatureNodes.4" targetNode="//@contextPatterns.2/@signatureNodes.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd/srcConnectionInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.2/@signatureNodes.5" targetNode="//@contextPatterns.2/@signatureNodes.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+    </localEdges>
+    <signatureNodes name="e2e1" outgoingEdges="//@contextPatterns.2/@localEdges.0 //@contextPatterns.2/@localEdges.1">
+      <type href="../model/Tgg.ecore#//End2End"/>
+    </signatureNodes>
+    <signatureNodes name="e2e2" outgoingEdges="//@contextPatterns.2/@localEdges.2 //@contextPatterns.2/@localEdges.3">
+      <type href="../model/Tgg.ecore#//End2End"/>
+    </signatureNodes>
+    <signatureNodes name="s2s" outgoingEdges="//@contextPatterns.2/@localEdges.4 //@contextPatterns.2/@localEdges.5">
+      <type href="../model/Tgg.ecore#//SystemToSystem"/>
+    </signatureNodes>
+    <signatureNodes name="s_destination" incomingEdges="//@contextPatterns.2/@localEdges.0" outgoingEdges="//@contextPatterns.2/@localEdges.6">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </signatureNodes>
+    <signatureNodes name="s_source" incomingEdges="//@contextPatterns.2/@localEdges.2" outgoingEdges="//@contextPatterns.2/@localEdges.7">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </signatureNodes>
+    <signatureNodes name="system_source" incomingEdges="//@contextPatterns.2/@localEdges.4" outgoingEdges="//@contextPatterns.2/@localEdges.8">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </signatureNodes>
+    <signatureNodes name="system_target" incomingEdges="//@contextPatterns.2/@localEdges.5">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </signatureNodes>
+    <signatureNodes name="t_destination" incomingEdges="//@contextPatterns.2/@localEdges.1">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </signatureNodes>
+    <signatureNodes name="t_source" incomingEdges="//@contextPatterns.2/@localEdges.3">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </signatureNodes>
+    <signatureNodes name="connection_source" incomingEdges="//@contextPatterns.2/@localEdges.6 //@contextPatterns.2/@localEdges.7 //@contextPatterns.2/@localEdges.8">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </signatureNodes>
+    <csps name="UserDefined_not_port_connection" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.tgg">
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.2/@signatureNodes.9">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+      </values>
+    </csps>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXLanguage:IBeXContextPattern" name="ConnectionReferenceToConnectionReference__FWD">
+    <injectivityConstraints values="//@contextPatterns.3/@signatureNodes.1 //@contextPatterns.3/@signatureNodes.2"/>
+    <injectivityConstraints values="//@contextPatterns.3/@signatureNodes.5 //@contextPatterns.3/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.3/@signatureNodes.5 //@contextPatterns.3/@signatureNodes.7"/>
+    <injectivityConstraints values="//@contextPatterns.3/@signatureNodes.5 //@contextPatterns.3/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.3/@signatureNodes.6 //@contextPatterns.3/@signatureNodes.7"/>
+    <injectivityConstraints values="//@contextPatterns.3/@signatureNodes.6 //@contextPatterns.3/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.3/@signatureNodes.7 //@contextPatterns.3/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.3/@signatureNodes.3 //@contextPatterns.3/@signatureNodes.4"/>
+    <localEdges sourceNode="//@contextPatterns.3/@signatureNodes.0" targetNode="//@contextPatterns.3/@signatureNodes.1">
+      <type href="../model/Tgg.ecore#//ConnectionToConnection/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.3/@signatureNodes.0" targetNode="//@contextPatterns.3/@signatureNodes.2">
+      <type href="../model/Tgg.ecore#//ConnectionToConnection/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.3/@signatureNodes.3" targetNode="//@contextPatterns.3/@signatureNodes.5">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.3/@signatureNodes.3" targetNode="//@contextPatterns.3/@signatureNodes.7">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.3/@signatureNodes.4" targetNode="//@contextPatterns.3/@signatureNodes.6">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.3/@signatureNodes.4" targetNode="//@contextPatterns.3/@signatureNodes.8">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.3/@signatureNodes.9" targetNode="//@contextPatterns.3/@signatureNodes.5">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.3/@signatureNodes.9" targetNode="//@contextPatterns.3/@signatureNodes.6">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.3/@signatureNodes.1" targetNode="//@contextPatterns.3/@signatureNodes.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+    </localEdges>
+    <signatureNodes name="c2c" outgoingEdges="//@contextPatterns.3/@localEdges.0 //@contextPatterns.3/@localEdges.1">
+      <type href="../model/Tgg.ecore#//ConnectionToConnection"/>
+    </signatureNodes>
+    <signatureNodes name="connection_source" incomingEdges="//@contextPatterns.3/@localEdges.0" outgoingEdges="//@contextPatterns.3/@localEdges.8">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </signatureNodes>
+    <signatureNodes name="connection_target" incomingEdges="//@contextPatterns.3/@localEdges.1">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </signatureNodes>
+    <signatureNodes name="e2e1" outgoingEdges="//@contextPatterns.3/@localEdges.2 //@contextPatterns.3/@localEdges.3">
+      <type href="../model/Tgg.ecore#//End2End"/>
+    </signatureNodes>
+    <signatureNodes name="e2e2" outgoingEdges="//@contextPatterns.3/@localEdges.4 //@contextPatterns.3/@localEdges.5">
+      <type href="../model/Tgg.ecore#//End2End"/>
+    </signatureNodes>
+    <signatureNodes name="s_destination" incomingEdges="//@contextPatterns.3/@localEdges.2 //@contextPatterns.3/@localEdges.6">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </signatureNodes>
+    <signatureNodes name="s_source" incomingEdges="//@contextPatterns.3/@localEdges.4 //@contextPatterns.3/@localEdges.7">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </signatureNodes>
+    <signatureNodes name="t_destination" incomingEdges="//@contextPatterns.3/@localEdges.3">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </signatureNodes>
+    <signatureNodes name="t_source" incomingEdges="//@contextPatterns.3/@localEdges.5">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </signatureNodes>
+    <signatureNodes name="connectionRef_source" incomingEdges="//@contextPatterns.3/@localEdges.8" outgoingEdges="//@contextPatterns.3/@localEdges.6 //@contextPatterns.3/@localEdges.7">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </signatureNodes>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXLanguage:IBeXContextPattern" name="DeviceConnectionInstanceToConnectionInstanceAtProcess__FWD">
+    <injectivityConstraints values="//@contextPatterns.4/@signatureNodes.3 //@contextPatterns.4/@signatureNodes.5"/>
+    <injectivityConstraints values="//@contextPatterns.4/@signatureNodes.3 //@contextPatterns.4/@signatureNodes.4"/>
+    <injectivityConstraints values="//@contextPatterns.4/@signatureNodes.3 //@contextPatterns.4/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.4/@signatureNodes.3 //@contextPatterns.4/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.4/@signatureNodes.5 //@contextPatterns.4/@signatureNodes.4"/>
+    <injectivityConstraints values="//@contextPatterns.4/@signatureNodes.5 //@contextPatterns.4/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.4/@signatureNodes.5 //@contextPatterns.4/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.4/@signatureNodes.7 //@contextPatterns.4/@signatureNodes.4"/>
+    <injectivityConstraints values="//@contextPatterns.4/@signatureNodes.7 //@contextPatterns.4/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.4/@signatureNodes.7 //@contextPatterns.4/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.4/@signatureNodes.4 //@contextPatterns.4/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.4/@signatureNodes.0 //@contextPatterns.4/@signatureNodes.1"/>
+    <injectivityConstraints values="//@contextPatterns.4/@signatureNodes.0 //@contextPatterns.4/@signatureNodes.2"/>
+    <injectivityConstraints values="//@contextPatterns.4/@signatureNodes.1 //@contextPatterns.4/@signatureNodes.2"/>
+    <localEdges sourceNode="//@contextPatterns.4/@signatureNodes.1" targetNode="//@contextPatterns.4/@signatureNodes.5">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.4/@signatureNodes.1" targetNode="//@contextPatterns.4/@signatureNodes.6">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.4/@signatureNodes.2" targetNode="//@contextPatterns.4/@signatureNodes.3">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.4/@signatureNodes.2" targetNode="//@contextPatterns.4/@signatureNodes.4">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.4/@signatureNodes.0" targetNode="//@contextPatterns.4/@signatureNodes.7">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.4/@signatureNodes.0" targetNode="//@contextPatterns.4/@signatureNodes.8">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.4/@signatureNodes.7" targetNode="//@contextPatterns.4/@signatureNodes.3">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.4/@signatureNodes.7" targetNode="//@contextPatterns.4/@signatureNodes.5">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.4/@signatureNodes.8" targetNode="//@contextPatterns.4/@signatureNodes.4">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.4/@signatureNodes.8" targetNode="//@contextPatterns.4/@signatureNodes.6">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.4/@signatureNodes.3" targetNode="//@contextPatterns.4/@signatureNodes.10">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.4/@signatureNodes.5" targetNode="//@contextPatterns.4/@signatureNodes.11">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.4/@signatureNodes.7" targetNode="//@contextPatterns.4/@signatureNodes.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.4/@signatureNodes.10" targetNode="//@contextPatterns.4/@signatureNodes.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd/dstConnectionInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.4/@signatureNodes.11" targetNode="//@contextPatterns.4/@signatureNodes.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd/srcConnectionInstance"/>
+    </localEdges>
+    <signatureNodes name="comp2comp" outgoingEdges="//@contextPatterns.4/@localEdges.4 //@contextPatterns.4/@localEdges.5">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="comp2comp1" outgoingEdges="//@contextPatterns.4/@localEdges.0 //@contextPatterns.4/@localEdges.1">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="comp2comp2" outgoingEdges="//@contextPatterns.4/@localEdges.2 //@contextPatterns.4/@localEdges.3">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="component_conn_destination" incomingEdges="//@contextPatterns.4/@localEdges.2 //@contextPatterns.4/@localEdges.6" outgoingEdges="//@contextPatterns.4/@localEdges.10">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="component_conn_destination_target" incomingEdges="//@contextPatterns.4/@localEdges.3 //@contextPatterns.4/@localEdges.8">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="component_conn_source" incomingEdges="//@contextPatterns.4/@localEdges.0 //@contextPatterns.4/@localEdges.7" outgoingEdges="//@contextPatterns.4/@localEdges.11">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="component_conn_source_target" incomingEdges="//@contextPatterns.4/@localEdges.1 //@contextPatterns.4/@localEdges.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="component_source" incomingEdges="//@contextPatterns.4/@localEdges.4" outgoingEdges="//@contextPatterns.4/@localEdges.6 //@contextPatterns.4/@localEdges.7 //@contextPatterns.4/@localEdges.12">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="component_target" incomingEdges="//@contextPatterns.4/@localEdges.5" outgoingEdges="//@contextPatterns.4/@localEdges.8 //@contextPatterns.4/@localEdges.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="connection_source" incomingEdges="//@contextPatterns.4/@localEdges.12 //@contextPatterns.4/@localEdges.13 //@contextPatterns.4/@localEdges.14">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </signatureNodes>
+    <signatureNodes name="feature_destination" incomingEdges="//@contextPatterns.4/@localEdges.10" outgoingEdges="//@contextPatterns.4/@localEdges.13">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="feature_source" incomingEdges="//@contextPatterns.4/@localEdges.11" outgoingEdges="//@contextPatterns.4/@localEdges.14">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <csps name="UserDefined_is_device" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.tgg">
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.4/@signatureNodes.5">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+      </values>
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.4/@signatureNodes.4">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+      </values>
+    </csps>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXLanguage:IBeXContextPattern" name="DeviceConnectionInstanceToConnectionInstanceAtSystem__FWD">
+    <injectivityConstraints values="//@contextPatterns.5/@signatureNodes.2 //@contextPatterns.5/@signatureNodes.4"/>
+    <injectivityConstraints values="//@contextPatterns.5/@signatureNodes.2 //@contextPatterns.5/@signatureNodes.7"/>
+    <injectivityConstraints values="//@contextPatterns.5/@signatureNodes.2 //@contextPatterns.5/@signatureNodes.3"/>
+    <injectivityConstraints values="//@contextPatterns.5/@signatureNodes.2 //@contextPatterns.5/@signatureNodes.5"/>
+    <injectivityConstraints values="//@contextPatterns.5/@signatureNodes.2 //@contextPatterns.5/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.5/@signatureNodes.4 //@contextPatterns.5/@signatureNodes.7"/>
+    <injectivityConstraints values="//@contextPatterns.5/@signatureNodes.4 //@contextPatterns.5/@signatureNodes.3"/>
+    <injectivityConstraints values="//@contextPatterns.5/@signatureNodes.4 //@contextPatterns.5/@signatureNodes.5"/>
+    <injectivityConstraints values="//@contextPatterns.5/@signatureNodes.4 //@contextPatterns.5/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.5/@signatureNodes.10 //@contextPatterns.5/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.5/@signatureNodes.12 //@contextPatterns.5/@signatureNodes.13"/>
+    <injectivityConstraints values="//@contextPatterns.5/@signatureNodes.7 //@contextPatterns.5/@signatureNodes.3"/>
+    <injectivityConstraints values="//@contextPatterns.5/@signatureNodes.7 //@contextPatterns.5/@signatureNodes.5"/>
+    <injectivityConstraints values="//@contextPatterns.5/@signatureNodes.7 //@contextPatterns.5/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.5/@signatureNodes.3 //@contextPatterns.5/@signatureNodes.5"/>
+    <injectivityConstraints values="//@contextPatterns.5/@signatureNodes.3 //@contextPatterns.5/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.5/@signatureNodes.5 //@contextPatterns.5/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.5/@signatureNodes.0 //@contextPatterns.5/@signatureNodes.1"/>
+    <localEdges sourceNode="//@contextPatterns.5/@signatureNodes.0" targetNode="//@contextPatterns.5/@signatureNodes.4">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.5/@signatureNodes.0" targetNode="//@contextPatterns.5/@signatureNodes.5">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.5/@signatureNodes.1" targetNode="//@contextPatterns.5/@signatureNodes.2">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.5/@signatureNodes.1" targetNode="//@contextPatterns.5/@signatureNodes.3">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.5/@signatureNodes.6" targetNode="//@contextPatterns.5/@signatureNodes.7">
+      <type href="../model/Tgg.ecore#//SystemToSystem/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.5/@signatureNodes.6" targetNode="//@contextPatterns.5/@signatureNodes.8">
+      <type href="../model/Tgg.ecore#//SystemToSystem/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.5/@signatureNodes.2" targetNode="//@contextPatterns.5/@signatureNodes.10">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.5/@signatureNodes.4" targetNode="//@contextPatterns.5/@signatureNodes.11">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.5/@signatureNodes.9" targetNode="//@contextPatterns.5/@signatureNodes.12">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.5/@signatureNodes.9" targetNode="//@contextPatterns.5/@signatureNodes.13">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.5/@signatureNodes.12" targetNode="//@contextPatterns.5/@signatureNodes.10">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.5/@signatureNodes.13" targetNode="//@contextPatterns.5/@signatureNodes.11">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.5/@signatureNodes.7" targetNode="//@contextPatterns.5/@signatureNodes.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+    </localEdges>
+    <signatureNodes name="comp2comp1" outgoingEdges="//@contextPatterns.5/@localEdges.0 //@contextPatterns.5/@localEdges.1">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="comp2comp2" outgoingEdges="//@contextPatterns.5/@localEdges.2 //@contextPatterns.5/@localEdges.3">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="comp_destination" incomingEdges="//@contextPatterns.5/@localEdges.2" outgoingEdges="//@contextPatterns.5/@localEdges.6">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="comp_destination_target" incomingEdges="//@contextPatterns.5/@localEdges.3">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="comp_source" incomingEdges="//@contextPatterns.5/@localEdges.0" outgoingEdges="//@contextPatterns.5/@localEdges.7">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="comp_source_target" incomingEdges="//@contextPatterns.5/@localEdges.1">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="s2s" outgoingEdges="//@contextPatterns.5/@localEdges.4 //@contextPatterns.5/@localEdges.5">
+      <type href="../model/Tgg.ecore#//SystemToSystem"/>
+    </signatureNodes>
+    <signatureNodes name="system_source" incomingEdges="//@contextPatterns.5/@localEdges.4" outgoingEdges="//@contextPatterns.5/@localEdges.12">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </signatureNodes>
+    <signatureNodes name="system_target" incomingEdges="//@contextPatterns.5/@localEdges.5">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </signatureNodes>
+    <signatureNodes name="connection_source" incomingEdges="//@contextPatterns.5/@localEdges.12" outgoingEdges="//@contextPatterns.5/@localEdges.8 //@contextPatterns.5/@localEdges.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </signatureNodes>
+    <signatureNodes name="feature_destination" incomingEdges="//@contextPatterns.5/@localEdges.6 //@contextPatterns.5/@localEdges.10">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="feature_source" incomingEdges="//@contextPatterns.5/@localEdges.7 //@contextPatterns.5/@localEdges.11">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="ref_connection_destination" incomingEdges="//@contextPatterns.5/@localEdges.8" outgoingEdges="//@contextPatterns.5/@localEdges.10">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </signatureNodes>
+    <signatureNodes name="ref_connection_source" incomingEdges="//@contextPatterns.5/@localEdges.9" outgoingEdges="//@contextPatterns.5/@localEdges.11">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </signatureNodes>
+    <csps name="UserDefined_is_device" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.tgg">
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.5/@signatureNodes.4">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+      </values>
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.5/@signatureNodes.2">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+      </values>
+    </csps>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXLanguage:IBeXContextPattern" name="FeatureToFeature__FWD">
+    <injectivityConstraints values="//@contextPatterns.6/@signatureNodes.1 //@contextPatterns.6/@signatureNodes.2"/>
+    <localEdges sourceNode="//@contextPatterns.6/@signatureNodes.0" targetNode="//@contextPatterns.6/@signatureNodes.1">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.6/@signatureNodes.0" targetNode="//@contextPatterns.6/@signatureNodes.2">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.6/@signatureNodes.1" targetNode="//@contextPatterns.6/@signatureNodes.3">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <signatureNodes name="c2c" outgoingEdges="//@contextPatterns.6/@localEdges.0 //@contextPatterns.6/@localEdges.1">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="component_source" incomingEdges="//@contextPatterns.6/@localEdges.0" outgoingEdges="//@contextPatterns.6/@localEdges.2">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="component_target" incomingEdges="//@contextPatterns.6/@localEdges.1">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="feature_source" incomingEdges="//@contextPatterns.6/@localEdges.2">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <csps name="UserDefined_not_port_feature" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.tgg">
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.6/@signatureNodes.3">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/category"/>
+      </values>
+    </csps>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXLanguage:IBeXContextPattern" name="FirstPortConnectionToDataAccessAtProcess__FWD">
+    <injectivityConstraints values="//@contextPatterns.7/@signatureNodes.1 //@contextPatterns.7/@signatureNodes.3"/>
+    <injectivityConstraints values="//@contextPatterns.7/@signatureNodes.1 //@contextPatterns.7/@signatureNodes.2"/>
+    <injectivityConstraints values="//@contextPatterns.7/@signatureNodes.1 //@contextPatterns.7/@signatureNodes.4"/>
+    <injectivityConstraints values="//@contextPatterns.7/@signatureNodes.1 //@contextPatterns.7/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.7/@signatureNodes.3 //@contextPatterns.7/@signatureNodes.2"/>
+    <injectivityConstraints values="//@contextPatterns.7/@signatureNodes.3 //@contextPatterns.7/@signatureNodes.4"/>
+    <injectivityConstraints values="//@contextPatterns.7/@signatureNodes.3 //@contextPatterns.7/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.7/@signatureNodes.5 //@contextPatterns.7/@signatureNodes.2"/>
+    <injectivityConstraints values="//@contextPatterns.7/@signatureNodes.5 //@contextPatterns.7/@signatureNodes.4"/>
+    <injectivityConstraints values="//@contextPatterns.7/@signatureNodes.5 //@contextPatterns.7/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.7/@signatureNodes.2 //@contextPatterns.7/@signatureNodes.4"/>
+    <injectivityConstraints values="//@contextPatterns.7/@signatureNodes.0 //@contextPatterns.7/@signatureNodes.7"/>
+    <injectivityConstraints values="//@contextPatterns.7/@signatureNodes.0 //@contextPatterns.7/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.7/@signatureNodes.7 //@contextPatterns.7/@signatureNodes.8"/>
+    <localEdges sourceNode="//@contextPatterns.7/@signatureNodes.0" targetNode="//@contextPatterns.7/@signatureNodes.5">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.7/@signatureNodes.0" targetNode="//@contextPatterns.7/@signatureNodes.6">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.7/@signatureNodes.5" targetNode="//@contextPatterns.7/@signatureNodes.1">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.7/@signatureNodes.5" targetNode="//@contextPatterns.7/@signatureNodes.3">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.7/@signatureNodes.6" targetNode="//@contextPatterns.7/@signatureNodes.2">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.7/@signatureNodes.6" targetNode="//@contextPatterns.7/@signatureNodes.4">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.7/@signatureNodes.7" targetNode="//@contextPatterns.7/@signatureNodes.3">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.7/@signatureNodes.7" targetNode="//@contextPatterns.7/@signatureNodes.4">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.7/@signatureNodes.8" targetNode="//@contextPatterns.7/@signatureNodes.1">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.7/@signatureNodes.8" targetNode="//@contextPatterns.7/@signatureNodes.2">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.7/@signatureNodes.1" targetNode="//@contextPatterns.7/@signatureNodes.10">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.7/@signatureNodes.3" targetNode="//@contextPatterns.7/@signatureNodes.11">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.7/@signatureNodes.5" targetNode="//@contextPatterns.7/@signatureNodes.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.7/@signatureNodes.9" targetNode="//@contextPatterns.7/@signatureNodes.12">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.7/@signatureNodes.10" targetNode="//@contextPatterns.7/@signatureNodes.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd/dstConnectionInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.7/@signatureNodes.11" targetNode="//@contextPatterns.7/@signatureNodes.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd/srcConnectionInstance"/>
+    </localEdges>
+    <signatureNodes name="c2c" outgoingEdges="//@contextPatterns.7/@localEdges.0 //@contextPatterns.7/@localEdges.1">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="component_conn_destination" incomingEdges="//@contextPatterns.7/@localEdges.2 //@contextPatterns.7/@localEdges.8" outgoingEdges="//@contextPatterns.7/@localEdges.10">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="component_conn_destination_target" incomingEdges="//@contextPatterns.7/@localEdges.4 //@contextPatterns.7/@localEdges.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="component_conn_source" incomingEdges="//@contextPatterns.7/@localEdges.3 //@contextPatterns.7/@localEdges.6" outgoingEdges="//@contextPatterns.7/@localEdges.11">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="component_conn_source_target" incomingEdges="//@contextPatterns.7/@localEdges.5 //@contextPatterns.7/@localEdges.7">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="component_source" incomingEdges="//@contextPatterns.7/@localEdges.0" outgoingEdges="//@contextPatterns.7/@localEdges.2 //@contextPatterns.7/@localEdges.3 //@contextPatterns.7/@localEdges.12">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="component_target" incomingEdges="//@contextPatterns.7/@localEdges.1" outgoingEdges="//@contextPatterns.7/@localEdges.4 //@contextPatterns.7/@localEdges.5">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="sub2sub1" outgoingEdges="//@contextPatterns.7/@localEdges.6 //@contextPatterns.7/@localEdges.7">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="sub2sub2" outgoingEdges="//@contextPatterns.7/@localEdges.8 //@contextPatterns.7/@localEdges.9">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="connection_source" incomingEdges="//@contextPatterns.7/@localEdges.12 //@contextPatterns.7/@localEdges.14 //@contextPatterns.7/@localEdges.15" outgoingEdges="//@contextPatterns.7/@localEdges.13">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </signatureNodes>
+    <signatureNodes name="feature_destination" incomingEdges="//@contextPatterns.7/@localEdges.10" outgoingEdges="//@contextPatterns.7/@localEdges.14">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="feature_source" incomingEdges="//@contextPatterns.7/@localEdges.11" outgoingEdges="//@contextPatterns.7/@localEdges.15">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="ref_connection_source" incomingEdges="//@contextPatterns.7/@localEdges.13">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </signatureNodes>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXLanguage:IBeXContextPattern" name="PortConnectionToDataAccessAtProcess__FWD">
+    <injectivityConstraints values="//@contextPatterns.8/@signatureNodes.1 //@contextPatterns.8/@signatureNodes.3"/>
+    <injectivityConstraints values="//@contextPatterns.8/@signatureNodes.1 //@contextPatterns.8/@signatureNodes.2"/>
+    <injectivityConstraints values="//@contextPatterns.8/@signatureNodes.1 //@contextPatterns.8/@signatureNodes.4"/>
+    <injectivityConstraints values="//@contextPatterns.8/@signatureNodes.1 //@contextPatterns.8/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.8/@signatureNodes.3 //@contextPatterns.8/@signatureNodes.2"/>
+    <injectivityConstraints values="//@contextPatterns.8/@signatureNodes.3 //@contextPatterns.8/@signatureNodes.4"/>
+    <injectivityConstraints values="//@contextPatterns.8/@signatureNodes.3 //@contextPatterns.8/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.8/@signatureNodes.5 //@contextPatterns.8/@signatureNodes.2"/>
+    <injectivityConstraints values="//@contextPatterns.8/@signatureNodes.5 //@contextPatterns.8/@signatureNodes.4"/>
+    <injectivityConstraints values="//@contextPatterns.8/@signatureNodes.5 //@contextPatterns.8/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.8/@signatureNodes.11 //@contextPatterns.8/@signatureNodes.9"/>
+    <injectivityConstraints values="//@contextPatterns.8/@signatureNodes.11 //@contextPatterns.8/@signatureNodes.10"/>
+    <injectivityConstraints values="//@contextPatterns.8/@signatureNodes.12 //@contextPatterns.8/@signatureNodes.9"/>
+    <injectivityConstraints values="//@contextPatterns.8/@signatureNodes.12 //@contextPatterns.8/@signatureNodes.10"/>
+    <injectivityConstraints values="//@contextPatterns.8/@signatureNodes.2 //@contextPatterns.8/@signatureNodes.4"/>
+    <injectivityConstraints values="//@contextPatterns.8/@signatureNodes.0 //@contextPatterns.8/@signatureNodes.13"/>
+    <injectivityConstraints values="//@contextPatterns.8/@signatureNodes.0 //@contextPatterns.8/@signatureNodes.14"/>
+    <injectivityConstraints values="//@contextPatterns.8/@signatureNodes.7 //@contextPatterns.8/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.8/@signatureNodes.13 //@contextPatterns.8/@signatureNodes.14"/>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.0" targetNode="//@contextPatterns.8/@signatureNodes.5">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.0" targetNode="//@contextPatterns.8/@signatureNodes.6">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.1" targetNode="//@contextPatterns.8/@signatureNodes.11">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.2" targetNode="//@contextPatterns.8/@signatureNodes.10">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.3" targetNode="//@contextPatterns.8/@signatureNodes.12">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.4" targetNode="//@contextPatterns.8/@signatureNodes.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.5" targetNode="//@contextPatterns.8/@signatureNodes.1">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.5" targetNode="//@contextPatterns.8/@signatureNodes.3">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.6" targetNode="//@contextPatterns.8/@signatureNodes.2">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.6" targetNode="//@contextPatterns.8/@signatureNodes.4">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.7" targetNode="//@contextPatterns.8/@signatureNodes.12">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.7" targetNode="//@contextPatterns.8/@signatureNodes.9">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.8" targetNode="//@contextPatterns.8/@signatureNodes.11">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.8" targetNode="//@contextPatterns.8/@signatureNodes.10">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.13" targetNode="//@contextPatterns.8/@signatureNodes.3">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.13" targetNode="//@contextPatterns.8/@signatureNodes.4">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.14" targetNode="//@contextPatterns.8/@signatureNodes.1">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.14" targetNode="//@contextPatterns.8/@signatureNodes.2">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.5" targetNode="//@contextPatterns.8/@signatureNodes.15">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.15" targetNode="//@contextPatterns.8/@signatureNodes.16">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.11" targetNode="//@contextPatterns.8/@signatureNodes.15">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd/dstConnectionInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.8/@signatureNodes.12" targetNode="//@contextPatterns.8/@signatureNodes.15">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd/srcConnectionInstance"/>
+    </localEdges>
+    <signatureNodes name="c2c" outgoingEdges="//@contextPatterns.8/@localEdges.0 //@contextPatterns.8/@localEdges.1">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="component_conn_destination" incomingEdges="//@contextPatterns.8/@localEdges.6 //@contextPatterns.8/@localEdges.16" outgoingEdges="//@contextPatterns.8/@localEdges.2">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="component_conn_destination_target" incomingEdges="//@contextPatterns.8/@localEdges.8 //@contextPatterns.8/@localEdges.17" outgoingEdges="//@contextPatterns.8/@localEdges.3">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="component_conn_source" incomingEdges="//@contextPatterns.8/@localEdges.7 //@contextPatterns.8/@localEdges.14" outgoingEdges="//@contextPatterns.8/@localEdges.4">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="component_conn_source_target" incomingEdges="//@contextPatterns.8/@localEdges.9 //@contextPatterns.8/@localEdges.15" outgoingEdges="//@contextPatterns.8/@localEdges.5">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="component_source" incomingEdges="//@contextPatterns.8/@localEdges.0" outgoingEdges="//@contextPatterns.8/@localEdges.6 //@contextPatterns.8/@localEdges.7 //@contextPatterns.8/@localEdges.18">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="component_target" incomingEdges="//@contextPatterns.8/@localEdges.1" outgoingEdges="//@contextPatterns.8/@localEdges.8 //@contextPatterns.8/@localEdges.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="f2f1" outgoingEdges="//@contextPatterns.8/@localEdges.10 //@contextPatterns.8/@localEdges.11">
+      <type href="../model/Tgg.ecore#//FeatToFeat"/>
+    </signatureNodes>
+    <signatureNodes name="f2f2" outgoingEdges="//@contextPatterns.8/@localEdges.12 //@contextPatterns.8/@localEdges.13">
+      <type href="../model/Tgg.ecore#//FeatToFeat"/>
+    </signatureNodes>
+    <signatureNodes name="feature1" incomingEdges="//@contextPatterns.8/@localEdges.5 //@contextPatterns.8/@localEdges.11">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="feature2" incomingEdges="//@contextPatterns.8/@localEdges.3 //@contextPatterns.8/@localEdges.13">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="feature_destination" incomingEdges="//@contextPatterns.8/@localEdges.2 //@contextPatterns.8/@localEdges.12" outgoingEdges="//@contextPatterns.8/@localEdges.20">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="feature_source" incomingEdges="//@contextPatterns.8/@localEdges.4 //@contextPatterns.8/@localEdges.10" outgoingEdges="//@contextPatterns.8/@localEdges.21">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="sub2sub1" outgoingEdges="//@contextPatterns.8/@localEdges.14 //@contextPatterns.8/@localEdges.15">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="sub2sub2" outgoingEdges="//@contextPatterns.8/@localEdges.16 //@contextPatterns.8/@localEdges.17">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="connection_source" incomingEdges="//@contextPatterns.8/@localEdges.18 //@contextPatterns.8/@localEdges.20 //@contextPatterns.8/@localEdges.21" outgoingEdges="//@contextPatterns.8/@localEdges.19">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </signatureNodes>
+    <signatureNodes name="ref_connection_source" incomingEdges="//@contextPatterns.8/@localEdges.19">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </signatureNodes>
+    <csps name="UserDefined_eq_enum" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.tgg">
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.8/@signatureNodes.12">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.8/@signatureNodes.9">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+    </csps>
+    <csps name="UserDefined_eq_enum" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.tgg">
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.8/@signatureNodes.11">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.8/@signatureNodes.10">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+    </csps>
+    <csps name="eq_string" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.8/@signatureNodes.12">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.8/@signatureNodes.9">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </csps>
+    <csps name="eq_string" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.8/@signatureNodes.11">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.8/@signatureNodes.10">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </csps>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXLanguage:IBeXContextPattern" name="PortConnectionToDataAccessAtSystem00__FWD">
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.16 //@contextPatterns.9/@signatureNodes.17"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.2 //@contextPatterns.9/@signatureNodes.4"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.2 //@contextPatterns.9/@signatureNodes.7"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.2 //@contextPatterns.9/@signatureNodes.13"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.2 //@contextPatterns.9/@signatureNodes.3"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.2 //@contextPatterns.9/@signatureNodes.5"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.2 //@contextPatterns.9/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.2 //@contextPatterns.9/@signatureNodes.12"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.2 //@contextPatterns.9/@signatureNodes.14"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.4 //@contextPatterns.9/@signatureNodes.7"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.4 //@contextPatterns.9/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.4 //@contextPatterns.9/@signatureNodes.3"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.4 //@contextPatterns.9/@signatureNodes.5"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.4 //@contextPatterns.9/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.4 //@contextPatterns.9/@signatureNodes.12"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.4 //@contextPatterns.9/@signatureNodes.14"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.18 //@contextPatterns.9/@signatureNodes.19"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.7 //@contextPatterns.9/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.7 //@contextPatterns.9/@signatureNodes.13"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.7 //@contextPatterns.9/@signatureNodes.3"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.7 //@contextPatterns.9/@signatureNodes.5"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.7 //@contextPatterns.9/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.7 //@contextPatterns.9/@signatureNodes.12"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.7 //@contextPatterns.9/@signatureNodes.14"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.11 //@contextPatterns.9/@signatureNodes.13"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.11 //@contextPatterns.9/@signatureNodes.3"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.11 //@contextPatterns.9/@signatureNodes.5"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.11 //@contextPatterns.9/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.11 //@contextPatterns.9/@signatureNodes.12"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.11 //@contextPatterns.9/@signatureNodes.14"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.13 //@contextPatterns.9/@signatureNodes.3"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.13 //@contextPatterns.9/@signatureNodes.5"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.13 //@contextPatterns.9/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.13 //@contextPatterns.9/@signatureNodes.12"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.13 //@contextPatterns.9/@signatureNodes.14"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.3 //@contextPatterns.9/@signatureNodes.5"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.3 //@contextPatterns.9/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.3 //@contextPatterns.9/@signatureNodes.14"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.5 //@contextPatterns.9/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.5 //@contextPatterns.9/@signatureNodes.12"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.8 //@contextPatterns.9/@signatureNodes.12"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.8 //@contextPatterns.9/@signatureNodes.14"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.12 //@contextPatterns.9/@signatureNodes.14"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.0 //@contextPatterns.9/@signatureNodes.1"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.0 //@contextPatterns.9/@signatureNodes.9"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.0 //@contextPatterns.9/@signatureNodes.10"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.1 //@contextPatterns.9/@signatureNodes.9"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.1 //@contextPatterns.9/@signatureNodes.10"/>
+    <injectivityConstraints values="//@contextPatterns.9/@signatureNodes.9 //@contextPatterns.9/@signatureNodes.10"/>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.0" targetNode="//@contextPatterns.9/@signatureNodes.4">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.0" targetNode="//@contextPatterns.9/@signatureNodes.5">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.1" targetNode="//@contextPatterns.9/@signatureNodes.2">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.1" targetNode="//@contextPatterns.9/@signatureNodes.3">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.2" targetNode="//@contextPatterns.9/@signatureNodes.11">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.3" targetNode="//@contextPatterns.9/@signatureNodes.12">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.4" targetNode="//@contextPatterns.9/@signatureNodes.13">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.5" targetNode="//@contextPatterns.9/@signatureNodes.14">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.6" targetNode="//@contextPatterns.9/@signatureNodes.7">
+      <type href="../model/Tgg.ecore#//SystemToSystem/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.6" targetNode="//@contextPatterns.9/@signatureNodes.8">
+      <type href="../model/Tgg.ecore#//SystemToSystem/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.9" targetNode="//@contextPatterns.9/@signatureNodes.13">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.9" targetNode="//@contextPatterns.9/@signatureNodes.14">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.10" targetNode="//@contextPatterns.9/@signatureNodes.11">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.10" targetNode="//@contextPatterns.9/@signatureNodes.12">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.15" targetNode="//@contextPatterns.9/@signatureNodes.18">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.15" targetNode="//@contextPatterns.9/@signatureNodes.19">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.18" targetNode="//@contextPatterns.9/@signatureNodes.16">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.19" targetNode="//@contextPatterns.9/@signatureNodes.17">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.7" targetNode="//@contextPatterns.9/@signatureNodes.15">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.11" targetNode="//@contextPatterns.9/@signatureNodes.16">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.9/@signatureNodes.13" targetNode="//@contextPatterns.9/@signatureNodes.17">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <signatureNodes name="process2process1" outgoingEdges="//@contextPatterns.9/@localEdges.0 //@contextPatterns.9/@localEdges.1">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="process2process2" outgoingEdges="//@contextPatterns.9/@localEdges.2 //@contextPatterns.9/@localEdges.3">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="process_destination" incomingEdges="//@contextPatterns.9/@localEdges.2" outgoingEdges="//@contextPatterns.9/@localEdges.4">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="process_destination_target" incomingEdges="//@contextPatterns.9/@localEdges.3" outgoingEdges="//@contextPatterns.9/@localEdges.5">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="process_source" incomingEdges="//@contextPatterns.9/@localEdges.0" outgoingEdges="//@contextPatterns.9/@localEdges.6">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="process_source_target" incomingEdges="//@contextPatterns.9/@localEdges.1" outgoingEdges="//@contextPatterns.9/@localEdges.7">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="s2s" outgoingEdges="//@contextPatterns.9/@localEdges.8 //@contextPatterns.9/@localEdges.9">
+      <type href="../model/Tgg.ecore#//SystemToSystem"/>
+    </signatureNodes>
+    <signatureNodes name="system_source" incomingEdges="//@contextPatterns.9/@localEdges.8" outgoingEdges="//@contextPatterns.9/@localEdges.18">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </signatureNodes>
+    <signatureNodes name="system_target" incomingEdges="//@contextPatterns.9/@localEdges.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </signatureNodes>
+    <signatureNodes name="thread2thread1" outgoingEdges="//@contextPatterns.9/@localEdges.10 //@contextPatterns.9/@localEdges.11">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="thread2thread2" outgoingEdges="//@contextPatterns.9/@localEdges.12 //@contextPatterns.9/@localEdges.13">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="thread_destination" incomingEdges="//@contextPatterns.9/@localEdges.4 //@contextPatterns.9/@localEdges.12" outgoingEdges="//@contextPatterns.9/@localEdges.19">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="thread_destination_target" incomingEdges="//@contextPatterns.9/@localEdges.5 //@contextPatterns.9/@localEdges.13">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="thread_source" incomingEdges="//@contextPatterns.9/@localEdges.6 //@contextPatterns.9/@localEdges.10" outgoingEdges="//@contextPatterns.9/@localEdges.20">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="thread_source_target" incomingEdges="//@contextPatterns.9/@localEdges.7 //@contextPatterns.9/@localEdges.11">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="connection_source" incomingEdges="//@contextPatterns.9/@localEdges.18" outgoingEdges="//@contextPatterns.9/@localEdges.14 //@contextPatterns.9/@localEdges.15">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </signatureNodes>
+    <signatureNodes name="feature_destination" incomingEdges="//@contextPatterns.9/@localEdges.16 //@contextPatterns.9/@localEdges.19">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="feature_source" incomingEdges="//@contextPatterns.9/@localEdges.17 //@contextPatterns.9/@localEdges.20">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="ref_connection_destination" incomingEdges="//@contextPatterns.9/@localEdges.14" outgoingEdges="//@contextPatterns.9/@localEdges.16">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </signatureNodes>
+    <signatureNodes name="ref_connection_source" incomingEdges="//@contextPatterns.9/@localEdges.15" outgoingEdges="//@contextPatterns.9/@localEdges.17">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </signatureNodes>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXLanguage:IBeXContextPattern" name="PortConnectionToDataAccessAtSystem01__FWD">
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.1 //@contextPatterns.10/@signatureNodes.2"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.5 //@contextPatterns.10/@signatureNodes.7"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.5 //@contextPatterns.10/@signatureNodes.10"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.5 //@contextPatterns.10/@signatureNodes.16"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.5 //@contextPatterns.10/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.5 //@contextPatterns.10/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.5 //@contextPatterns.10/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.5 //@contextPatterns.10/@signatureNodes.15"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.5 //@contextPatterns.10/@signatureNodes.17"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.7 //@contextPatterns.10/@signatureNodes.10"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.7 //@contextPatterns.10/@signatureNodes.14"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.7 //@contextPatterns.10/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.7 //@contextPatterns.10/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.7 //@contextPatterns.10/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.7 //@contextPatterns.10/@signatureNodes.15"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.7 //@contextPatterns.10/@signatureNodes.17"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.20 //@contextPatterns.10/@signatureNodes.21"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.10 //@contextPatterns.10/@signatureNodes.14"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.10 //@contextPatterns.10/@signatureNodes.16"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.10 //@contextPatterns.10/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.10 //@contextPatterns.10/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.10 //@contextPatterns.10/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.10 //@contextPatterns.10/@signatureNodes.15"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.10 //@contextPatterns.10/@signatureNodes.17"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.14 //@contextPatterns.10/@signatureNodes.16"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.14 //@contextPatterns.10/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.14 //@contextPatterns.10/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.14 //@contextPatterns.10/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.14 //@contextPatterns.10/@signatureNodes.15"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.14 //@contextPatterns.10/@signatureNodes.17"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.16 //@contextPatterns.10/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.16 //@contextPatterns.10/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.16 //@contextPatterns.10/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.16 //@contextPatterns.10/@signatureNodes.15"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.16 //@contextPatterns.10/@signatureNodes.17"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.6 //@contextPatterns.10/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.6 //@contextPatterns.10/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.6 //@contextPatterns.10/@signatureNodes.17"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.8 //@contextPatterns.10/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.8 //@contextPatterns.10/@signatureNodes.15"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.11 //@contextPatterns.10/@signatureNodes.15"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.11 //@contextPatterns.10/@signatureNodes.17"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.15 //@contextPatterns.10/@signatureNodes.17"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.3 //@contextPatterns.10/@signatureNodes.4"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.3 //@contextPatterns.10/@signatureNodes.12"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.3 //@contextPatterns.10/@signatureNodes.13"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.4 //@contextPatterns.10/@signatureNodes.12"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.4 //@contextPatterns.10/@signatureNodes.13"/>
+    <injectivityConstraints values="//@contextPatterns.10/@signatureNodes.12 //@contextPatterns.10/@signatureNodes.13"/>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.0" targetNode="//@contextPatterns.10/@signatureNodes.1">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.0" targetNode="//@contextPatterns.10/@signatureNodes.2">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.3" targetNode="//@contextPatterns.10/@signatureNodes.7">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.3" targetNode="//@contextPatterns.10/@signatureNodes.8">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.4" targetNode="//@contextPatterns.10/@signatureNodes.5">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.4" targetNode="//@contextPatterns.10/@signatureNodes.6">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.5" targetNode="//@contextPatterns.10/@signatureNodes.14">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.6" targetNode="//@contextPatterns.10/@signatureNodes.15">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.7" targetNode="//@contextPatterns.10/@signatureNodes.16">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.8" targetNode="//@contextPatterns.10/@signatureNodes.17">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.9" targetNode="//@contextPatterns.10/@signatureNodes.10">
+      <type href="../model/Tgg.ecore#//SystemToSystem/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.9" targetNode="//@contextPatterns.10/@signatureNodes.11">
+      <type href="../model/Tgg.ecore#//SystemToSystem/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.12" targetNode="//@contextPatterns.10/@signatureNodes.16">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.12" targetNode="//@contextPatterns.10/@signatureNodes.17">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.13" targetNode="//@contextPatterns.10/@signatureNodes.14">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.13" targetNode="//@contextPatterns.10/@signatureNodes.15">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.16" targetNode="//@contextPatterns.10/@signatureNodes.1">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.17" targetNode="//@contextPatterns.10/@signatureNodes.2">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.18" targetNode="//@contextPatterns.10/@signatureNodes.20">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.18" targetNode="//@contextPatterns.10/@signatureNodes.21">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.20" targetNode="//@contextPatterns.10/@signatureNodes.19">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.21" targetNode="//@contextPatterns.10/@signatureNodes.1">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.10" targetNode="//@contextPatterns.10/@signatureNodes.18">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.10/@signatureNodes.14" targetNode="//@contextPatterns.10/@signatureNodes.19">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <signatureNodes name="feature2feature1" outgoingEdges="//@contextPatterns.10/@localEdges.0 //@contextPatterns.10/@localEdges.1">
+      <type href="../model/Tgg.ecore#//FeatToFeat"/>
+    </signatureNodes>
+    <signatureNodes name="feature_source" incomingEdges="//@contextPatterns.10/@localEdges.0 //@contextPatterns.10/@localEdges.16 //@contextPatterns.10/@localEdges.21">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="feature_source_target" incomingEdges="//@contextPatterns.10/@localEdges.1 //@contextPatterns.10/@localEdges.17">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="process2process1" outgoingEdges="//@contextPatterns.10/@localEdges.2 //@contextPatterns.10/@localEdges.3">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="process2process2" outgoingEdges="//@contextPatterns.10/@localEdges.4 //@contextPatterns.10/@localEdges.5">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="process_destination" incomingEdges="//@contextPatterns.10/@localEdges.4" outgoingEdges="//@contextPatterns.10/@localEdges.6">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="process_destination_target" incomingEdges="//@contextPatterns.10/@localEdges.5" outgoingEdges="//@contextPatterns.10/@localEdges.7">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="process_source" incomingEdges="//@contextPatterns.10/@localEdges.2" outgoingEdges="//@contextPatterns.10/@localEdges.8">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="process_source_target" incomingEdges="//@contextPatterns.10/@localEdges.3" outgoingEdges="//@contextPatterns.10/@localEdges.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="s2s" outgoingEdges="//@contextPatterns.10/@localEdges.10 //@contextPatterns.10/@localEdges.11">
+      <type href="../model/Tgg.ecore#//SystemToSystem"/>
+    </signatureNodes>
+    <signatureNodes name="system_source" incomingEdges="//@contextPatterns.10/@localEdges.10" outgoingEdges="//@contextPatterns.10/@localEdges.22">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </signatureNodes>
+    <signatureNodes name="system_target" incomingEdges="//@contextPatterns.10/@localEdges.11">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </signatureNodes>
+    <signatureNodes name="thread2thread1" outgoingEdges="//@contextPatterns.10/@localEdges.12 //@contextPatterns.10/@localEdges.13">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="thread2thread2" outgoingEdges="//@contextPatterns.10/@localEdges.14 //@contextPatterns.10/@localEdges.15">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="thread_destination" incomingEdges="//@contextPatterns.10/@localEdges.6 //@contextPatterns.10/@localEdges.14" outgoingEdges="//@contextPatterns.10/@localEdges.23">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="thread_destination_target" incomingEdges="//@contextPatterns.10/@localEdges.7 //@contextPatterns.10/@localEdges.15">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="thread_source" incomingEdges="//@contextPatterns.10/@localEdges.8 //@contextPatterns.10/@localEdges.12" outgoingEdges="//@contextPatterns.10/@localEdges.16">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="thread_source_target" incomingEdges="//@contextPatterns.10/@localEdges.9 //@contextPatterns.10/@localEdges.13" outgoingEdges="//@contextPatterns.10/@localEdges.17">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="connection_source" incomingEdges="//@contextPatterns.10/@localEdges.22" outgoingEdges="//@contextPatterns.10/@localEdges.18 //@contextPatterns.10/@localEdges.19">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </signatureNodes>
+    <signatureNodes name="feature_destination" incomingEdges="//@contextPatterns.10/@localEdges.20 //@contextPatterns.10/@localEdges.23">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="ref_connection_destination" incomingEdges="//@contextPatterns.10/@localEdges.18" outgoingEdges="//@contextPatterns.10/@localEdges.20">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </signatureNodes>
+    <signatureNodes name="ref_connection_source" incomingEdges="//@contextPatterns.10/@localEdges.19" outgoingEdges="//@contextPatterns.10/@localEdges.21">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </signatureNodes>
+    <csps name="UserDefined_eq_enum" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.tgg">
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.10/@signatureNodes.1">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.10/@signatureNodes.2">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+    </csps>
+    <csps name="eq_string" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.10/@signatureNodes.1">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.10/@signatureNodes.2">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </csps>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXLanguage:IBeXContextPattern" name="PortConnectionToDataAccessAtSystem10__FWD">
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.1 //@contextPatterns.11/@signatureNodes.2"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.5 //@contextPatterns.11/@signatureNodes.7"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.5 //@contextPatterns.11/@signatureNodes.10"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.5 //@contextPatterns.11/@signatureNodes.16"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.5 //@contextPatterns.11/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.5 //@contextPatterns.11/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.5 //@contextPatterns.11/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.5 //@contextPatterns.11/@signatureNodes.15"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.5 //@contextPatterns.11/@signatureNodes.17"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.7 //@contextPatterns.11/@signatureNodes.10"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.7 //@contextPatterns.11/@signatureNodes.14"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.7 //@contextPatterns.11/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.7 //@contextPatterns.11/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.7 //@contextPatterns.11/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.7 //@contextPatterns.11/@signatureNodes.15"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.7 //@contextPatterns.11/@signatureNodes.17"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.20 //@contextPatterns.11/@signatureNodes.21"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.10 //@contextPatterns.11/@signatureNodes.14"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.10 //@contextPatterns.11/@signatureNodes.16"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.10 //@contextPatterns.11/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.10 //@contextPatterns.11/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.10 //@contextPatterns.11/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.10 //@contextPatterns.11/@signatureNodes.15"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.10 //@contextPatterns.11/@signatureNodes.17"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.14 //@contextPatterns.11/@signatureNodes.16"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.14 //@contextPatterns.11/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.14 //@contextPatterns.11/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.14 //@contextPatterns.11/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.14 //@contextPatterns.11/@signatureNodes.15"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.14 //@contextPatterns.11/@signatureNodes.17"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.16 //@contextPatterns.11/@signatureNodes.6"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.16 //@contextPatterns.11/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.16 //@contextPatterns.11/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.16 //@contextPatterns.11/@signatureNodes.15"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.16 //@contextPatterns.11/@signatureNodes.17"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.6 //@contextPatterns.11/@signatureNodes.8"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.6 //@contextPatterns.11/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.6 //@contextPatterns.11/@signatureNodes.17"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.8 //@contextPatterns.11/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.8 //@contextPatterns.11/@signatureNodes.15"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.11 //@contextPatterns.11/@signatureNodes.15"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.11 //@contextPatterns.11/@signatureNodes.17"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.15 //@contextPatterns.11/@signatureNodes.17"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.3 //@contextPatterns.11/@signatureNodes.4"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.3 //@contextPatterns.11/@signatureNodes.12"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.3 //@contextPatterns.11/@signatureNodes.13"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.4 //@contextPatterns.11/@signatureNodes.12"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.4 //@contextPatterns.11/@signatureNodes.13"/>
+    <injectivityConstraints values="//@contextPatterns.11/@signatureNodes.12 //@contextPatterns.11/@signatureNodes.13"/>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.0" targetNode="//@contextPatterns.11/@signatureNodes.1">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.0" targetNode="//@contextPatterns.11/@signatureNodes.2">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.3" targetNode="//@contextPatterns.11/@signatureNodes.7">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.3" targetNode="//@contextPatterns.11/@signatureNodes.8">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.4" targetNode="//@contextPatterns.11/@signatureNodes.5">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.4" targetNode="//@contextPatterns.11/@signatureNodes.6">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.5" targetNode="//@contextPatterns.11/@signatureNodes.14">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.6" targetNode="//@contextPatterns.11/@signatureNodes.15">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.7" targetNode="//@contextPatterns.11/@signatureNodes.16">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.8" targetNode="//@contextPatterns.11/@signatureNodes.17">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.9" targetNode="//@contextPatterns.11/@signatureNodes.10">
+      <type href="../model/Tgg.ecore#//SystemToSystem/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.9" targetNode="//@contextPatterns.11/@signatureNodes.11">
+      <type href="../model/Tgg.ecore#//SystemToSystem/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.12" targetNode="//@contextPatterns.11/@signatureNodes.16">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.12" targetNode="//@contextPatterns.11/@signatureNodes.17">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.13" targetNode="//@contextPatterns.11/@signatureNodes.14">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.13" targetNode="//@contextPatterns.11/@signatureNodes.15">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.14" targetNode="//@contextPatterns.11/@signatureNodes.1">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.15" targetNode="//@contextPatterns.11/@signatureNodes.2">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.18" targetNode="//@contextPatterns.11/@signatureNodes.20">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.18" targetNode="//@contextPatterns.11/@signatureNodes.21">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.20" targetNode="//@contextPatterns.11/@signatureNodes.1">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.21" targetNode="//@contextPatterns.11/@signatureNodes.19">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.10" targetNode="//@contextPatterns.11/@signatureNodes.18">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.11/@signatureNodes.16" targetNode="//@contextPatterns.11/@signatureNodes.19">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <signatureNodes name="feature2feature2" outgoingEdges="//@contextPatterns.11/@localEdges.0 //@contextPatterns.11/@localEdges.1">
+      <type href="../model/Tgg.ecore#//FeatToFeat"/>
+    </signatureNodes>
+    <signatureNodes name="feature_destination" incomingEdges="//@contextPatterns.11/@localEdges.0 //@contextPatterns.11/@localEdges.16 //@contextPatterns.11/@localEdges.20">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="feature_destination_target" incomingEdges="//@contextPatterns.11/@localEdges.1 //@contextPatterns.11/@localEdges.17">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="process2process1" outgoingEdges="//@contextPatterns.11/@localEdges.2 //@contextPatterns.11/@localEdges.3">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="process2process2" outgoingEdges="//@contextPatterns.11/@localEdges.4 //@contextPatterns.11/@localEdges.5">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="process_destination" incomingEdges="//@contextPatterns.11/@localEdges.4" outgoingEdges="//@contextPatterns.11/@localEdges.6">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="process_destination_target" incomingEdges="//@contextPatterns.11/@localEdges.5" outgoingEdges="//@contextPatterns.11/@localEdges.7">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="process_source" incomingEdges="//@contextPatterns.11/@localEdges.2" outgoingEdges="//@contextPatterns.11/@localEdges.8">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="process_source_target" incomingEdges="//@contextPatterns.11/@localEdges.3" outgoingEdges="//@contextPatterns.11/@localEdges.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="s2s" outgoingEdges="//@contextPatterns.11/@localEdges.10 //@contextPatterns.11/@localEdges.11">
+      <type href="../model/Tgg.ecore#//SystemToSystem"/>
+    </signatureNodes>
+    <signatureNodes name="system_source" incomingEdges="//@contextPatterns.11/@localEdges.10" outgoingEdges="//@contextPatterns.11/@localEdges.22">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </signatureNodes>
+    <signatureNodes name="system_target" incomingEdges="//@contextPatterns.11/@localEdges.11">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </signatureNodes>
+    <signatureNodes name="thread2thread1" outgoingEdges="//@contextPatterns.11/@localEdges.12 //@contextPatterns.11/@localEdges.13">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="thread2thread2" outgoingEdges="//@contextPatterns.11/@localEdges.14 //@contextPatterns.11/@localEdges.15">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="thread_destination" incomingEdges="//@contextPatterns.11/@localEdges.6 //@contextPatterns.11/@localEdges.14" outgoingEdges="//@contextPatterns.11/@localEdges.16">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="thread_destination_target" incomingEdges="//@contextPatterns.11/@localEdges.7 //@contextPatterns.11/@localEdges.15" outgoingEdges="//@contextPatterns.11/@localEdges.17">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="thread_source" incomingEdges="//@contextPatterns.11/@localEdges.8 //@contextPatterns.11/@localEdges.12" outgoingEdges="//@contextPatterns.11/@localEdges.23">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="thread_source_target" incomingEdges="//@contextPatterns.11/@localEdges.9 //@contextPatterns.11/@localEdges.13">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="connection_source" incomingEdges="//@contextPatterns.11/@localEdges.22" outgoingEdges="//@contextPatterns.11/@localEdges.18 //@contextPatterns.11/@localEdges.19">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </signatureNodes>
+    <signatureNodes name="feature_source" incomingEdges="//@contextPatterns.11/@localEdges.21 //@contextPatterns.11/@localEdges.23">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="ref_connection_destination" incomingEdges="//@contextPatterns.11/@localEdges.18" outgoingEdges="//@contextPatterns.11/@localEdges.20">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </signatureNodes>
+    <signatureNodes name="ref_connection_source" incomingEdges="//@contextPatterns.11/@localEdges.19" outgoingEdges="//@contextPatterns.11/@localEdges.21">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </signatureNodes>
+    <csps name="UserDefined_eq_enum" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.tgg">
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.11/@signatureNodes.1">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.11/@signatureNodes.2">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+    </csps>
+    <csps name="eq_string" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.11/@signatureNodes.1">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.11/@signatureNodes.2">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </csps>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXLanguage:IBeXContextPattern" name="PortConnectionToDataAccessAtSystem11__FWD">
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.2 //@contextPatterns.12/@signatureNodes.4"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.2 //@contextPatterns.12/@signatureNodes.3"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.2 //@contextPatterns.12/@signatureNodes.5"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.4 //@contextPatterns.12/@signatureNodes.3"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.4 //@contextPatterns.12/@signatureNodes.5"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.8 //@contextPatterns.12/@signatureNodes.10"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.8 //@contextPatterns.12/@signatureNodes.13"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.8 //@contextPatterns.12/@signatureNodes.19"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.8 //@contextPatterns.12/@signatureNodes.9"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.8 //@contextPatterns.12/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.8 //@contextPatterns.12/@signatureNodes.14"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.8 //@contextPatterns.12/@signatureNodes.18"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.8 //@contextPatterns.12/@signatureNodes.20"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.10 //@contextPatterns.12/@signatureNodes.13"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.10 //@contextPatterns.12/@signatureNodes.17"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.10 //@contextPatterns.12/@signatureNodes.9"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.10 //@contextPatterns.12/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.10 //@contextPatterns.12/@signatureNodes.14"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.10 //@contextPatterns.12/@signatureNodes.18"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.10 //@contextPatterns.12/@signatureNodes.20"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.22 //@contextPatterns.12/@signatureNodes.23"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.13 //@contextPatterns.12/@signatureNodes.17"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.13 //@contextPatterns.12/@signatureNodes.19"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.13 //@contextPatterns.12/@signatureNodes.9"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.13 //@contextPatterns.12/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.13 //@contextPatterns.12/@signatureNodes.14"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.13 //@contextPatterns.12/@signatureNodes.18"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.13 //@contextPatterns.12/@signatureNodes.20"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.17 //@contextPatterns.12/@signatureNodes.19"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.17 //@contextPatterns.12/@signatureNodes.9"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.17 //@contextPatterns.12/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.17 //@contextPatterns.12/@signatureNodes.14"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.17 //@contextPatterns.12/@signatureNodes.18"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.17 //@contextPatterns.12/@signatureNodes.20"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.19 //@contextPatterns.12/@signatureNodes.9"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.19 //@contextPatterns.12/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.19 //@contextPatterns.12/@signatureNodes.14"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.19 //@contextPatterns.12/@signatureNodes.18"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.19 //@contextPatterns.12/@signatureNodes.20"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.3 //@contextPatterns.12/@signatureNodes.5"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.9 //@contextPatterns.12/@signatureNodes.11"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.9 //@contextPatterns.12/@signatureNodes.14"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.9 //@contextPatterns.12/@signatureNodes.20"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.11 //@contextPatterns.12/@signatureNodes.14"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.11 //@contextPatterns.12/@signatureNodes.18"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.14 //@contextPatterns.12/@signatureNodes.18"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.14 //@contextPatterns.12/@signatureNodes.20"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.18 //@contextPatterns.12/@signatureNodes.20"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.0 //@contextPatterns.12/@signatureNodes.1"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.6 //@contextPatterns.12/@signatureNodes.7"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.6 //@contextPatterns.12/@signatureNodes.15"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.6 //@contextPatterns.12/@signatureNodes.16"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.7 //@contextPatterns.12/@signatureNodes.15"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.7 //@contextPatterns.12/@signatureNodes.16"/>
+    <injectivityConstraints values="//@contextPatterns.12/@signatureNodes.15 //@contextPatterns.12/@signatureNodes.16"/>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.0" targetNode="//@contextPatterns.12/@signatureNodes.4">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.0" targetNode="//@contextPatterns.12/@signatureNodes.5">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.1" targetNode="//@contextPatterns.12/@signatureNodes.2">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.1" targetNode="//@contextPatterns.12/@signatureNodes.3">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.6" targetNode="//@contextPatterns.12/@signatureNodes.10">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.6" targetNode="//@contextPatterns.12/@signatureNodes.11">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.7" targetNode="//@contextPatterns.12/@signatureNodes.8">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.7" targetNode="//@contextPatterns.12/@signatureNodes.9">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.8" targetNode="//@contextPatterns.12/@signatureNodes.17">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.9" targetNode="//@contextPatterns.12/@signatureNodes.18">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.10" targetNode="//@contextPatterns.12/@signatureNodes.19">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.11" targetNode="//@contextPatterns.12/@signatureNodes.20">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.12" targetNode="//@contextPatterns.12/@signatureNodes.13">
+      <type href="../model/Tgg.ecore#//SystemToSystem/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.12" targetNode="//@contextPatterns.12/@signatureNodes.14">
+      <type href="../model/Tgg.ecore#//SystemToSystem/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.15" targetNode="//@contextPatterns.12/@signatureNodes.19">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.15" targetNode="//@contextPatterns.12/@signatureNodes.20">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.16" targetNode="//@contextPatterns.12/@signatureNodes.17">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.16" targetNode="//@contextPatterns.12/@signatureNodes.18">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.17" targetNode="//@contextPatterns.12/@signatureNodes.2">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.18" targetNode="//@contextPatterns.12/@signatureNodes.3">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.19" targetNode="//@contextPatterns.12/@signatureNodes.4">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.20" targetNode="//@contextPatterns.12/@signatureNodes.5">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.21" targetNode="//@contextPatterns.12/@signatureNodes.22">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.21" targetNode="//@contextPatterns.12/@signatureNodes.23">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.22" targetNode="//@contextPatterns.12/@signatureNodes.2">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.23" targetNode="//@contextPatterns.12/@signatureNodes.4">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.12/@signatureNodes.13" targetNode="//@contextPatterns.12/@signatureNodes.21">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+    </localEdges>
+    <signatureNodes name="feature2feature1" outgoingEdges="//@contextPatterns.12/@localEdges.0 //@contextPatterns.12/@localEdges.1">
+      <type href="../model/Tgg.ecore#//FeatToFeat"/>
+    </signatureNodes>
+    <signatureNodes name="feature2feature2" outgoingEdges="//@contextPatterns.12/@localEdges.2 //@contextPatterns.12/@localEdges.3">
+      <type href="../model/Tgg.ecore#//FeatToFeat"/>
+    </signatureNodes>
+    <signatureNodes name="feature_destination" incomingEdges="//@contextPatterns.12/@localEdges.2 //@contextPatterns.12/@localEdges.18 //@contextPatterns.12/@localEdges.24">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="feature_destination_target" incomingEdges="//@contextPatterns.12/@localEdges.3 //@contextPatterns.12/@localEdges.19">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="feature_source" incomingEdges="//@contextPatterns.12/@localEdges.0 //@contextPatterns.12/@localEdges.20 //@contextPatterns.12/@localEdges.25">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="feature_source_target" incomingEdges="//@contextPatterns.12/@localEdges.1 //@contextPatterns.12/@localEdges.21">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </signatureNodes>
+    <signatureNodes name="process2process1" outgoingEdges="//@contextPatterns.12/@localEdges.4 //@contextPatterns.12/@localEdges.5">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="process2process2" outgoingEdges="//@contextPatterns.12/@localEdges.6 //@contextPatterns.12/@localEdges.7">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="process_destination" incomingEdges="//@contextPatterns.12/@localEdges.6" outgoingEdges="//@contextPatterns.12/@localEdges.8">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="process_destination_target" incomingEdges="//@contextPatterns.12/@localEdges.7" outgoingEdges="//@contextPatterns.12/@localEdges.9">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="process_source" incomingEdges="//@contextPatterns.12/@localEdges.4" outgoingEdges="//@contextPatterns.12/@localEdges.10">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="process_source_target" incomingEdges="//@contextPatterns.12/@localEdges.5" outgoingEdges="//@contextPatterns.12/@localEdges.11">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="s2s" outgoingEdges="//@contextPatterns.12/@localEdges.12 //@contextPatterns.12/@localEdges.13">
+      <type href="../model/Tgg.ecore#//SystemToSystem"/>
+    </signatureNodes>
+    <signatureNodes name="system_source" incomingEdges="//@contextPatterns.12/@localEdges.12" outgoingEdges="//@contextPatterns.12/@localEdges.26">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </signatureNodes>
+    <signatureNodes name="system_target" incomingEdges="//@contextPatterns.12/@localEdges.13">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </signatureNodes>
+    <signatureNodes name="thread2thread1" outgoingEdges="//@contextPatterns.12/@localEdges.14 //@contextPatterns.12/@localEdges.15">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="thread2thread2" outgoingEdges="//@contextPatterns.12/@localEdges.16 //@contextPatterns.12/@localEdges.17">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="thread_destination" incomingEdges="//@contextPatterns.12/@localEdges.8 //@contextPatterns.12/@localEdges.16" outgoingEdges="//@contextPatterns.12/@localEdges.18">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="thread_destination_target" incomingEdges="//@contextPatterns.12/@localEdges.9 //@contextPatterns.12/@localEdges.17" outgoingEdges="//@contextPatterns.12/@localEdges.19">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="thread_source" incomingEdges="//@contextPatterns.12/@localEdges.10 //@contextPatterns.12/@localEdges.14" outgoingEdges="//@contextPatterns.12/@localEdges.20">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="thread_source_target" incomingEdges="//@contextPatterns.12/@localEdges.11 //@contextPatterns.12/@localEdges.15" outgoingEdges="//@contextPatterns.12/@localEdges.21">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="connection_source" incomingEdges="//@contextPatterns.12/@localEdges.26" outgoingEdges="//@contextPatterns.12/@localEdges.22 //@contextPatterns.12/@localEdges.23">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </signatureNodes>
+    <signatureNodes name="ref_connection_destination" incomingEdges="//@contextPatterns.12/@localEdges.22" outgoingEdges="//@contextPatterns.12/@localEdges.24">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </signatureNodes>
+    <signatureNodes name="ref_connection_source" incomingEdges="//@contextPatterns.12/@localEdges.23" outgoingEdges="//@contextPatterns.12/@localEdges.25">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </signatureNodes>
+    <csps name="UserDefined_eq_enum" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.tgg">
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.12/@signatureNodes.4">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.12/@signatureNodes.5">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+    </csps>
+    <csps name="UserDefined_eq_enum" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.tgg">
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.12/@signatureNodes.2">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.12/@signatureNodes.3">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+    </csps>
+    <csps name="eq_string" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.12/@signatureNodes.4">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.12/@signatureNodes.5">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </csps>
+    <csps name="eq_string" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.12/@signatureNodes.2">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="IBeXLanguage:IBeXAttributeExpression" node="//@contextPatterns.12/@signatureNodes.3">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </csps>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXLanguage:IBeXContextPattern" name="SubcomponentToSubcomponent__FWD">
+    <injectivityConstraints values="//@contextPatterns.13/@signatureNodes.1 //@contextPatterns.13/@signatureNodes.2"/>
+    <localEdges sourceNode="//@contextPatterns.13/@signatureNodes.0" targetNode="//@contextPatterns.13/@signatureNodes.1">
+      <type href="../model/Tgg.ecore#//End2End/source"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.13/@signatureNodes.0" targetNode="//@contextPatterns.13/@signatureNodes.2">
+      <type href="../model/Tgg.ecore#//End2End/target"/>
+    </localEdges>
+    <localEdges sourceNode="//@contextPatterns.13/@signatureNodes.1" targetNode="//@contextPatterns.13/@signatureNodes.3">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+    </localEdges>
+    <signatureNodes name="c2c" outgoingEdges="//@contextPatterns.13/@localEdges.0 //@contextPatterns.13/@localEdges.1">
+      <type href="../model/Tgg.ecore#//CompToComp"/>
+    </signatureNodes>
+    <signatureNodes name="component_source" incomingEdges="//@contextPatterns.13/@localEdges.0" outgoingEdges="//@contextPatterns.13/@localEdges.2">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="component_target" incomingEdges="//@contextPatterns.13/@localEdges.1">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+    <signatureNodes name="subcomponent_source" incomingEdges="//@contextPatterns.13/@localEdges.2">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </signatureNodes>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXLanguage:IBeXContextPattern" name="SystemToSystem__FWD">
+    <attributeConstraint node="//@contextPatterns.14/@signatureNodes.0" relation="EQUAL">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+      <value xsi:type="IBeXLanguage:IBeXEnumLiteral">
+        <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/system"/>
+      </value>
+    </attributeConstraint>
+    <signatureNodes name="system_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </signatureNodes>
+  </contextPatterns>
+</IBeXLanguage:IBeXPatternSet>

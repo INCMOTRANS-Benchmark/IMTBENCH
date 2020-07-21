@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ASCII"?>
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="Top_level2_Instance" category="system">
+  <componentInstance name="PC2" category="system">
+    <componentInstance name="C" category="system">
+      <featureInstance name="Beta"/>
+      <componentInstance name="T" category="data"/>
+      <componentInstance name="the_bus" category="bus"/>
+      <componentInstance name="CPU" category="processor">
+        <featureInstance name="ETH" category="busAccess"/>
+      </componentInstance>
+      <componentInstance name="pr_B_1" category="process">
+        <componentInstance name="Consumer" category="thread"/>
+      </componentInstance>
+    </componentInstance>
+    <componentInstance name="P" category="system">
+      <componentInstance name="T" category="data"/>
+      <componentInstance name="pr_A_1" category="process">
+        <componentInstance name="Producer" category="thread"/>
+      </componentInstance>
+      <componentInstance name="the_bus" category="bus"/>
+      <componentInstance name="CPU" category="processor">
+        <featureInstance name="ETH" category="busAccess"/>
+      </componentInstance>
+    </componentInstance>
+    <componentInstance name="PC1.P.pr_A_1.Producer.Data_Source -> PC2.C.pr_B_1.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_out" kind="accessConnection" destination="//@componentInstance.0/@componentInstance.2" source="//@componentInstance.0/@componentInstance.0/@featureInstance.0">
+      <connectionReference source="//@componentInstance.0/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.0/@componentInstance.2"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="PC1" category="system">
+    <componentInstance name="C" category="system">
+      <componentInstance name="CPU" category="processor">
+        <featureInstance name="ETH" category="busAccess"/>
+      </componentInstance>
+      <componentInstance name="the_bus" category="bus"/>
+      <componentInstance name="T" category="data"/>
+      <componentInstance name="pr_B_1" category="process">
+        <componentInstance name="Consumer" category="thread"/>
+      </componentInstance>
+    </componentInstance>
+    <componentInstance name="P" category="system">
+      <featureInstance name="Alpha" direction="out"/>
+      <componentInstance name="the_bus" category="bus"/>
+      <componentInstance name="T" category="data"/>
+      <componentInstance name="CPU" category="processor">
+        <featureInstance name="ETH" category="busAccess"/>
+      </componentInstance>
+      <componentInstance name="pr_A_1" category="process">
+        <componentInstance name="Producer" category="thread"/>
+      </componentInstance>
+    </componentInstance>
+    <componentInstance name="PC1.P.pr_A_1.Producer.Data_Source -> PC2.C.pr_B_1.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_in" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.1/@featureInstance.0" source="//@componentInstance.1/@componentInstance.2">
+      <connectionReference source="//@componentInstance.1/@componentInstance.2" destination="//@componentInstance.1/@componentInstance.1/@featureInstance.0"/>
+    </connectionInstance>
+  </componentInstance>
+</instance:SystemInstance>

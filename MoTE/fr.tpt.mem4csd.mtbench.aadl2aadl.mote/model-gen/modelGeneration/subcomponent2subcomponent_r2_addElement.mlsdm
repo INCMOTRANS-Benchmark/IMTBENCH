@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mlsdm:Activity xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mlexpressions="http://www.mdelab.de/mlexpressions/1.0" xmlns:mlsdm="http://www.mdelab.de/mlsdm/1.0" xmlns:mlstorypatterns="http://www.mdelab.de/mlstorypatterns/1.0" uuid="__k2-4K-5EeqN9ew5rcv3QA" name="subcomponent2subcomponent_r2_addElement">
+  <edges uuid="__k2-4a-5EeqN9ew5rcv3QA" source="__k2-66-5EeqN9ew5rcv3QA" target="__k2-76-5EeqN9ew5rcv3QA" guardType="FAILURE"/>
+  <edges uuid="__k2-4q-5EeqN9ew5rcv3QA" source="__k2-9K-5EeqN9ew5rcv3QA" target="__k2-66-5EeqN9ew5rcv3QA" guardType="SUCCESS"/>
+  <edges uuid="__k2-46-5EeqN9ew5rcv3QA" source="__k2-76-5EeqN9ew5rcv3QA" target="__k2-56-5EeqN9ew5rcv3QA"/>
+  <edges uuid="__k2-5K-5EeqN9ew5rcv3QA" source="__k2-6q-5EeqN9ew5rcv3QA" target="__k2-9K-5EeqN9ew5rcv3QA"/>
+  <edges uuid="__k2-5a-5EeqN9ew5rcv3QA" source="__k2-9K-5EeqN9ew5rcv3QA" target="__k2-56-5EeqN9ew5rcv3QA" guardType="FAILURE"/>
+  <edges uuid="__k2-5q-5EeqN9ew5rcv3QA" source="__k2-66-5EeqN9ew5rcv3QA" target="__k2_C6-5EeqN9ew5rcv3QA" guardType="SUCCESS"/>
+  <nodes xsi:type="mlsdm:ActivityFinalNode" uuid="__k2-56-5EeqN9ew5rcv3QA" incomingEdges="__k2-5a-5EeqN9ew5rcv3QA __k2-46-5EeqN9ew5rcv3QA">
+    <outputParameterValues uuid="__k2-6K-5EeqN9ew5rcv3QA" parameter="__k2_D6-5EeqN9ew5rcv3QA">
+      <expression xsi:type="mlexpressions:MLStringExpression" uuid="__k2-6a-5EeqN9ew5rcv3QA" expressionString="null" expressionLanguageID="OCL"/>
+    </outputParameterValues>
+  </nodes>
+  <nodes xsi:type="mlsdm:InitialNode" uuid="__k2-6q-5EeqN9ew5rcv3QA" outgoingEdges="__k2-5K-5EeqN9ew5rcv3QA"/>
+  <nodes xsi:type="mlsdm:StoryNode" uuid="__k2-66-5EeqN9ew5rcv3QA" outgoingEdges="__k2-5q-5EeqN9ew5rcv3QA __k2-4a-5EeqN9ew5rcv3QA" incomingEdges="__k2-4q-5EeqN9ew5rcv3QA" name="check attribute formulae">
+    <storyPattern uuid="__k2-7K-5EeqN9ew5rcv3QA" name="check attribute formulae">
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__k2-7a-5EeqN9ew5rcv3QA" name="subcomponentInstance" bindingType="BOUND">
+        <type xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__k2-7q-5EeqN9ew5rcv3QA" name="subcomponentInstanceRef" bindingType="BOUND">
+        <type xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      </storyPatternObjects>
+    </storyPattern>
+  </nodes>
+  <nodes xsi:type="mlsdm:StoryNode" uuid="__k2-76-5EeqN9ew5rcv3QA" outgoingEdges="__k2-46-5EeqN9ew5rcv3QA" incomingEdges="__k2-4a-5EeqN9ew5rcv3QA" name="delete elements">
+    <storyPattern uuid="__k2-8K-5EeqN9ew5rcv3QA" name="delete elements">
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__k2-8a-5EeqN9ew5rcv3QA" modifier="DESTROY" name="subcomponentInstance" bindingType="BOUND">
+        <type xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__k2-8q-5EeqN9ew5rcv3QA" modifier="DESTROY" name="subcomponentInstanceRef" bindingType="BOUND">
+        <type xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__k2-86-5EeqN9ew5rcv3QA" modifier="DESTROY" name="subcomponent2subcomponent" bindingType="BOUND">
+        <type xsi:type="ecore:EClass" href="https://mem4csd.telecom-paristech.fr/mtbench.aadl2aadl#//CorrComponent2Component"/>
+      </storyPatternObjects>
+    </storyPattern>
+  </nodes>
+  <nodes xsi:type="mlsdm:StoryNode" uuid="__k2-9K-5EeqN9ew5rcv3QA" outgoingEdges="__k2-4q-5EeqN9ew5rcv3QA __k2-5a-5EeqN9ew5rcv3QA" incomingEdges="__k2-5K-5EeqN9ew5rcv3QA" name="create elements">
+    <storyPattern uuid="__k2-9a-5EeqN9ew5rcv3QA" name="create elements">
+      <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="__k2-9q-5EeqN9ew5rcv3QA" modifier="CREATE" source="__k2_Aq-5EeqN9ew5rcv3QA" target="__k2-_a-5EeqN9ew5rcv3QA">
+        <feature xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </storyPatternLinks>
+      <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="__k2-96-5EeqN9ew5rcv3QA" modifier="CREATE" source="__k2_A6-5EeqN9ew5rcv3QA" target="__k2_BK-5EeqN9ew5rcv3QA">
+        <feature xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </storyPatternLinks>
+      <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="__k2--K-5EeqN9ew5rcv3QA" source="__k2_Ca-5EeqN9ew5rcv3QA" target="__k2_A6-5EeqN9ew5rcv3QA">
+        <feature xsi:type="ecore:EReference" href="http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode/rightNodes"/>
+      </storyPatternLinks>
+      <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="__k2--a-5EeqN9ew5rcv3QA" modifier="CREATE" source="__k2_Cq-5EeqN9ew5rcv3QA" target="__k2_BK-5EeqN9ew5rcv3QA">
+        <feature xsi:type="ecore:EReference" href="http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode/rightNodes"/>
+      </storyPatternLinks>
+      <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="__k2--q-5EeqN9ew5rcv3QA" source="__k2_Ca-5EeqN9ew5rcv3QA" target="__k2_Aq-5EeqN9ew5rcv3QA">
+        <feature xsi:type="ecore:EReference" href="http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode/leftNodes"/>
+      </storyPatternLinks>
+      <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="__k2--6-5EeqN9ew5rcv3QA" modifier="CREATE" source="__k2_Cq-5EeqN9ew5rcv3QA" target="__k2-_a-5EeqN9ew5rcv3QA">
+        <feature xsi:type="ecore:EReference" href="http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode/leftNodes"/>
+      </storyPatternLinks>
+      <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="__k2-_K-5EeqN9ew5rcv3QA" modifier="CREATE" source="__k2_Ca-5EeqN9ew5rcv3QA" target="__k2_Cq-5EeqN9ew5rcv3QA">
+        <feature xsi:type="ecore:EReference" href="http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode/next"/>
+      </storyPatternLinks>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__k2-_a-5EeqN9ew5rcv3QA" modifier="CREATE" name="subcomponentInstance" incomingLinks="__k2-9q-5EeqN9ew5rcv3QA __k2--6-5EeqN9ew5rcv3QA">
+        <type xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+        <attributeAssignments uuid="__k2-_q-5EeqN9ew5rcv3QA">
+          <assignmentExpression xsi:type="mlexpressions:MLStringExpression" uuid="__k2-_6-5EeqN9ew5rcv3QA" expressionString="nameVar" expressionLanguageID="OCL"/>
+          <feature xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+        </attributeAssignments>
+        <attributeAssignments uuid="__k2_AK-5EeqN9ew5rcv3QA">
+          <assignmentExpression xsi:type="mlexpressions:MLStringExpression" uuid="__k2_Aa-5EeqN9ew5rcv3QA" expressionString="categoryVar" expressionLanguageID="OCL"/>
+          <feature xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        </attributeAssignments>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__k2_Aq-5EeqN9ew5rcv3QA" name="componentInstance" outgoingLinks="__k2-9q-5EeqN9ew5rcv3QA" incomingLinks="__k2--q-5EeqN9ew5rcv3QA">
+        <type xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__k2_A6-5EeqN9ew5rcv3QA" name="componentInstanceRef" outgoingLinks="__k2-96-5EeqN9ew5rcv3QA" incomingLinks="__k2--K-5EeqN9ew5rcv3QA">
+        <type xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__k2_BK-5EeqN9ew5rcv3QA" modifier="CREATE" name="subcomponentInstanceRef" incomingLinks="__k2-96-5EeqN9ew5rcv3QA __k2--a-5EeqN9ew5rcv3QA">
+        <type xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+        <attributeAssignments uuid="__k2_Ba-5EeqN9ew5rcv3QA">
+          <assignmentExpression xsi:type="mlexpressions:MLStringExpression" uuid="__k2_Bq-5EeqN9ew5rcv3QA" expressionString="nameVar" expressionLanguageID="OCL"/>
+          <feature xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+        </attributeAssignments>
+        <attributeAssignments uuid="__k2_B6-5EeqN9ew5rcv3QA">
+          <assignmentExpression xsi:type="mlexpressions:MLStringExpression" uuid="__k2_CK-5EeqN9ew5rcv3QA" expressionString="categoryVar" expressionLanguageID="OCL"/>
+          <feature xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        </attributeAssignments>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__k2_Ca-5EeqN9ew5rcv3QA" name="component2component" outgoingLinks="__k2--K-5EeqN9ew5rcv3QA __k2--q-5EeqN9ew5rcv3QA __k2-_K-5EeqN9ew5rcv3QA" bindingType="BOUND">
+        <type xsi:type="ecore:EClass" href="https://mem4csd.telecom-paristech.fr/mtbench.aadl2aadl#//CorrComponent2Component"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__k2_Cq-5EeqN9ew5rcv3QA" modifier="CREATE" name="subcomponent2subcomponent" outgoingLinks="__k2--6-5EeqN9ew5rcv3QA __k2--a-5EeqN9ew5rcv3QA" incomingLinks="__k2-_K-5EeqN9ew5rcv3QA">
+        <type xsi:type="ecore:EClass" href="https://mem4csd.telecom-paristech.fr/mtbench.aadl2aadl#//CorrComponent2Component"/>
+      </storyPatternObjects>
+    </storyPattern>
+  </nodes>
+  <nodes xsi:type="mlsdm:ActivityFinalNode" uuid="__k2_C6-5EeqN9ew5rcv3QA" incomingEdges="__k2-5q-5EeqN9ew5rcv3QA">
+    <outputParameterValues uuid="__k2_DK-5EeqN9ew5rcv3QA" parameter="__k2_D6-5EeqN9ew5rcv3QA">
+      <expression xsi:type="mlexpressions:MLStringExpression" uuid="__k2_Da-5EeqN9ew5rcv3QA" expressionString="subcomponent2subcomponent" expressionLanguageID="OCL"/>
+    </outputParameterValues>
+  </nodes>
+  <parameters uuid="__k2_Dq-5EeqN9ew5rcv3QA" name="component2component">
+    <type xsi:type="ecore:EClass" href="https://mem4csd.telecom-paristech.fr/mtbench.aadl2aadl#//CorrComponent2Component"/>
+  </parameters>
+  <parameters uuid="__k2_D6-5EeqN9ew5rcv3QA" name="subcomponent2subcomponent" direction="OUT">
+    <type xsi:type="ecore:EClass" href="https://mem4csd.telecom-paristech.fr/mtbench.aadl2aadl#//CorrComponent2Component"/>
+  </parameters>
+  <parameters uuid="__k2_EK-5EeqN9ew5rcv3QA" name="nameVar">
+    <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </parameters>
+  <parameters uuid="__k2_Ea-5EeqN9ew5rcv3QA" name="categoryVar">
+    <type xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+  </parameters>
+</mlsdm:Activity>

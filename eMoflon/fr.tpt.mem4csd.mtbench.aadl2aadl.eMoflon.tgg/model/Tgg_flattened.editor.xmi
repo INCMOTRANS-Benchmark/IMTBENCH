@@ -1,0 +1,2330 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tgg:TripleGraphGrammarFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tgg="http://www.moflon.org/ide/tgg/mosl/TGG">
+  <imports name="http://aadl.info/AADL/2.0"/>
+  <imports name="http://aadl.info/AADL/2.0/instance"/>
+  <schema name="Tgg">
+    <sourceTypes href="http://aadl.info/AADL/2.0/instance#/"/>
+    <targetTypes href="http://aadl.info/AADL/2.0/instance#/"/>
+    <correspondenceTypes name="SystemToSystem">
+      <source href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+      <target href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="ConnectionToConnection">
+      <source href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <target href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="PortConnectionToSharedData">
+      <source href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <target href="http://aadl.info/AADL/2.0/instance#//InstanceObject"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="Reference2Reference">
+      <source href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <target href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="End2End">
+      <source href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+      <target href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="CompToComp" super="//@schema/@correspondenceTypes.4"/>
+    <correspondenceTypes name="FeatToFeat" super="//@schema/@correspondenceTypes.4"/>
+    <attributeCondDefs name="eq_enum" userDefined="true">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EEnumerator"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EEnumerator"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="not_port_connection" userDefined="true">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EEnumerator"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="not_port_feature" userDefined="true">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EEnumerator"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="is_device" userDefined="true">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EEnumerator"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EEnumerator"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="eq_string">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+  </schema>
+  <rules name="ComponentToComponent" schema="//@schema">
+    <sourcePatterns name="component_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </sourcePatterns>
+    <sourcePatterns name="system_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+      <linkVariablePatterns target="//@rules.0/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="component_target">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </targetPatterns>
+    <targetPatterns name="system_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="c2c" type="//@schema/@correspondenceTypes.5" source="//@rules.0/@sourcePatterns.0" target="//@rules.0/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="s2s" type="//@schema/@correspondenceTypes.0" source="//@rules.0/@sourcePatterns.1" target="//@rules.0/@targetPatterns.1"/>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@targetPatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@targetPatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ConnectionInstanceToConnectionInstance" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="connection_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <linkVariablePatterns target="//@rules.1/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/destination"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="s_destination">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </sourcePatterns>
+    <sourcePatterns name="s_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </sourcePatterns>
+    <targetPatterns name="connection_target">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.2">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/destination"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="t_destination">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </targetPatterns>
+    <targetPatterns name="t_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </targetPatterns>
+    <correspondencePatterns name="c2c" type="//@schema/@correspondenceTypes.1" source="//@rules.1/@sourcePatterns.0" target="//@rules.1/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="e2e1" type="//@schema/@correspondenceTypes.4" source="//@rules.1/@sourcePatterns.1" target="//@rules.1/@targetPatterns.1"/>
+    <correspondencePatterns name="e2e2" type="//@schema/@correspondenceTypes.4" source="//@rules.1/@sourcePatterns.2" target="//@rules.1/@targetPatterns.2"/>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.1/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.1/@targetPatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.1/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.1/@targetPatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.1">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.1/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ConnectionInstanceToConnectionInstanceAtProcess" schema="//@schema">
+    <sourcePatterns name="component_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.2/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="connection_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <linkVariablePatterns target="//@rules.2/@sourcePatterns.3">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.2/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/destination"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="s_destination">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </sourcePatterns>
+    <sourcePatterns name="s_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </sourcePatterns>
+    <targetPatterns name="component_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="connection_target">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.3">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.2">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/destination"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="t_destination">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </targetPatterns>
+    <targetPatterns name="t_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </targetPatterns>
+    <correspondencePatterns name="c2c" type="//@schema/@correspondenceTypes.1" source="//@rules.2/@sourcePatterns.1" target="//@rules.2/@targetPatterns.1">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="comp2comp" type="//@schema/@correspondenceTypes.5" source="//@rules.2/@sourcePatterns.0" target="//@rules.2/@targetPatterns.0"/>
+    <correspondencePatterns name="e2e1" type="//@schema/@correspondenceTypes.4" source="//@rules.2/@sourcePatterns.2" target="//@rules.2/@targetPatterns.2"/>
+    <correspondencePatterns name="e2e2" type="//@schema/@correspondenceTypes.4" source="//@rules.2/@sourcePatterns.3" target="//@rules.2/@targetPatterns.3"/>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.2/@sourcePatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.2/@targetPatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.2/@sourcePatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.2/@targetPatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.1">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.2/@sourcePatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ConnectionInstanceToConnectionInstanceAtSystem" schema="//@schema">
+    <sourcePatterns name="connection_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <linkVariablePatterns target="//@rules.3/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.3/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/destination"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="s_destination">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </sourcePatterns>
+    <sourcePatterns name="s_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </sourcePatterns>
+    <sourcePatterns name="system_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+      <linkVariablePatterns target="//@rules.3/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="connection_target">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.3">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.2">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/destination"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="system_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="t_destination">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </targetPatterns>
+    <targetPatterns name="t_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </targetPatterns>
+    <correspondencePatterns name="c2c" type="//@schema/@correspondenceTypes.1" source="//@rules.3/@sourcePatterns.0" target="//@rules.3/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="e2e1" type="//@schema/@correspondenceTypes.4" source="//@rules.3/@sourcePatterns.1" target="//@rules.3/@targetPatterns.2"/>
+    <correspondencePatterns name="e2e2" type="//@schema/@correspondenceTypes.4" source="//@rules.3/@sourcePatterns.2" target="//@rules.3/@targetPatterns.3"/>
+    <correspondencePatterns name="s2s" type="//@schema/@correspondenceTypes.0" source="//@rules.3/@sourcePatterns.3" target="//@rules.3/@targetPatterns.1"/>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.3/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.3/@targetPatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.3/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.3/@targetPatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.1">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.3/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ConnectionReferenceToConnectionReference" schema="//@schema">
+    <sourcePatterns name="connectionRef_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <linkVariablePatterns target="//@rules.4/@sourcePatterns.3">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.4/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="connection_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <linkVariablePatterns target="//@rules.4/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="s_destination">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </sourcePatterns>
+    <sourcePatterns name="s_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </sourcePatterns>
+    <targetPatterns name="connectionRef_target">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <linkVariablePatterns target="//@rules.4/@targetPatterns.3">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.4/@targetPatterns.2">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="connection_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <linkVariablePatterns target="//@rules.4/@targetPatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="t_destination">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </targetPatterns>
+    <targetPatterns name="t_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </targetPatterns>
+    <correspondencePatterns name="c2c" type="//@schema/@correspondenceTypes.1" source="//@rules.4/@sourcePatterns.1" target="//@rules.4/@targetPatterns.1"/>
+    <correspondencePatterns name="e2e1" type="//@schema/@correspondenceTypes.4" source="//@rules.4/@sourcePatterns.2" target="//@rules.4/@targetPatterns.2"/>
+    <correspondencePatterns name="e2e2" type="//@schema/@correspondenceTypes.4" source="//@rules.4/@sourcePatterns.3" target="//@rules.4/@targetPatterns.3"/>
+    <correspondencePatterns name="r2r" type="//@schema/@correspondenceTypes.3" source="//@rules.4/@sourcePatterns.0" target="//@rules.4/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+  </rules>
+  <rules name="FeatureToFeature" schema="//@schema">
+    <sourcePatterns name="component_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.5/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="feature_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </sourcePatterns>
+    <targetPatterns name="component_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.5/@targetPatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="feature_target">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </targetPatterns>
+    <correspondencePatterns name="c2c" type="//@schema/@correspondenceTypes.5" source="//@rules.5/@sourcePatterns.0" target="//@rules.5/@targetPatterns.0"/>
+    <correspondencePatterns name="f2f2" type="//@schema/@correspondenceTypes.6" source="//@rules.5/@sourcePatterns.1" target="//@rules.5/@targetPatterns.1">
+      <op value="++"/>
+    </correspondencePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.5/@sourcePatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/category"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.5/@targetPatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/category"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.5/@sourcePatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.5/@targetPatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.5/@sourcePatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.5/@targetPatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.2">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.5/@sourcePatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/category"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="PortConnectionToDataAccessAtProcess" schema="//@schema">
+    <sourcePatterns name="component_conn_destination">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeConstraints op="==">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/thread"/>
+        </valueExp>
+      </attributeConstraints>
+      <linkVariablePatterns target="//@rules.6/@sourcePatterns.4">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="component_conn_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeConstraints op="==">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/thread"/>
+        </valueExp>
+      </attributeConstraints>
+      <linkVariablePatterns target="//@rules.6/@sourcePatterns.5">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="component_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeConstraints op="==">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/process"/>
+        </valueExp>
+      </attributeConstraints>
+      <linkVariablePatterns target="//@rules.6/@sourcePatterns.1">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.6/@sourcePatterns.0">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.6/@sourcePatterns.3">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="connection_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0/instance#//ConnectionKind"/>
+          <literal href="http://aadl.info/AADL/2.0/instance#//ConnectionKind/portConnection"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.6/@sourcePatterns.5">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.6/@sourcePatterns.4">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.6/@sourcePatterns.6">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="feature_destination">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </sourcePatterns>
+    <sourcePatterns name="feature_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </sourcePatterns>
+    <sourcePatterns name="ref_connection_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </sourcePatterns>
+    <targetPatterns name="component_conn_destination_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.7">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="component_conn_source_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.6">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="component_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.3">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.0">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.1">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.4">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.5">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="data">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/data"/>
+        </valueExp>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="dataaccess1">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0/instance#//ConnectionKind"/>
+          <literal href="http://aadl.info/AADL/2.0/instance#//ConnectionKind/accessConnection"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.3">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.6">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.8">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="dataaccess2">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0/instance#//ConnectionKind"/>
+          <literal href="http://aadl.info/AADL/2.0/instance#//ConnectionKind/accessConnection"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.7">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.3">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.9">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="feature1">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </targetPatterns>
+    <targetPatterns name="feature2">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </targetPatterns>
+    <targetPatterns name="refconnection1">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.2">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/context"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.3">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.6">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="refconnection2">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.2">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/context"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.7">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.3">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="c2c" type="//@schema/@correspondenceTypes.5" source="//@rules.6/@sourcePatterns.2" target="//@rules.6/@targetPatterns.2"/>
+    <correspondencePatterns name="f2f1" type="//@schema/@correspondenceTypes.6" source="//@rules.6/@sourcePatterns.5" target="//@rules.6/@targetPatterns.6">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="f2f2" type="//@schema/@correspondenceTypes.6" source="//@rules.6/@sourcePatterns.4" target="//@rules.6/@targetPatterns.7">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="p2a1" type="//@schema/@correspondenceTypes.2" source="//@rules.6/@sourcePatterns.3" target="//@rules.6/@targetPatterns.4">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="p2a2" type="//@schema/@correspondenceTypes.2" source="//@rules.6/@sourcePatterns.3" target="//@rules.6/@targetPatterns.5">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="p2d" type="//@schema/@correspondenceTypes.2" source="//@rules.6/@sourcePatterns.3" target="//@rules.6/@targetPatterns.3">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="p2r1" type="//@schema/@correspondenceTypes.2" source="//@rules.6/@sourcePatterns.3" target="//@rules.6/@targetPatterns.8">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="p2r2" type="//@schema/@correspondenceTypes.2" source="//@rules.6/@sourcePatterns.3" target="//@rules.6/@targetPatterns.9">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="sub2sub1" type="//@schema/@correspondenceTypes.5" source="//@rules.6/@sourcePatterns.1" target="//@rules.6/@targetPatterns.1"/>
+    <correspondencePatterns name="sub2sub2" type="//@schema/@correspondenceTypes.5" source="//@rules.6/@sourcePatterns.0" target="//@rules.6/@targetPatterns.0"/>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.6/@sourcePatterns.5">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.6/@targetPatterns.6">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.6/@sourcePatterns.4">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.6/@targetPatterns.7">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.6/@sourcePatterns.5">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.6/@targetPatterns.6">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.6/@sourcePatterns.4">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.6/@targetPatterns.7">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.6/@targetPatterns.3">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.6/@sourcePatterns.3">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.6/@targetPatterns.4">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.6/@sourcePatterns.3">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.6/@targetPatterns.5">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.6/@sourcePatterns.3">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="PortConnectionToDataAccessAtSystem00" schema="//@schema">
+    <sourcePatterns name="connection_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0/instance#//ConnectionKind"/>
+          <literal href="http://aadl.info/AADL/2.0/instance#//ConnectionKind/portConnection"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.7/@sourcePatterns.6">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.7/@sourcePatterns.5">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="feature_destination">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </sourcePatterns>
+    <sourcePatterns name="feature_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </sourcePatterns>
+    <sourcePatterns name="process_destination">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeConstraints op="==">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/process"/>
+        </valueExp>
+      </attributeConstraints>
+      <linkVariablePatterns target="//@rules.7/@sourcePatterns.8">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="process_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeConstraints op="==">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/process"/>
+        </valueExp>
+      </attributeConstraints>
+      <linkVariablePatterns target="//@rules.7/@sourcePatterns.9">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="ref_connection_destination">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <linkVariablePatterns target="//@rules.7/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.7/@sourcePatterns.3">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/context"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="ref_connection_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <linkVariablePatterns target="//@rules.7/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.7/@sourcePatterns.4">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/context"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="system_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+      <linkVariablePatterns target="//@rules.7/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="thread_destination">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeConstraints op="==">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/thread"/>
+        </valueExp>
+      </attributeConstraints>
+      <linkVariablePatterns target="//@rules.7/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="thread_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeConstraints op="==">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/thread"/>
+        </valueExp>
+      </attributeConstraints>
+      <linkVariablePatterns target="//@rules.7/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="data_destination">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/data"/>
+        </valueExp>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="data_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/data"/>
+        </valueExp>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="dataaccess_destination">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0/instance#//ConnectionKind"/>
+          <literal href="http://aadl.info/AADL/2.0/instance#//ConnectionKind/accessConnection"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.4">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.8">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="dataaccess_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0/instance#//ConnectionKind"/>
+          <literal href="http://aadl.info/AADL/2.0/instance#//ConnectionKind/accessConnection"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.5">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.9">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="feature_destination_target">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0/instance#//FeatureCategory"/>
+          <literal href="http://aadl.info/AADL/2.0/instance#//FeatureCategory/Parameter"/>
+        </valueExp>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="feature_source_target">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0/instance#//FeatureCategory"/>
+          <literal href="http://aadl.info/AADL/2.0/instance#//FeatureCategory/Parameter"/>
+        </valueExp>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="process_destination_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.11">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.2">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="process_source_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.12">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.3">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="ref_destination">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.4">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="ref_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.5">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="system_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </targetPatterns>
+    <targetPatterns name="thread_destination_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.4">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="thread_source_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.5">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="feature2feature1" type="//@schema/@correspondenceTypes.6" source="//@rules.7/@sourcePatterns.2" target="//@rules.7/@targetPatterns.5">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="feature2feature2" type="//@schema/@correspondenceTypes.6" source="//@rules.7/@sourcePatterns.1" target="//@rules.7/@targetPatterns.4">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="p2a1" type="//@schema/@correspondenceTypes.2" source="//@rules.7/@sourcePatterns.0" target="//@rules.7/@targetPatterns.3">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="p2a2" type="//@schema/@correspondenceTypes.2" source="//@rules.7/@sourcePatterns.0" target="//@rules.7/@targetPatterns.2">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="p2d1" type="//@schema/@correspondenceTypes.2" source="//@rules.7/@sourcePatterns.0" target="//@rules.7/@targetPatterns.1">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="p2d2" type="//@schema/@correspondenceTypes.2" source="//@rules.7/@sourcePatterns.0" target="//@rules.7/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="process2process1" type="//@schema/@correspondenceTypes.5" source="//@rules.7/@sourcePatterns.4" target="//@rules.7/@targetPatterns.7"/>
+    <correspondencePatterns name="process2process2" type="//@schema/@correspondenceTypes.5" source="//@rules.7/@sourcePatterns.3" target="//@rules.7/@targetPatterns.6"/>
+    <correspondencePatterns name="r2r1" type="//@schema/@correspondenceTypes.2" source="//@rules.7/@sourcePatterns.0" target="//@rules.7/@targetPatterns.9">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="r2r2" type="//@schema/@correspondenceTypes.2" source="//@rules.7/@sourcePatterns.0" target="//@rules.7/@targetPatterns.8">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="s2s" type="//@schema/@correspondenceTypes.0" source="//@rules.7/@sourcePatterns.7" target="//@rules.7/@targetPatterns.10"/>
+    <correspondencePatterns name="thread2thread1" type="//@schema/@correspondenceTypes.5" source="//@rules.7/@sourcePatterns.9" target="//@rules.7/@targetPatterns.12"/>
+    <correspondencePatterns name="thread2thread2" type="//@schema/@correspondenceTypes.5" source="//@rules.7/@sourcePatterns.8" target="//@rules.7/@targetPatterns.11"/>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@sourcePatterns.2">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@targetPatterns.5">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@sourcePatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@targetPatterns.4">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@targetPatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@targetPatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@targetPatterns.3">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@sourcePatterns.2">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@targetPatterns.5">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@targetPatterns.2">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@sourcePatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@targetPatterns.4">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="PortConnectionToDataAccessAtSystem01" schema="//@schema">
+    <sourcePatterns name="connection_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0/instance#//ConnectionKind"/>
+          <literal href="http://aadl.info/AADL/2.0/instance#//ConnectionKind/portConnection"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.8/@sourcePatterns.6">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.8/@sourcePatterns.5">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="feature_destination">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </sourcePatterns>
+    <sourcePatterns name="feature_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </sourcePatterns>
+    <sourcePatterns name="process_destination">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeConstraints op="==">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/process"/>
+        </valueExp>
+      </attributeConstraints>
+      <linkVariablePatterns target="//@rules.8/@sourcePatterns.8">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="process_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeConstraints op="==">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/process"/>
+        </valueExp>
+      </attributeConstraints>
+      <linkVariablePatterns target="//@rules.8/@sourcePatterns.9">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="ref_connection_destination">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <linkVariablePatterns target="//@rules.8/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.8/@sourcePatterns.3">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/context"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="ref_connection_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <linkVariablePatterns target="//@rules.8/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.8/@sourcePatterns.4">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/context"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="system_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+      <linkVariablePatterns target="//@rules.8/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="thread_destination">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeConstraints op="==">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/thread"/>
+        </valueExp>
+      </attributeConstraints>
+      <linkVariablePatterns target="//@rules.8/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="thread_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeConstraints op="==">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/thread"/>
+        </valueExp>
+      </attributeConstraints>
+      <linkVariablePatterns target="//@rules.8/@sourcePatterns.2">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="data_destination">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/data"/>
+        </valueExp>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="data_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/data"/>
+        </valueExp>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="dataaccess_destination">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0/instance#//ConnectionKind"/>
+          <literal href="http://aadl.info/AADL/2.0/instance#//ConnectionKind/accessConnection"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.4">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.8">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="dataaccess_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0/instance#//ConnectionKind"/>
+          <literal href="http://aadl.info/AADL/2.0/instance#//ConnectionKind/accessConnection"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.5">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.9">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="feature_destination_target">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </targetPatterns>
+    <targetPatterns name="feature_source_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </targetPatterns>
+    <targetPatterns name="process_destination_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.11">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.2">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="process_source_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.12">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.3">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="ref_destination">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.4">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="ref_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.5">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="system_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </targetPatterns>
+    <targetPatterns name="thread_destination_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.4">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="thread_source_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.5">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="feature2feature1" type="//@schema/@correspondenceTypes.6" source="//@rules.8/@sourcePatterns.2" target="//@rules.8/@targetPatterns.5"/>
+    <correspondencePatterns name="feature2feature2" type="//@schema/@correspondenceTypes.6" source="//@rules.8/@sourcePatterns.1" target="//@rules.8/@targetPatterns.4">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="p2a1" type="//@schema/@correspondenceTypes.2" source="//@rules.8/@sourcePatterns.0" target="//@rules.8/@targetPatterns.3">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="p2a2" type="//@schema/@correspondenceTypes.2" source="//@rules.8/@sourcePatterns.0" target="//@rules.8/@targetPatterns.2">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="p2d1" type="//@schema/@correspondenceTypes.2" source="//@rules.8/@sourcePatterns.0" target="//@rules.8/@targetPatterns.1">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="p2d2" type="//@schema/@correspondenceTypes.2" source="//@rules.8/@sourcePatterns.0" target="//@rules.8/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="process2process1" type="//@schema/@correspondenceTypes.5" source="//@rules.8/@sourcePatterns.4" target="//@rules.8/@targetPatterns.7"/>
+    <correspondencePatterns name="process2process2" type="//@schema/@correspondenceTypes.5" source="//@rules.8/@sourcePatterns.3" target="//@rules.8/@targetPatterns.6"/>
+    <correspondencePatterns name="r2r1" type="//@schema/@correspondenceTypes.2" source="//@rules.8/@sourcePatterns.0" target="//@rules.8/@targetPatterns.9">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="r2r2" type="//@schema/@correspondenceTypes.2" source="//@rules.8/@sourcePatterns.0" target="//@rules.8/@targetPatterns.8">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="s2s" type="//@schema/@correspondenceTypes.0" source="//@rules.8/@sourcePatterns.7" target="//@rules.8/@targetPatterns.10"/>
+    <correspondencePatterns name="thread2thread1" type="//@schema/@correspondenceTypes.5" source="//@rules.8/@sourcePatterns.9" target="//@rules.8/@targetPatterns.12"/>
+    <correspondencePatterns name="thread2thread2" type="//@schema/@correspondenceTypes.5" source="//@rules.8/@sourcePatterns.8" target="//@rules.8/@targetPatterns.11"/>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@sourcePatterns.2">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@targetPatterns.5">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@sourcePatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@targetPatterns.4">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@sourcePatterns.2">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@targetPatterns.5">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@sourcePatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@targetPatterns.4">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@targetPatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@targetPatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@targetPatterns.3">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@targetPatterns.2">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="PortConnectionToDataAccessAtSystem10" schema="//@schema">
+    <sourcePatterns name="connection_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0/instance#//ConnectionKind"/>
+          <literal href="http://aadl.info/AADL/2.0/instance#//ConnectionKind/portConnection"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.9/@sourcePatterns.6">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@sourcePatterns.5">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="feature_destination">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </sourcePatterns>
+    <sourcePatterns name="feature_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </sourcePatterns>
+    <sourcePatterns name="process_destination">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeConstraints op="==">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/process"/>
+        </valueExp>
+      </attributeConstraints>
+      <linkVariablePatterns target="//@rules.9/@sourcePatterns.8">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="process_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeConstraints op="==">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/process"/>
+        </valueExp>
+      </attributeConstraints>
+      <linkVariablePatterns target="//@rules.9/@sourcePatterns.9">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="ref_connection_destination">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <linkVariablePatterns target="//@rules.9/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@sourcePatterns.3">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/context"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="ref_connection_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <linkVariablePatterns target="//@rules.9/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@sourcePatterns.4">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/context"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="system_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+      <linkVariablePatterns target="//@rules.9/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="thread_destination">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeConstraints op="==">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/thread"/>
+        </valueExp>
+      </attributeConstraints>
+      <linkVariablePatterns target="//@rules.9/@sourcePatterns.1">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="thread_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeConstraints op="==">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/thread"/>
+        </valueExp>
+      </attributeConstraints>
+      <linkVariablePatterns target="//@rules.9/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="data_destination">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/data"/>
+        </valueExp>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="data_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/data"/>
+        </valueExp>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="dataaccess_destination">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0/instance#//ConnectionKind"/>
+          <literal href="http://aadl.info/AADL/2.0/instance#//ConnectionKind/accessConnection"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.4">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.8">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="dataaccess_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0/instance#//ConnectionKind"/>
+          <literal href="http://aadl.info/AADL/2.0/instance#//ConnectionKind/accessConnection"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.5">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.9">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="feature_destination_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </targetPatterns>
+    <targetPatterns name="feature_source_target">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </targetPatterns>
+    <targetPatterns name="process_destination_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.11">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.2">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="process_source_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.12">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.3">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="ref_destination">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.4">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="ref_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.5">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="system_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </targetPatterns>
+    <targetPatterns name="thread_destination_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.4">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="thread_source_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.5">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="feature2feature1" type="//@schema/@correspondenceTypes.6" source="//@rules.9/@sourcePatterns.2" target="//@rules.9/@targetPatterns.5">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="feature2feature2" type="//@schema/@correspondenceTypes.6" source="//@rules.9/@sourcePatterns.1" target="//@rules.9/@targetPatterns.4"/>
+    <correspondencePatterns name="p2a1" type="//@schema/@correspondenceTypes.2" source="//@rules.9/@sourcePatterns.0" target="//@rules.9/@targetPatterns.3">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="p2a2" type="//@schema/@correspondenceTypes.2" source="//@rules.9/@sourcePatterns.0" target="//@rules.9/@targetPatterns.2">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="p2d1" type="//@schema/@correspondenceTypes.2" source="//@rules.9/@sourcePatterns.0" target="//@rules.9/@targetPatterns.1">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="p2d2" type="//@schema/@correspondenceTypes.2" source="//@rules.9/@sourcePatterns.0" target="//@rules.9/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="process2process1" type="//@schema/@correspondenceTypes.5" source="//@rules.9/@sourcePatterns.4" target="//@rules.9/@targetPatterns.7"/>
+    <correspondencePatterns name="process2process2" type="//@schema/@correspondenceTypes.5" source="//@rules.9/@sourcePatterns.3" target="//@rules.9/@targetPatterns.6"/>
+    <correspondencePatterns name="r2r1" type="//@schema/@correspondenceTypes.2" source="//@rules.9/@sourcePatterns.0" target="//@rules.9/@targetPatterns.9">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="r2r2" type="//@schema/@correspondenceTypes.2" source="//@rules.9/@sourcePatterns.0" target="//@rules.9/@targetPatterns.8">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="s2s" type="//@schema/@correspondenceTypes.0" source="//@rules.9/@sourcePatterns.7" target="//@rules.9/@targetPatterns.10"/>
+    <correspondencePatterns name="thread2thread1" type="//@schema/@correspondenceTypes.5" source="//@rules.9/@sourcePatterns.9" target="//@rules.9/@targetPatterns.12"/>
+    <correspondencePatterns name="thread2thread2" type="//@schema/@correspondenceTypes.5" source="//@rules.9/@sourcePatterns.8" target="//@rules.9/@targetPatterns.11"/>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@sourcePatterns.2">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@targetPatterns.5">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@sourcePatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@targetPatterns.4">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@sourcePatterns.2">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@targetPatterns.5">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@sourcePatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@targetPatterns.4">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@targetPatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@targetPatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@targetPatterns.3">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@targetPatterns.2">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="PortConnectionToDataAccessAtSystem11" schema="//@schema">
+    <sourcePatterns name="connection_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0/instance#//ConnectionKind"/>
+          <literal href="http://aadl.info/AADL/2.0/instance#//ConnectionKind/portConnection"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.10/@sourcePatterns.6">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.10/@sourcePatterns.5">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="feature_destination">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </sourcePatterns>
+    <sourcePatterns name="feature_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </sourcePatterns>
+    <sourcePatterns name="process_destination">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeConstraints op="==">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/process"/>
+        </valueExp>
+      </attributeConstraints>
+      <linkVariablePatterns target="//@rules.10/@sourcePatterns.8">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="process_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeConstraints op="==">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/process"/>
+        </valueExp>
+      </attributeConstraints>
+      <linkVariablePatterns target="//@rules.10/@sourcePatterns.9">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="ref_connection_destination">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <linkVariablePatterns target="//@rules.10/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.10/@sourcePatterns.3">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/context"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="ref_connection_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <linkVariablePatterns target="//@rules.10/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.10/@sourcePatterns.4">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/context"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="system_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+      <linkVariablePatterns target="//@rules.10/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="thread_destination">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeConstraints op="==">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/thread"/>
+        </valueExp>
+      </attributeConstraints>
+      <linkVariablePatterns target="//@rules.10/@sourcePatterns.1">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="thread_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeConstraints op="==">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/thread"/>
+        </valueExp>
+      </attributeConstraints>
+      <linkVariablePatterns target="//@rules.10/@sourcePatterns.2">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="data_destination">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/data"/>
+        </valueExp>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="data_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/data"/>
+        </valueExp>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="dataaccess_destination">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0/instance#//ConnectionKind"/>
+          <literal href="http://aadl.info/AADL/2.0/instance#//ConnectionKind/accessConnection"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.10/@targetPatterns.4">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.10/@targetPatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.10/@targetPatterns.8">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="dataaccess_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0/instance#//ConnectionKind"/>
+          <literal href="http://aadl.info/AADL/2.0/instance#//ConnectionKind/accessConnection"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.10/@targetPatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.10/@targetPatterns.5">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/source"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.10/@targetPatterns.9">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="feature_destination_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </targetPatterns>
+    <targetPatterns name="feature_source_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </targetPatterns>
+    <targetPatterns name="process_destination_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.10/@targetPatterns.11">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.10/@targetPatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.10/@targetPatterns.2">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="process_source_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.10/@targetPatterns.12">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.10/@targetPatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.10/@targetPatterns.3">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="ref_destination">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <linkVariablePatterns target="//@rules.10/@targetPatterns.4">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.10/@targetPatterns.0">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="ref_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+      <linkVariablePatterns target="//@rules.10/@targetPatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.10/@targetPatterns.5">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="system_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </targetPatterns>
+    <targetPatterns name="thread_destination_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.10/@targetPatterns.4">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="thread_source_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.10/@targetPatterns.5">
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="feature2feature1" type="//@schema/@correspondenceTypes.6" source="//@rules.10/@sourcePatterns.2" target="//@rules.10/@targetPatterns.5"/>
+    <correspondencePatterns name="feature2feature2" type="//@schema/@correspondenceTypes.6" source="//@rules.10/@sourcePatterns.1" target="//@rules.10/@targetPatterns.4"/>
+    <correspondencePatterns name="p2a1" type="//@schema/@correspondenceTypes.2" source="//@rules.10/@sourcePatterns.0" target="//@rules.10/@targetPatterns.3">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="p2a2" type="//@schema/@correspondenceTypes.2" source="//@rules.10/@sourcePatterns.0" target="//@rules.10/@targetPatterns.2">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="p2d1" type="//@schema/@correspondenceTypes.2" source="//@rules.10/@sourcePatterns.0" target="//@rules.10/@targetPatterns.1">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="p2d2" type="//@schema/@correspondenceTypes.2" source="//@rules.10/@sourcePatterns.0" target="//@rules.10/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="process2process1" type="//@schema/@correspondenceTypes.5" source="//@rules.10/@sourcePatterns.4" target="//@rules.10/@targetPatterns.7"/>
+    <correspondencePatterns name="process2process2" type="//@schema/@correspondenceTypes.5" source="//@rules.10/@sourcePatterns.3" target="//@rules.10/@targetPatterns.6"/>
+    <correspondencePatterns name="r2r1" type="//@schema/@correspondenceTypes.2" source="//@rules.10/@sourcePatterns.0" target="//@rules.10/@targetPatterns.9">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="r2r2" type="//@schema/@correspondenceTypes.2" source="//@rules.10/@sourcePatterns.0" target="//@rules.10/@targetPatterns.8">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="s2s" type="//@schema/@correspondenceTypes.0" source="//@rules.10/@sourcePatterns.7" target="//@rules.10/@targetPatterns.10"/>
+    <correspondencePatterns name="thread2thread1" type="//@schema/@correspondenceTypes.5" source="//@rules.10/@sourcePatterns.9" target="//@rules.10/@targetPatterns.12"/>
+    <correspondencePatterns name="thread2thread2" type="//@schema/@correspondenceTypes.5" source="//@rules.10/@sourcePatterns.8" target="//@rules.10/@targetPatterns.11"/>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@sourcePatterns.2">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@targetPatterns.5">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@sourcePatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@targetPatterns.4">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@sourcePatterns.2">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@targetPatterns.5">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@sourcePatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@targetPatterns.4">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@targetPatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@targetPatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@targetPatterns.3">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@targetPatterns.2">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="SubcomponentToSubcomponent" schema="//@schema">
+    <sourcePatterns name="component_source">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.11/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="subcomponent_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </sourcePatterns>
+    <targetPatterns name="component_target">
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+      <linkVariablePatterns target="//@rules.11/@targetPatterns.1">
+        <op value="++"/>
+        <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="subcomponent_target">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </targetPatterns>
+    <correspondencePatterns name="c2c" type="//@schema/@correspondenceTypes.5" source="//@rules.11/@sourcePatterns.0" target="//@rules.11/@targetPatterns.0"/>
+    <correspondencePatterns name="sub2sub" type="//@schema/@correspondenceTypes.5" source="//@rules.11/@sourcePatterns.1" target="//@rules.11/@targetPatterns.1">
+      <op value="++"/>
+    </correspondencePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.11/@sourcePatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.11/@targetPatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.11/@sourcePatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.11/@targetPatterns.1">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="SystemToSystem" schema="//@schema">
+    <sourcePatterns name="system_source">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/system"/>
+        </valueExp>
+      </attributeAssignments>
+    </sourcePatterns>
+    <targetPatterns name="system_target">
+      <op value="++"/>
+      <type href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+      <attributeAssignments op=":=">
+        <attribute href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+          <literal href="http://aadl.info/AADL/2.0#//ComponentCategory/system"/>
+        </valueExp>
+      </attributeAssignments>
+    </targetPatterns>
+    <correspondencePatterns name="s2s" type="//@schema/@correspondenceTypes.0" source="//@rules.12/@sourcePatterns.0" target="//@rules.12/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.12/@sourcePatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.12/@targetPatterns.0">
+        <attribute href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+</tgg:TripleGraphGrammarFile>

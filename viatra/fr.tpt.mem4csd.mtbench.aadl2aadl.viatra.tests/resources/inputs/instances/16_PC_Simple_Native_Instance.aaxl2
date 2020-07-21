@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="ASCII"?>
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="PC_Simple_Native_Instance" category="system">
+  <componentInstance name="the_bus" category="bus">
+    <subcomponent xsi:type="aadl2:BusSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedBusSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:BusType" href="../16.aadl#PC16.Ethernet_Bus"/>
+  </componentInstance>
+  <componentInstance name="T" category="data">
+    <subcomponent xsi:type="aadl2:DataSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedDataSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DataType" href="../16.aadl#PC16.Alpha_Type"/>
+  </componentInstance>
+  <componentInstance name="pr_A_1" category="process">
+    <featureInstance name="Alpha" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="addedFeat_Alpha" direction="out"/>
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="addedFeat_Data_Source" direction="out"/>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.P.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.A.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_B_1" category="process">
+    <featureInstance name="Beta">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="addedFeat_Beta"/>
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="addedFeat_Data_Sink"/>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.Q.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.1"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.B.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_A_2" category="process">
+    <featureInstance name="Alpha" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.P.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.2"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.A.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_B_2" category="process">
+    <featureInstance name="Beta">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.Q.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.3"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.B.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_A_3" category="process">
+    <featureInstance name="Alpha" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.P.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.4"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.A.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_B_3" category="process">
+    <featureInstance name="Beta">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.Q.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.5"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.B.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_A_4" category="process">
+    <featureInstance name="Alpha" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.P.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.6"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.A.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_B_4" category="process">
+    <featureInstance name="Beta">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.Q.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.7"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.B.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_A_5" category="process">
+    <featureInstance name="Alpha" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.P.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.8"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.A.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_B_5" category="process">
+    <featureInstance name="Beta">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.Q.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.9"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.B.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_A_6" category="process">
+    <featureInstance name="Alpha" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.P.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.10"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.A.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_B_6" category="process">
+    <featureInstance name="Beta">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.Q.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.11"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.B.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_A_7" category="process">
+    <featureInstance name="Alpha" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.P.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.12"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.A.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_B_7" category="process">
+    <featureInstance name="Beta">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.Q.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.13"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.B.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_A_8" category="process">
+    <featureInstance name="Alpha" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.P.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.14"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.A.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_B_8" category="process">
+    <featureInstance name="Beta">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.Q.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.15"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.B.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_A_9" category="process">
+    <featureInstance name="Alpha" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.P.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.16"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.A.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_B_9" category="process">
+    <featureInstance name="Beta">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.Q.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.17"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.B.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_A_10" category="process">
+    <featureInstance name="Alpha" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.P.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.18"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.A.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_B_10" category="process">
+    <featureInstance name="Beta">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.Q.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.19"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.B.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_A_11" category="process">
+    <featureInstance name="Alpha" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.P.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.20"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.A.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_B_11" category="process">
+    <featureInstance name="Beta">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.Q.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.21"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.B.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_A_12" category="process">
+    <featureInstance name="Alpha" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.P.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.22"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.A.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_B_12" category="process">
+    <featureInstance name="Beta">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.Q.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.23"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.B.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_A_13" category="process">
+    <featureInstance name="Alpha" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.P.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.24"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.A.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_B_13" category="process">
+    <featureInstance name="Beta">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.Q.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.25"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.B.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_A_14" category="process">
+    <featureInstance name="Alpha" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.P.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.26"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.A.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_B_14" category="process">
+    <featureInstance name="Beta">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.Q.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.27"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.B.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_A_15" category="process">
+    <featureInstance name="Alpha" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.P.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.28"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.A.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_B_15" category="process">
+    <featureInstance name="Beta">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.Q.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.29"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.B.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_A_16" category="process">
+    <featureInstance name="Alpha" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.P.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.30"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.A.Impl"/>
+  </componentInstance>
+  <componentInstance name="pr_B_16" category="process">
+    <featureInstance name="Beta">
+      <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+    </featureInstance>
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink">
+        <feature xsi:type="aadl2:DataPort" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../16.aadl#PC16.Q.Impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.31"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../16.aadl#PC16.B.Impl"/>
+  </componentInstance>
+  <componentInstance name="CPU" category="processor">
+    <featureInstance name="ETH" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessorSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessorType" href="../16.aadl#PC16.the_processor"/>
+  </componentInstance>
+  <connectionInstance name="pr_A_1.Producer.Data_Source -> pr_B_1.Consumer.Data_Sink" complete="true" kind="portConnection" destination="//@componentInstance.3/@componentInstance.0/@featureInstance.0" source="//@componentInstance.2/@componentInstance.0/@featureInstance.0">
+    <connectionReference context="//@componentInstance.2" source="//@componentInstance.2/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.2/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.2/@featureInstance.0" destination="//@componentInstance.3/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.3" source="//@componentInstance.3/@featureInstance.0" destination="//@componentInstance.3/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="pr_A_2.Producer.Data_Source -> pr_B_2.Consumer.Data_Sink" complete="true" kind="portConnection" destination="//@componentInstance.5/@componentInstance.0/@featureInstance.0" source="//@componentInstance.4/@componentInstance.0/@featureInstance.0">
+    <connectionReference context="//@componentInstance.4" source="//@componentInstance.4/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.4/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.4/@featureInstance.0" destination="//@componentInstance.5/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.1"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.5" source="//@componentInstance.5/@featureInstance.0" destination="//@componentInstance.5/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="pr_A_3.Producer.Data_Source -> pr_B_3.Consumer.Data_Sink" complete="true" kind="portConnection" destination="//@componentInstance.7/@componentInstance.0/@featureInstance.0" source="//@componentInstance.6/@componentInstance.0/@featureInstance.0">
+    <connectionReference context="//@componentInstance.6" source="//@componentInstance.6/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.6/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.6/@featureInstance.0" destination="//@componentInstance.7/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.2"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.7" source="//@componentInstance.7/@featureInstance.0" destination="//@componentInstance.7/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="pr_A_4.Producer.Data_Source -> pr_B_4.Consumer.Data_Sink" complete="true" kind="portConnection" destination="//@componentInstance.9/@componentInstance.0/@featureInstance.0" source="//@componentInstance.8/@componentInstance.0/@featureInstance.0">
+    <connectionReference context="//@componentInstance.8" source="//@componentInstance.8/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.8/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.8/@featureInstance.0" destination="//@componentInstance.9/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.3"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.9" source="//@componentInstance.9/@featureInstance.0" destination="//@componentInstance.9/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="pr_A_5.Producer.Data_Source -> pr_B_5.Consumer.Data_Sink" complete="true" kind="portConnection" destination="//@componentInstance.11/@componentInstance.0/@featureInstance.0" source="//@componentInstance.10/@componentInstance.0/@featureInstance.0">
+    <connectionReference context="//@componentInstance.10" source="//@componentInstance.10/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.10/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.10/@featureInstance.0" destination="//@componentInstance.11/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.4"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.11" source="//@componentInstance.11/@featureInstance.0" destination="//@componentInstance.11/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="pr_A_6.Producer.Data_Source -> pr_B_6.Consumer.Data_Sink" complete="true" kind="portConnection" destination="//@componentInstance.13/@componentInstance.0/@featureInstance.0" source="//@componentInstance.12/@componentInstance.0/@featureInstance.0">
+    <connectionReference context="//@componentInstance.12" source="//@componentInstance.12/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.12/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.12/@featureInstance.0" destination="//@componentInstance.13/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.5"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.13" source="//@componentInstance.13/@featureInstance.0" destination="//@componentInstance.13/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="pr_A_7.Producer.Data_Source -> pr_B_7.Consumer.Data_Sink" complete="true" kind="portConnection" destination="//@componentInstance.15/@componentInstance.0/@featureInstance.0" source="//@componentInstance.14/@componentInstance.0/@featureInstance.0">
+    <connectionReference context="//@componentInstance.14" source="//@componentInstance.14/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.14/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.14/@featureInstance.0" destination="//@componentInstance.15/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.6"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.15" source="//@componentInstance.15/@featureInstance.0" destination="//@componentInstance.15/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="pr_A_8.Producer.Data_Source -> pr_B_8.Consumer.Data_Sink" complete="true" kind="portConnection" destination="//@componentInstance.17/@componentInstance.0/@featureInstance.0" source="//@componentInstance.16/@componentInstance.0/@featureInstance.0">
+    <connectionReference context="//@componentInstance.16" source="//@componentInstance.16/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.16/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.16/@featureInstance.0" destination="//@componentInstance.17/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.7"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.17" source="//@componentInstance.17/@featureInstance.0" destination="//@componentInstance.17/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="pr_A_9.Producer.Data_Source -> pr_B_9.Consumer.Data_Sink" complete="true" kind="portConnection" destination="//@componentInstance.19/@componentInstance.0/@featureInstance.0" source="//@componentInstance.18/@componentInstance.0/@featureInstance.0">
+    <connectionReference context="//@componentInstance.18" source="//@componentInstance.18/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.18/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.18/@featureInstance.0" destination="//@componentInstance.19/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.8"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.19" source="//@componentInstance.19/@featureInstance.0" destination="//@componentInstance.19/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="pr_A_10.Producer.Data_Source -> pr_B_10.Consumer.Data_Sink" complete="true" kind="portConnection" destination="//@componentInstance.21/@componentInstance.0/@featureInstance.0" source="//@componentInstance.20/@componentInstance.0/@featureInstance.0">
+    <connectionReference context="//@componentInstance.20" source="//@componentInstance.20/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.20/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.20/@featureInstance.0" destination="//@componentInstance.21/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.9"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.21" source="//@componentInstance.21/@featureInstance.0" destination="//@componentInstance.21/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="pr_A_11.Producer.Data_Source -> pr_B_11.Consumer.Data_Sink" complete="true" kind="portConnection" destination="//@componentInstance.23/@componentInstance.0/@featureInstance.0" source="//@componentInstance.22/@componentInstance.0/@featureInstance.0">
+    <connectionReference context="//@componentInstance.22" source="//@componentInstance.22/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.22/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.22/@featureInstance.0" destination="//@componentInstance.23/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.10"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.23" source="//@componentInstance.23/@featureInstance.0" destination="//@componentInstance.23/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="pr_A_12.Producer.Data_Source -> pr_B_12.Consumer.Data_Sink" complete="true" kind="portConnection" destination="//@componentInstance.25/@componentInstance.0/@featureInstance.0" source="//@componentInstance.24/@componentInstance.0/@featureInstance.0">
+    <connectionReference context="//@componentInstance.24" source="//@componentInstance.24/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.24/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.24/@featureInstance.0" destination="//@componentInstance.25/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.11"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.25" source="//@componentInstance.25/@featureInstance.0" destination="//@componentInstance.25/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="pr_A_13.Producer.Data_Source -> pr_B_13.Consumer.Data_Sink" complete="true" kind="portConnection" destination="//@componentInstance.27/@componentInstance.0/@featureInstance.0" source="//@componentInstance.26/@componentInstance.0/@featureInstance.0">
+    <connectionReference context="//@componentInstance.26" source="//@componentInstance.26/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.26/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.26/@featureInstance.0" destination="//@componentInstance.27/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.12"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.27" source="//@componentInstance.27/@featureInstance.0" destination="//@componentInstance.27/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="pr_A_14.Producer.Data_Source -> pr_B_14.Consumer.Data_Sink" complete="true" kind="portConnection" destination="//@componentInstance.29/@componentInstance.0/@featureInstance.0" source="//@componentInstance.28/@componentInstance.0/@featureInstance.0">
+    <connectionReference context="//@componentInstance.28" source="//@componentInstance.28/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.28/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.28/@featureInstance.0" destination="//@componentInstance.29/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.13"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.29" source="//@componentInstance.29/@featureInstance.0" destination="//@componentInstance.29/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="pr_A_15.Producer.Data_Source -> pr_B_15.Consumer.Data_Sink" complete="true" kind="portConnection" destination="//@componentInstance.31/@componentInstance.0/@featureInstance.0" source="//@componentInstance.30/@componentInstance.0/@featureInstance.0">
+    <connectionReference context="//@componentInstance.30" source="//@componentInstance.30/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.30/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.30/@featureInstance.0" destination="//@componentInstance.31/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.14"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.31" source="//@componentInstance.31/@featureInstance.0" destination="//@componentInstance.31/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="pr_A_16.Producer.Data_Source -> pr_B_16.Consumer.Data_Sink" complete="true" kind="portConnection" destination="//@componentInstance.33/@componentInstance.0/@featureInstance.0" source="//@componentInstance.32/@componentInstance.0/@featureInstance.0">
+    <connectionReference context="//@componentInstance.32" source="//@componentInstance.32/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.32/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.32/@featureInstance.0" destination="//@componentInstance.33/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.15"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.33" source="//@componentInstance.33/@featureInstance.0" destination="//@componentInstance.33/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../16.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="addedConnection" kind="portConnection">
+    <connectionReference context="//@componentInstance.2" source="//@componentInstance.2/@componentInstance.0/@featureInstance.1" destination="//@componentInstance.2/@featureInstance.1"/>
+    <connectionReference context="/"/>
+    <connectionReference context="//@componentInstance.3" source="//@componentInstance.3/@featureInstance.1" destination="//@componentInstance.3/@componentInstance.0/@featureInstance.1"/>
+  </connectionInstance>
+  <systemOperationMode name="No Modes"/>
+  <componentImplementation xsi:type="aadl2:SystemImplementation" href="../16.aadl#PC16.PC_Simple.Native"/>
+</instance:SystemInstance>

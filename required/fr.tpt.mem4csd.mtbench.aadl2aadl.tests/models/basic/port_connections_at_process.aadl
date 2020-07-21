@@ -1,0 +1,207 @@
+package port_connections_at_process
+public
+  ----------
+  -- Data --
+  ----------
+
+  data Alpha_Type
+
+  end Alpha_Type;
+
+  -----------------
+  -- Subprograms --
+  -----------------
+
+  subprogram Produce_Spg
+  features
+    Data_Source : out parameter Alpha_Type;
+
+  end Produce_Spg;
+
+  subprogram Consume_Spg
+  features
+    Data_Sink : in parameter Alpha_Type;
+
+  end Consume_Spg;
+
+  -------------
+  -- Threads --
+  -------------
+
+  thread P
+  features
+    Alpha : out data port Alpha_Type;
+  end P;
+
+  thread implementation P.Impl
+  calls
+    Mycall : {
+    P_Spg : subprogram Produce_Spg;
+    };
+  connections
+    Z1:parameter P_Spg.Data_Source -> Alpha;
+  end P.Impl;
+
+  thread Q
+  features
+    Beta : in data port Alpha_Type;
+  end Q;
+
+  thread implementation Q.Impl
+  calls
+    Mycall : {
+    Q_Spg : subprogram Consume_Spg;
+    };
+  connections
+    Z2:parameter Beta -> Q_Spg.Data_Sink;
+  end Q.Impl;
+
+  ---------
+  -- Bus --
+  ---------
+
+  bus Ethernet_Bus 
+  end Ethernet_Bus;
+
+  ---------------
+  -- Processor --
+  ---------------
+
+  processor the_processor 
+  features
+    ETH : requires bus access Ethernet_Bus;
+  end the_processor;
+
+  ---------------
+  -- Processes --
+  ---------------
+
+  process prod_cons
+
+  end prod_cons;
+
+  process implementation prod_cons.Impl
+  subcomponents
+
+    pr_A_1 : thread P.Impl;
+    pr_B_1 : thread Q.Impl;
+
+    pr_A_2 : thread P.Impl;
+    pr_B_2 : thread Q.Impl;
+
+    pr_A_3 : thread P.Impl;
+    pr_B_3 : thread Q.Impl;
+
+    pr_A_4 : thread P.Impl;
+    pr_B_4 : thread Q.Impl;
+
+    pr_A_5 : thread P.Impl;
+    pr_B_5 : thread Q.Impl;
+
+    pr_A_6 : thread P.Impl;
+    pr_B_6 : thread Q.Impl;
+
+    pr_A_7 : thread P.Impl;
+    pr_B_7 : thread Q.Impl;
+
+    pr_A_8 : thread P.Impl;
+    pr_B_8 : thread Q.Impl;
+
+    pr_A_9 : thread P.Impl;
+    pr_B_9 : thread Q.Impl;
+
+    pr_A_10 : thread P.Impl;
+    pr_B_10 : thread Q.Impl;
+
+    pr_A_11 : thread P.Impl;
+    pr_B_11 : thread Q.Impl;
+
+    pr_A_12 : thread P.Impl;
+    pr_B_12 : thread Q.Impl;
+
+    pr_A_13 : thread P.Impl;
+    pr_B_13 : thread Q.Impl;
+
+    pr_A_14 : thread P.Impl;
+    pr_B_14 : thread Q.Impl;
+
+    pr_A_15 : thread P.Impl;
+    pr_B_15 : thread Q.Impl;
+
+    pr_A_16 : thread P.Impl;
+    pr_B_16 : thread Q.Impl;
+
+    pr_A_17 : thread P.Impl;
+    pr_B_17 : thread Q.Impl;
+
+    pr_A_18 : thread P.Impl;
+    pr_B_18 : thread Q.Impl;
+
+    pr_A_19 : thread P.Impl;
+    pr_B_19 : thread Q.Impl;
+
+    pr_A_20 : thread P.Impl;
+    pr_B_20 : thread Q.Impl;
+
+  connections
+
+    Z1:port pr_A_1.Alpha -> pr_B_1.Beta;
+
+    Z2:port pr_A_2.Alpha -> pr_B_2.Beta;
+
+    Z3:port pr_A_3.Alpha -> pr_B_3.Beta;
+
+    Z4:port pr_A_4.Alpha -> pr_B_4.Beta;
+
+    Z5:port pr_A_5.Alpha -> pr_B_5.Beta;
+
+    Z6:port pr_A_6.Alpha -> pr_B_6.Beta;
+
+    Z7:port pr_A_7.Alpha -> pr_B_7.Beta;
+
+    Z8:port pr_A_8.Alpha -> pr_B_8.Beta;
+
+    Z9:port pr_A_9.Alpha -> pr_B_9.Beta;
+
+    Z10:port pr_A_10.Alpha -> pr_B_10.Beta;
+
+    Z11:port pr_A_11.Alpha -> pr_B_11.Beta;
+
+    Z12:port pr_A_12.Alpha -> pr_B_12.Beta;
+
+    Z13:port pr_A_13.Alpha -> pr_B_13.Beta;
+
+    Z14:port pr_A_14.Alpha -> pr_B_14.Beta;
+
+    Z15:port pr_A_15.Alpha -> pr_B_15.Beta;
+
+    Z16:port pr_A_16.Alpha -> pr_B_16.Beta;
+
+    Z17:port pr_A_17.Alpha -> pr_B_17.Beta;
+
+    Z18:port pr_A_18.Alpha -> pr_B_18.Beta;
+
+    Z19:port pr_A_19.Alpha -> pr_B_19.Beta;
+
+    Z20:port pr_A_20.Alpha -> pr_B_20.Beta;
+  end prod_cons.Impl;
+
+
+  ------------
+  -- System --
+  ------------
+
+  system PC_Simple
+  end PC_Simple;
+
+  system implementation PC_Simple.Native
+  subcomponents
+    T : data Alpha_Type; 
+    prod_cons : process prod_cons.Impl;
+    CPU     : processor the_processor;
+    the_bus : bus Ethernet_Bus;
+  connections
+    Z:bus access the_bus -> CPU.ETH;
+  end PC_Simple.Native;
+
+end port_connections_at_process;

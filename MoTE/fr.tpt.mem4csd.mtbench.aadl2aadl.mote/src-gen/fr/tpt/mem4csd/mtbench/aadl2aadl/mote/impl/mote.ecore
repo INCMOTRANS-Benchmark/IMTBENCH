@@ -1,0 +1,1764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="mote" nsURI="https://mem4csd.telecom-paristech.fr/mtbench.aadl2aadl"
+    nsPrefix="mote">
+  <eClassifiers xsi:type="ecore:EClass" name="CorrAxiom" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CorrComponent2Component" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CorrConnection2DataAccess" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CorrRef2Ref" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CorrConn2Conn" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CorrConnection2DataAccessSys" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CorrFeature2Feature" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CorrRef2RefOther" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+  <eSubpackages name="generated" nsURI="https://mem4csd.telecom-paristech.fr/mtbench.aadl2aadl/generated"
+      nsPrefix="mote.generated">
+    <eClassifiers xsi:type="ecore:EClass" name="moteOperationalTGG" eSuperTypes="http://www.mdelab.de/mltgg/mote2/sdm/1.0#//SdmOperationalTGG"/>
+    <eClassifiers xsi:type="ecore:EClass" name="moteAxiom" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalAxiomGroup"/>
+    <eClassifiers xsi:type="ecore:EClass" name="connection2connection" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRuleGroup"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PortConnection2DataAccessSys00_ForFeatGroup_copy"
+        eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRuleGroup"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PortConnection2DataAccessSys00" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRuleGroup"/>
+    <eClassifiers xsi:type="ecore:EClass" name="component2component" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRuleGroup"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PortConnection2DataAccessSys10" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRuleGroup"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PortConnection2DataAccessSys01" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRuleGroup"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PortConnection2DataAccessSys00_ForFeatGroup"
+        eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRuleGroup"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PortConnection2DataAccess" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRuleGroup"/>
+    <eClassifiers xsi:type="ecore:EClass" name="subcomponent2subcomponent" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRuleGroup"/>
+    <eClassifiers xsi:type="ecore:EClass" name="connection2connectionSys" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRuleGroup"/>
+    <eClassifiers xsi:type="ecore:EClass" name="subfeature2subfeature" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRuleGroup"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PortConnection2DataAccessSys11" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRuleGroup"/>
+    <eClassifiers xsi:type="ecore:EClass" name="connection2connectionSysDevice" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRuleGroup"/>
+    <eClassifiers xsi:type="ecore:EClass" name="feature2feature" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRuleGroup"/>
+    <eClassifiers xsi:type="ecore:EClass" name="connectionref2connectionref" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRuleGroup"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PortConnection2DataAccessSys11Plus"
+        eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRuleGroup"/>
+    <eClassifiers xsi:type="ecore:EClass" name="moteAxiom_r0" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalAxiom">
+      <eOperations name="addElement" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="parameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+        <eParameters name="leftInputElements" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        <eParameters name="rightInputElements" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eOperations>
+      <eOperations name="changeAttributeValues" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="ruleParameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="transformForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="leftInputElements" lowerBound="1" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        <eParameters name="rightInputElements" lowerBound="1" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformMapping" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="leftInputElements" lowerBound="1" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        <eParameters name="rightInputElements" lowerBound="1" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="leftInputElements" lowerBound="1" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        <eParameters name="rightInputElements" lowerBound="1" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="synchronizeForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="leftInputElements" lowerBound="1" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        <eParameters name="rightInputElements" lowerBound="1" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="synchronizeBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="leftInputElements" lowerBound="1" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        <eParameters name="rightInputElements" lowerBound="1" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="addElementActivity" lowerBound="1"
+          eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="moveElementActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="changeAttributeActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PortConnection2DataAccessSys00_ForFeatGroup_r11"
+        eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRule">
+      <eOperations name="addElement" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="parameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="changeAttributeValues" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="ruleParameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="moveElement" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="oldPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="newPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="transformForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformMapping" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="conflictCheckForward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckMapping" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckBackward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="synchronizeForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="synchronizeBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="addElementActivity" lowerBound="1"
+          eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="moveElementActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="changeAttributeActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="component2component_r1" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRule">
+      <eOperations name="addElement" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="parameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="changeAttributeValues" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="ruleParameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="moveElement" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="oldPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="newPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="transformForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformMapping" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="conflictCheckForward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckMapping" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckBackward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="synchronizeForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="synchronizeBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="addElementActivity" lowerBound="1"
+          eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="moveElementActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="changeAttributeActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="connection2connectionSys_r9" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRule">
+      <eOperations name="addElement" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="parameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="changeAttributeValues" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="ruleParameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="moveElement" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="oldPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="newPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="transformForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformMapping" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="conflictCheckForward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckMapping" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckBackward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="synchronizeForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="synchronizeBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="addElementActivity" lowerBound="1"
+          eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="moveElementActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="changeAttributeActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PortConnection2DataAccess_r4" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRule">
+      <eOperations name="addElement" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="parameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="changeAttributeValues" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="ruleParameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="moveElement" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="oldPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="newPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="transformForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformMapping" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="conflictCheckForward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckMapping" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckBackward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="synchronizeForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="synchronizeBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="addElementActivity" lowerBound="1"
+          eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="moveElementActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="changeAttributeActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PortConnection2DataAccessSys00_ForFeatGroup_copy_r12"
+        eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRule">
+      <eOperations name="addElement" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="parameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="changeAttributeValues" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="ruleParameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="moveElement" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="oldPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="newPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="transformForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformMapping" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="conflictCheckForward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckMapping" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckBackward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="synchronizeForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="synchronizeBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="addElementActivity" lowerBound="1"
+          eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="moveElementActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="changeAttributeActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PortConnection2DataAccessSys01_r801"
+        eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRule">
+      <eOperations name="addElement" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="parameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="changeAttributeValues" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="ruleParameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="moveElement" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="oldPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="newPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="transformForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformMapping" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="conflictCheckForward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckMapping" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckBackward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="synchronizeForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="synchronizeBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="addElementActivity" lowerBound="1"
+          eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="moveElementActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="changeAttributeActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PortConnection2DataAccessSys00_r800"
+        eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRule">
+      <eOperations name="addElement" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="parameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="changeAttributeValues" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="ruleParameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="moveElement" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="oldPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="newPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="transformForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformMapping" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="conflictCheckForward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckMapping" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckBackward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="synchronizeForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="synchronizeBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="addElementActivity" lowerBound="1"
+          eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="moveElementActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="changeAttributeActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="subcomponent2subcomponent_r2" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRule">
+      <eOperations name="addElement" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="parameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="changeAttributeValues" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="ruleParameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="moveElement" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="oldPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="newPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="transformForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformMapping" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="conflictCheckForward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckMapping" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckBackward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="synchronizeForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="synchronizeBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="addElementActivity" lowerBound="1"
+          eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="moveElementActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="changeAttributeActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PortConnection2DataAccessSys11Plus_r811p"
+        eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRule">
+      <eOperations name="addElement" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="parameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="changeAttributeValues" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="ruleParameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="moveElement" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="oldPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="newPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="transformForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformMapping" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="conflictCheckForward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckMapping" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckBackward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="synchronizeForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="synchronizeBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="addElementActivity" lowerBound="1"
+          eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="moveElementActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="changeAttributeActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="feature2feature_r3" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRule">
+      <eOperations name="addElement" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="parameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="changeAttributeValues" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="ruleParameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="moveElement" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="oldPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="newPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="transformForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformMapping" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="conflictCheckForward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckMapping" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckBackward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="synchronizeForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="synchronizeBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="addElementActivity" lowerBound="1"
+          eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="moveElementActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="changeAttributeActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PortConnection2DataAccessSys10_r810"
+        eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRule">
+      <eOperations name="addElement" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="parameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="changeAttributeValues" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="ruleParameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="moveElement" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="oldPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="newPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="transformForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformMapping" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="conflictCheckForward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckMapping" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckBackward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="synchronizeForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="synchronizeBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="addElementActivity" lowerBound="1"
+          eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="moveElementActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="changeAttributeActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="connection2connectionSysDevice_r7"
+        eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRule">
+      <eOperations name="addElement" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="parameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="changeAttributeValues" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="ruleParameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="moveElement" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="oldPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="newPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="transformForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformMapping" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="conflictCheckForward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckMapping" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckBackward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="synchronizeForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="synchronizeBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="addElementActivity" lowerBound="1"
+          eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="moveElementActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="changeAttributeActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="subfeature2subfeature_r10" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRule">
+      <eOperations name="addElement" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="parameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="changeAttributeValues" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="ruleParameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="moveElement" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="oldPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="newPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="transformForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformMapping" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="conflictCheckForward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckMapping" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckBackward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="synchronizeForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="synchronizeBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="addElementActivity" lowerBound="1"
+          eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="moveElementActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="changeAttributeActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PortConnection2DataAccessSys11_r811"
+        eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRule">
+      <eOperations name="addElement" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="parameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="changeAttributeValues" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="ruleParameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="moveElement" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="oldPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="newPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="transformForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformMapping" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="conflictCheckForward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckMapping" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckBackward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="synchronizeForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="synchronizeBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="addElementActivity" lowerBound="1"
+          eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="moveElementActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="changeAttributeActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="connectionref2connectionref_r6" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRule">
+      <eOperations name="addElement" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="parameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="changeAttributeValues" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="ruleParameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="moveElement" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="oldPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="newPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="transformForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformMapping" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="conflictCheckForward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckMapping" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckBackward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="synchronizeForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="synchronizeBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="addElementActivity" lowerBound="1"
+          eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="moveElementActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="changeAttributeActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="connection2connection_r5" eSuperTypes="http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/OperationalRule">
+      <eOperations name="addElement" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="parameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="changeAttributeValues" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="ruleParameters" upperBound="-1">
+          <eGenericType eClassifier="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//helpers/MapEntry">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="moveElement" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="correspondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="oldPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="newPreviousCorrespondenceNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="transformForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformMapping" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="transformBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="considerAllLhsCorrNodes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="conflictCheckForward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckMapping" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="conflictCheckBackward" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+      </eOperations>
+      <eOperations name="synchronizeForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="synchronizeBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairForward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eOperations name="repairBackward" lowerBound="1" eType="ecore:EEnum http://www.mdelab.de/mltgg/mote2/1.0#//operationalTGG/ErrorCodeEnum"
+          eExceptions="ecore:EDataType http://www.mdelab.de/mltgg/mote2/1.0#//helpers/TransformationException">
+        <eParameters name="inputTggNode" lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode"/>
+        <eParameters name="checkAttributeFormulae" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="addElementActivity" lowerBound="1"
+          eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="moveElementActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="changeAttributeActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckMappingActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conflictCheckBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="synchronizeBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairForwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repairBackwardActivity"
+          lowerBound="1" eType="ecore:EClass http://www.mdelab.de/mlsdm/1.0#//Activity"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

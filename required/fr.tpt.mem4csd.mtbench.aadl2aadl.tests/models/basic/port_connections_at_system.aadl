@@ -1,0 +1,240 @@
+package port_connections_at_system
+public
+  ----------
+  -- Data --
+  ----------
+
+  data Alpha_Type
+
+  end Alpha_Type;
+
+  -----------------
+  -- Subprograms --
+  -----------------
+
+  subprogram Produce_Spg
+  features
+    Data_Source : out parameter Alpha_Type;
+
+  end Produce_Spg;
+
+  subprogram Consume_Spg
+  features
+    Data_Sink : in parameter Alpha_Type;
+
+  end Consume_Spg;
+
+  -------------
+  -- Threads --
+  -------------
+
+  thread P
+  features
+    Data_Source : out data port Alpha_Type;
+  end P;
+
+  thread implementation P.Impl
+  calls
+    Mycall : {
+    P_Spg : subprogram Produce_Spg;
+    };
+  connections
+    Z1:parameter P_Spg.Data_Source -> Data_Source;
+  end P.Impl;
+
+  thread Q
+  features
+    Data_Sink : in data port Alpha_Type;
+  end Q;
+
+  thread implementation Q.Impl
+  calls
+    Mycall : {
+    Q_Spg : subprogram Consume_Spg;
+    };
+  connections
+    Z2:parameter Data_Sink -> Q_Spg.Data_Sink;
+  end Q.Impl;
+
+  ---------
+  -- Bus --
+  ---------
+
+  bus Ethernet_Bus 
+  end Ethernet_Bus;
+
+  ---------------
+  -- Processor --
+  ---------------
+
+  processor the_processor 
+  features
+    ETH : requires bus access Ethernet_Bus;
+  end the_processor;
+
+  ---------------
+  -- Processes --
+  ---------------
+
+  process A
+  features
+    Alpha : out data port Alpha_Type;
+  end A;
+
+  process implementation A.Impl
+  subcomponents
+    Producer        : thread P.Impl;
+  connections
+    Z3:port Producer.Data_Source -> Alpha;
+  end A.Impl;
+
+  process B
+  features
+    Beta  : in data port Alpha_Type;
+  end B;
+
+  process implementation B.Impl
+  subcomponents
+    Consumer        : thread Q.Impl;
+  connections
+    Z4:port Beta -> Consumer.Data_Sink;
+  end B.Impl;
+
+  ------------
+  -- System --
+  ------------
+
+  system PC_Simple
+  end PC_Simple;
+
+  system implementation PC_Simple.Native
+  subcomponents
+    T : data Alpha_Type; 
+
+    pr_A_1 : process A.Impl;
+    pr_B_1 : process B.Impl;
+
+    pr_A_2 : process A.Impl;
+    pr_B_2 : process B.Impl;
+
+    pr_A_3 : process A.Impl;
+    pr_B_3 : process B.Impl;
+
+    pr_A_4 : process A.Impl;
+    pr_B_4 : process B.Impl;
+
+    pr_A_5 : process A.Impl;
+    pr_B_5 : process B.Impl;
+
+    pr_A_6 : process A.Impl;
+    pr_B_6 : process B.Impl;
+
+    pr_A_7 : process A.Impl;
+    pr_B_7 : process B.Impl;
+
+    pr_A_8 : process A.Impl;
+    pr_B_8 : process B.Impl;
+
+    pr_A_9 : process A.Impl;
+    pr_B_9 : process B.Impl;
+
+    pr_A_10 : process A.Impl;
+    pr_B_10 : process B.Impl;
+
+    pr_A_11 : process A.Impl;
+    pr_B_11 : process B.Impl;
+
+    pr_A_12 : process A.Impl;
+    pr_B_12 : process B.Impl;
+
+    pr_A_13 : process A.Impl;
+    pr_B_13 : process B.Impl;
+
+    pr_A_14 : process A.Impl;
+    pr_B_14 : process B.Impl;
+
+    pr_A_15 : process A.Impl;
+    pr_B_15 : process B.Impl;
+
+    pr_A_16 : process A.Impl;
+    pr_B_16 : process B.Impl;
+
+    pr_A_17 : process A.Impl;
+    pr_B_17 : process B.Impl;
+
+    pr_A_18 : process A.Impl;
+    pr_B_18 : process B.Impl;
+
+    pr_A_19 : process A.Impl;
+    pr_B_19 : process B.Impl;
+
+    pr_A_20 : process A.Impl;
+    pr_B_20 : process B.Impl;
+
+    CPU     : processor the_processor;
+    the_bus : bus Ethernet_Bus;
+  connections
+    Z:bus access the_bus -> CPU.ETH;
+
+    Z1:port pr_A_1.Alpha -> pr_B_1.Beta
+    {Actual_Connection_Binding => (reference (the_bus));};
+
+    Z2:port pr_A_2.Alpha -> pr_B_2.Beta
+    {Actual_Connection_Binding => (reference (the_bus));};
+
+    Z3:port pr_A_3.Alpha -> pr_B_3.Beta
+    {Actual_Connection_Binding => (reference (the_bus));};
+
+    Z4:port pr_A_4.Alpha -> pr_B_4.Beta
+    {Actual_Connection_Binding => (reference (the_bus));};
+
+    Z5:port pr_A_5.Alpha -> pr_B_5.Beta
+    {Actual_Connection_Binding => (reference (the_bus));};
+
+    Z6:port pr_A_6.Alpha -> pr_B_6.Beta
+    {Actual_Connection_Binding => (reference (the_bus));};
+
+    Z7:port pr_A_7.Alpha -> pr_B_7.Beta
+    {Actual_Connection_Binding => (reference (the_bus));};
+
+    Z8:port pr_A_8.Alpha -> pr_B_8.Beta
+    {Actual_Connection_Binding => (reference (the_bus));};
+
+    Z9:port pr_A_9.Alpha -> pr_B_9.Beta
+    {Actual_Connection_Binding => (reference (the_bus));};
+
+    Z10:port pr_A_10.Alpha -> pr_B_10.Beta
+    {Actual_Connection_Binding => (reference (the_bus));};
+
+    Z11:port pr_A_11.Alpha -> pr_B_11.Beta
+    {Actual_Connection_Binding => (reference (the_bus));};
+
+    Z12:port pr_A_12.Alpha -> pr_B_12.Beta
+    {Actual_Connection_Binding => (reference (the_bus));};
+
+    Z13:port pr_A_13.Alpha -> pr_B_13.Beta
+    {Actual_Connection_Binding => (reference (the_bus));};
+
+    Z14:port pr_A_14.Alpha -> pr_B_14.Beta
+    {Actual_Connection_Binding => (reference (the_bus));};
+
+    Z15:port pr_A_15.Alpha -> pr_B_15.Beta
+    {Actual_Connection_Binding => (reference (the_bus));};
+
+    Z16:port pr_A_16.Alpha -> pr_B_16.Beta
+    {Actual_Connection_Binding => (reference (the_bus));};
+
+    Z17:port pr_A_17.Alpha -> pr_B_17.Beta
+    {Actual_Connection_Binding => (reference (the_bus));};
+
+    Z18:port pr_A_18.Alpha -> pr_B_18.Beta
+    {Actual_Connection_Binding => (reference (the_bus));};
+
+    Z19:port pr_A_19.Alpha -> pr_B_19.Beta
+    {Actual_Connection_Binding => (reference (the_bus));};
+
+    Z20:port pr_A_20.Alpha -> pr_B_20.Beta
+    {Actual_Connection_Binding => (reference (the_bus));};
+  end PC_Simple.Native;
+
+end port_connections_at_system;

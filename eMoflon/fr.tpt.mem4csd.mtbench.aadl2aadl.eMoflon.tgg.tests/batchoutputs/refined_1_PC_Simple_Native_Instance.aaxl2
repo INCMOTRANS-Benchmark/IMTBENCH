@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ASCII"?>
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="PC_Simple_Native_Instance" category="system">
+  <componentInstance name="T" category="data"/>
+  <componentInstance name="CPU" category="processor">
+    <featureInstance name="ETH" category="busAccess"/>
+  </componentInstance>
+  <componentInstance name="the_bus" category="bus"/>
+  <componentInstance name="pr_A" category="process">
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out"/>
+    </componentInstance>
+    <componentInstance name="pr_A.Producer.Data_Source -> pr_B.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_out" kind="accessConnection" destination="//@componentInstance.3/@componentInstance.1" source="//@componentInstance.3/@componentInstance.0/@featureInstance.0">
+      <connectionReference source="//@componentInstance.3/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.3/@componentInstance.1"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="pr_B" category="process">
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink"/>
+    </componentInstance>
+    <componentInstance name="pr_A.Producer.Data_Source -> pr_B.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_in" kind="accessConnection" destination="//@componentInstance.4/@componentInstance.0/@featureInstance.0" source="//@componentInstance.4/@componentInstance.1">
+      <connectionReference source="//@componentInstance.4/@componentInstance.1" destination="//@componentInstance.4/@componentInstance.0/@featureInstance.0"/>
+    </connectionInstance>
+  </componentInstance>
+</instance:SystemInstance>

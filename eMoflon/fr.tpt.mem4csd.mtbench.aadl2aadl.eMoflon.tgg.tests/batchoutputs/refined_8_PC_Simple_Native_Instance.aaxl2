@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="ASCII"?>
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="PC_Simple_Native_Instance" category="system">
+  <componentInstance name="pr_A_2" category="process">
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out"/>
+    </componentInstance>
+    <componentInstance name="pr_A_2.Producer.Data_Source -> pr_B_2.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_out" kind="accessConnection" destination="//@componentInstance.0/@componentInstance.1" source="//@componentInstance.0/@componentInstance.0/@featureInstance.0">
+      <connectionReference source="//@componentInstance.0/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.0/@componentInstance.1"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="CPU" category="processor">
+    <featureInstance name="ETH" category="busAccess"/>
+  </componentInstance>
+  <componentInstance name="pr_A_3" category="process">
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out"/>
+    </componentInstance>
+    <componentInstance name="pr_A_3.Producer.Data_Source -> pr_B_3.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_out" kind="accessConnection" destination="//@componentInstance.2/@componentInstance.1" source="//@componentInstance.2/@componentInstance.0/@featureInstance.0">
+      <connectionReference source="//@componentInstance.2/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.1"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="pr_B_7" category="process">
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink"/>
+    </componentInstance>
+    <componentInstance name="pr_A_7.Producer.Data_Source -> pr_B_7.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_in" kind="accessConnection" destination="//@componentInstance.3/@componentInstance.0/@featureInstance.0" source="//@componentInstance.3/@componentInstance.1">
+      <connectionReference source="//@componentInstance.3/@componentInstance.1" destination="//@componentInstance.3/@componentInstance.0/@featureInstance.0"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="pr_A_8" category="process">
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out"/>
+    </componentInstance>
+    <componentInstance name="pr_A_8.Producer.Data_Source -> pr_B_8.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_out" kind="accessConnection" destination="//@componentInstance.4/@componentInstance.1" source="//@componentInstance.4/@componentInstance.0/@featureInstance.0">
+      <connectionReference source="//@componentInstance.4/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.4/@componentInstance.1"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="pr_A_4" category="process">
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out"/>
+    </componentInstance>
+    <componentInstance name="pr_A_4.Producer.Data_Source -> pr_B_4.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_out" kind="accessConnection" destination="//@componentInstance.5/@componentInstance.1" source="//@componentInstance.5/@componentInstance.0/@featureInstance.0">
+      <connectionReference source="//@componentInstance.5/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.5/@componentInstance.1"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="pr_B_5" category="process">
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink"/>
+    </componentInstance>
+    <componentInstance name="pr_A_5.Producer.Data_Source -> pr_B_5.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_in" kind="accessConnection" destination="//@componentInstance.6/@componentInstance.0/@featureInstance.0" source="//@componentInstance.6/@componentInstance.1">
+      <connectionReference source="//@componentInstance.6/@componentInstance.1" destination="//@componentInstance.6/@componentInstance.0/@featureInstance.0"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="pr_B_6" category="process">
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink"/>
+    </componentInstance>
+    <componentInstance name="pr_A_6.Producer.Data_Source -> pr_B_6.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_in" kind="accessConnection" destination="//@componentInstance.7/@componentInstance.0/@featureInstance.0" source="//@componentInstance.7/@componentInstance.1">
+      <connectionReference source="//@componentInstance.7/@componentInstance.1" destination="//@componentInstance.7/@componentInstance.0/@featureInstance.0"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="pr_B_8" category="process">
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink"/>
+    </componentInstance>
+    <componentInstance name="pr_A_8.Producer.Data_Source -> pr_B_8.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_in" kind="accessConnection" destination="//@componentInstance.8/@componentInstance.0/@featureInstance.0" source="//@componentInstance.8/@componentInstance.1">
+      <connectionReference source="//@componentInstance.8/@componentInstance.1" destination="//@componentInstance.8/@componentInstance.0/@featureInstance.0"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="the_bus" category="bus"/>
+  <componentInstance name="pr_A_5" category="process">
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out"/>
+    </componentInstance>
+    <componentInstance name="pr_A_5.Producer.Data_Source -> pr_B_5.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_out" kind="accessConnection" destination="//@componentInstance.10/@componentInstance.1" source="//@componentInstance.10/@componentInstance.0/@featureInstance.0">
+      <connectionReference source="//@componentInstance.10/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.10/@componentInstance.1"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="pr_B_4" category="process">
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink"/>
+    </componentInstance>
+    <componentInstance name="pr_A_4.Producer.Data_Source -> pr_B_4.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_in" kind="accessConnection" destination="//@componentInstance.11/@componentInstance.0/@featureInstance.0" source="//@componentInstance.11/@componentInstance.1">
+      <connectionReference source="//@componentInstance.11/@componentInstance.1" destination="//@componentInstance.11/@componentInstance.0/@featureInstance.0"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="pr_B_3" category="process">
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink"/>
+    </componentInstance>
+    <componentInstance name="pr_A_3.Producer.Data_Source -> pr_B_3.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_in" kind="accessConnection" destination="//@componentInstance.12/@componentInstance.0/@featureInstance.0" source="//@componentInstance.12/@componentInstance.1">
+      <connectionReference source="//@componentInstance.12/@componentInstance.1" destination="//@componentInstance.12/@componentInstance.0/@featureInstance.0"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="pr_B_2" category="process">
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink"/>
+    </componentInstance>
+    <componentInstance name="pr_A_2.Producer.Data_Source -> pr_B_2.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_in" kind="accessConnection" destination="//@componentInstance.13/@componentInstance.0/@featureInstance.0" source="//@componentInstance.13/@componentInstance.1">
+      <connectionReference source="//@componentInstance.13/@componentInstance.1" destination="//@componentInstance.13/@componentInstance.0/@featureInstance.0"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="pr_B_1" category="process">
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink"/>
+    </componentInstance>
+    <componentInstance name="pr_A_1.Producer.Data_Source -> pr_B_1.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_in" kind="accessConnection" destination="//@componentInstance.14/@componentInstance.0/@featureInstance.0" source="//@componentInstance.14/@componentInstance.1">
+      <connectionReference source="//@componentInstance.14/@componentInstance.1" destination="//@componentInstance.14/@componentInstance.0/@featureInstance.0"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="T" category="data"/>
+  <componentInstance name="pr_A_7" category="process">
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out"/>
+    </componentInstance>
+    <componentInstance name="pr_A_7.Producer.Data_Source -> pr_B_7.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_out" kind="accessConnection" destination="//@componentInstance.16/@componentInstance.1" source="//@componentInstance.16/@componentInstance.0/@featureInstance.0">
+      <connectionReference source="//@componentInstance.16/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.16/@componentInstance.1"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="pr_A_6" category="process">
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out"/>
+    </componentInstance>
+    <componentInstance name="pr_A_6.Producer.Data_Source -> pr_B_6.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_out" kind="accessConnection" destination="//@componentInstance.17/@componentInstance.1" source="//@componentInstance.17/@componentInstance.0/@featureInstance.0">
+      <connectionReference source="//@componentInstance.17/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.17/@componentInstance.1"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="pr_A_1" category="process">
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out"/>
+    </componentInstance>
+    <componentInstance name="pr_A_1.Producer.Data_Source -> pr_B_1.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_out" kind="accessConnection" destination="//@componentInstance.18/@componentInstance.1" source="//@componentInstance.18/@componentInstance.0/@featureInstance.0">
+      <connectionReference source="//@componentInstance.18/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.18/@componentInstance.1"/>
+    </connectionInstance>
+  </componentInstance>
+</instance:SystemInstance>

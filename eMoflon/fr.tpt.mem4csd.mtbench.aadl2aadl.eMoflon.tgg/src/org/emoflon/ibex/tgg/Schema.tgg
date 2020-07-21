@@ -1,0 +1,71 @@
+#import "http://aadl.info/AADL/2.0"
+#import "http://aadl.info/AADL/2.0/instance"
+
+#schema Tgg
+
+#source {
+	instance
+}
+
+#target {
+	instance
+}
+
+#correspondence {
+	SystemToSystem {
+		#src->SystemInstance
+		#trg->SystemInstance
+	}
+
+	ConnectionToConnection {
+		#src->ConnectionInstance
+		#trg->ConnectionInstance
+	}
+
+	PortConnectionToSharedData {
+		#src->ConnectionInstance
+		#trg->InstanceObject
+	}
+
+	Reference2Reference {
+		#src->ConnectionReference
+		#trg->ConnectionReference
+	}
+
+	End2End {
+		#src->ConnectionInstanceEnd
+		#trg->ConnectionInstanceEnd
+	}
+
+	CompToComp #extends End2End
+
+	FeatToFeat #extends End2End
+}
+
+#attributeConditions {
+	#userDefined 
+   	eq_enum(a:EEnumerator, b:EEnumerator) {
+		#sync: [B B], [B F], [F B], [F F]
+		#gen:  [B B], [B F], [F B], [F F]
+		}
+
+	#userDefined 		
+   	not_port_connection(a:EEnumerator) {
+		#sync: [B]
+		#gen:  [B], [F]
+		}
+
+	#userDefined 		
+   	not_port_feature(a:EEnumerator) {
+		#sync: [B]
+		#gen:  [B], [F]
+		}
+
+	#userDefined 
+   	is_device(a:EEnumerator, b:EEnumerator) {
+		#sync: [B B], [B F], [F B], [F F]
+		#gen:  [B B], [B F], [F B], [F F]
+		}
+}
+
+

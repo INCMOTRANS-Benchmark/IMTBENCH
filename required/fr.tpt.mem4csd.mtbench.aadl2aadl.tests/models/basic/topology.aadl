@@ -1,0 +1,100 @@
+package topology
+
+public
+
+	data mydata
+	end mydata;
+
+	data implementation mydata.i
+	end mydata.i;
+
+	processor myPCu
+		features
+			eth: requires bus access ethernet;
+	end myPCu;
+
+	memory ram
+	end ram;
+
+	bus ethernet
+	end ethernet;
+
+--
+--  Producer software part
+--
+	process prodcons
+	end prodcons;
+
+	process implementation prodcons.i
+		subcomponents
+			thrp: thread producer_thr.i;
+			thrc: thread consumer_thr.i;
+		connections
+			c0: port thrp.dataout -> thrc.datain;
+	end prodcons.i;
+
+	process producer
+		features
+			dataout: out data port mydata.i;
+	end producer;
+
+	process implementation producer.i
+		subcomponents
+			thr: thread producer_thr.i;
+		connections
+			c0: port thr.dataout -> dataout;
+
+	end producer.i;
+
+	thread producer_thr
+		features
+			dataout: out data port mydata.i;
+	end producer_thr;
+
+	thread implementation producer_thr.i
+	end producer_thr.i;
+
+--
+--  Consumer Software Part
+--
+	process consumer
+		features
+			datain: in data port mydata.i;
+	end consumer;
+
+	process implementation consumer.i
+		subcomponents
+			thr: thread consumer_thr.i;
+		connections
+			c0: port datain -> thr.datain;
+	end consumer.i;
+
+	thread consumer_thr
+		features
+			datain: in data port mydata.i;
+	end consumer_thr;
+
+	thread implementation consumer_thr.i
+	end consumer_thr.i;
+
+--
+--  main assembly
+--
+	system test
+	end test;
+
+	system implementation test.i
+		subcomponents
+			PCU: processor myPCu;
+			Prod1: process producer.i;
+			Prod2: process producer.i;
+			Cons1: process consumer.i;
+			Cons2: process consumer.i;
+			eth: bus ethernet;
+		connections
+			PC11: port Prod1.dataout -> Cons1.datain;
+			PC12: port Prod1.dataout -> Cons2.datain;
+			PC22: port Prod2.dataout -> Cons2.datain;
+	end test.i;
+
+end topology;

@@ -1,0 +1,62 @@
+#using Tgg.*
+#using AttrCondDefLibrary.*
+
+#rule ConnectionReferenceToConnectionReference 
+ #with Tgg
+
+#source {
+	s_source:ConnectionInstanceEnd{}
+
+	s_destination:ConnectionInstanceEnd{}
+
+	++connectionRef_source:ConnectionReference{
+		++-source -> s_source
+		++-destination -> s_destination
+	}
+
+	connection_source:ConnectionInstance{
+		++-connectionReference -> connectionRef_source
+	}
+}
+
+#target {
+	t_source:ConnectionInstanceEnd{}
+
+	t_destination:ConnectionInstanceEnd{}
+
+	++connectionRef_target:ConnectionReference{
+		++-source -> t_source
+		++-destination -> t_destination
+	}
+
+	connection_target:ConnectionInstance{
+		++-connectionReference -> connectionRef_target
+	}
+}
+
+#correspondence {
+	e2e1:End2End{
+		#src->s_destination
+		#trg->t_destination
+	}
+
+	e2e2:End2End{
+		#src->s_source
+		#trg->t_source
+	}
+
+	c2c:ConnectionToConnection{
+		#src->connection_source
+		#trg->connection_target
+	}
+
+	++r2r:Reference2Reference{
+		#src->connectionRef_source
+		#trg->connectionRef_target
+	}
+}
+
+#attributeConditions {
+}
+
+

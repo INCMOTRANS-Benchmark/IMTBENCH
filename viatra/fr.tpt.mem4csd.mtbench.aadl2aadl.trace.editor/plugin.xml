@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated aadl2aadl -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="fr.tpt.mem4csd.mtbench.aadl2aadl.trace.aadl2aadl.presentation.Aadl2aadlModelWizardID"
+            name="%_UI_Aadl2aadlModelWizard_label"
+            class="fr.tpt.mem4csd.mtbench.aadl2aadl.trace.aadl2aadl.presentation.Aadl2aadlModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Aadl2aadlModelFile.gif">
+         <description>%_UI_Aadl2aadlModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated aadl2aadl -->
+      <editor
+            id="fr.tpt.mem4csd.mtbench.aadl2aadl.trace.aadl2aadl.presentation.Aadl2aadlEditorID"
+            name="%_UI_Aadl2aadlEditor_label"
+            icon="icons/full/obj16/Aadl2aadlModelFile.gif"
+            extensions="aadl2aadl"
+            class="fr.tpt.mem4csd.mtbench.aadl2aadl.trace.aadl2aadl.presentation.Aadl2aadlEditor"
+            contributorClass="fr.tpt.mem4csd.mtbench.aadl2aadl.trace.aadl2aadl.presentation.Aadl2aadlActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

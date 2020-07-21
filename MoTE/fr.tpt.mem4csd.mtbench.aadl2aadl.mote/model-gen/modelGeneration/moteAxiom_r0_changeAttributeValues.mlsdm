@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mlsdm:Activity xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mlexpressions="http://www.mdelab.de/mlexpressions/1.0" xmlns:mlsdm="http://www.mdelab.de/mlsdm/1.0" xmlns:mlstorypatterns="http://www.mdelab.de/mlstorypatterns/1.0" uuid="__j_cMK-5EeqN9ew5rcv3QA" name="moteAxiom_r0_changeAttributeValues">
+  <edges uuid="__j_cMa-5EeqN9ew5rcv3QA" source="__j_cNK-5EeqN9ew5rcv3QA" target="__j_cNa-5EeqN9ew5rcv3QA"/>
+  <edges uuid="__j_cMq-5EeqN9ew5rcv3QA" source="__j_cNa-5EeqN9ew5rcv3QA" target="__j_cQK-5EeqN9ew5rcv3QA" guardType="SUCCESS"/>
+  <edges uuid="__j_cM6-5EeqN9ew5rcv3QA" source="__j_cNa-5EeqN9ew5rcv3QA" target="__j_cQ6-5EeqN9ew5rcv3QA" guardType="FAILURE"/>
+  <nodes xsi:type="mlsdm:InitialNode" uuid="__j_cNK-5EeqN9ew5rcv3QA" outgoingEdges="__j_cMa-5EeqN9ew5rcv3QA"/>
+  <nodes xsi:type="mlsdm:StoryNode" uuid="__j_cNa-5EeqN9ew5rcv3QA" outgoingEdges="__j_cMq-5EeqN9ew5rcv3QA __j_cM6-5EeqN9ew5rcv3QA" incomingEdges="__j_cMa-5EeqN9ew5rcv3QA" name="change attribute values">
+    <storyPattern uuid="__j_cNq-5EeqN9ew5rcv3QA" name="change attribute values">
+      <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="__j_cN6-5EeqN9ew5rcv3QA" source="__j_cP6-5EeqN9ew5rcv3QA" target="__j_cPK-5EeqN9ew5rcv3QA">
+        <feature xsi:type="ecore:EReference" href="http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode/rightNodes"/>
+      </storyPatternLinks>
+      <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="__j_cOK-5EeqN9ew5rcv3QA" source="__j_cP6-5EeqN9ew5rcv3QA" target="__j_cOa-5EeqN9ew5rcv3QA">
+        <feature xsi:type="ecore:EReference" href="http://www.mdelab.de/mltgg/mote2/1.0#//TGGNode/leftNodes"/>
+      </storyPatternLinks>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__j_cOa-5EeqN9ew5rcv3QA" name="systemInstance" incomingLinks="__j_cOK-5EeqN9ew5rcv3QA">
+        <type xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+        <attributeAssignments uuid="__j_cOq-5EeqN9ew5rcv3QA">
+          <assignmentExpression xsi:type="mlexpressions:MLStringExpression" uuid="__j_cO6-5EeqN9ew5rcv3QA" expressionString="nameVar" expressionLanguageID="OCL"/>
+          <feature xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+        </attributeAssignments>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__j_cPK-5EeqN9ew5rcv3QA" name="systemInstanceRef" incomingLinks="__j_cN6-5EeqN9ew5rcv3QA">
+        <type xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+        <attributeAssignments uuid="__j_cPa-5EeqN9ew5rcv3QA">
+          <assignmentExpression xsi:type="mlexpressions:MLStringExpression" uuid="__j_cPq-5EeqN9ew5rcv3QA" expressionString="nameVar" expressionLanguageID="OCL"/>
+          <feature xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+        </attributeAssignments>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__j_cP6-5EeqN9ew5rcv3QA" name="corrAxiom" outgoingLinks="__j_cN6-5EeqN9ew5rcv3QA __j_cOK-5EeqN9ew5rcv3QA" bindingType="BOUND">
+        <type xsi:type="ecore:EClass" href="https://mem4csd.telecom-paristech.fr/mtbench.aadl2aadl#//CorrAxiom"/>
+      </storyPatternObjects>
+    </storyPattern>
+  </nodes>
+  <nodes xsi:type="mlsdm:ActivityFinalNode" uuid="__j_cQK-5EeqN9ew5rcv3QA" incomingEdges="__j_cMq-5EeqN9ew5rcv3QA">
+    <outputParameterValues uuid="__j_cQa-5EeqN9ew5rcv3QA" parameter="__j_cSK-5EeqN9ew5rcv3QA">
+      <expression xsi:type="mlexpressions:MLStringExpression" uuid="__j_cQq-5EeqN9ew5rcv3QA" expressionString="true" expressionLanguageID="OCL"/>
+    </outputParameterValues>
+  </nodes>
+  <nodes xsi:type="mlsdm:ActivityFinalNode" uuid="__j_cQ6-5EeqN9ew5rcv3QA" incomingEdges="__j_cM6-5EeqN9ew5rcv3QA">
+    <outputParameterValues uuid="__j_cRK-5EeqN9ew5rcv3QA" parameter="__j_cSK-5EeqN9ew5rcv3QA">
+      <expression xsi:type="mlexpressions:MLStringExpression" uuid="__j_cRa-5EeqN9ew5rcv3QA" expressionString="false" expressionLanguageID="OCL"/>
+    </outputParameterValues>
+  </nodes>
+  <parameters uuid="__j_cRq-5EeqN9ew5rcv3QA" name="corrAxiom">
+    <type xsi:type="ecore:EClass" href="https://mem4csd.telecom-paristech.fr/mtbench.aadl2aadl#//CorrAxiom"/>
+  </parameters>
+  <parameters uuid="__j_cR6-5EeqN9ew5rcv3QA" name="nameVar">
+    <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </parameters>
+  <parameters uuid="__j_cSK-5EeqN9ew5rcv3QA" name="__returnValue" direction="OUT">
+    <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </parameters>
+</mlsdm:Activity>

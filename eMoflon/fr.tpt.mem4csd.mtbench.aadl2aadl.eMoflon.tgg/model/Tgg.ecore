@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Tgg" nsURI="platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore"
+    nsPrefix="Tgg">
+  <eClassifiers xsi:type="ecore:EClass" name="SystemToSystem">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectionToConnection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortConnectionToSharedData">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//InstanceObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Reference2Reference">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="End2End">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompToComp" eSuperTypes="platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//End2End"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FeatToFeat" eSuperTypes="platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//End2End"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentToComponent__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.core.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__component_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__system_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__component_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__system_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__c2c" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__s2s" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//SystemToSystem"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectionInstanceToConnectionInstanceAtProcess__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.core.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__component_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__connection_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__s_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__s_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__component_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__connection_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__t_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__t_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__c2c" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//ConnectionToConnection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__comp2comp"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__e2e1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//End2End"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__e2e2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//End2End"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectionInstanceToConnectionInstanceAtSystem__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.core.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__connection_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__s_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__s_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__system_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__connection_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__system_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__t_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__t_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__c2c" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//ConnectionToConnection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__e2e1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//End2End"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__e2e2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//End2End"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__s2s" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//SystemToSystem"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectionReferenceToConnectionReference__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.core.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__connectionRef_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__connection_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__s_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__s_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__connectionRef_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__connection_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__t_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__t_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__c2c" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//ConnectionToConnection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__e2e1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//End2End"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__e2e2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//End2End"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__r2r" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//Reference2Reference"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FeatureToFeature__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.core.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__component_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__feature_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__component_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__feature_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__c2c" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__f2f2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//FeatToFeat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortConnectionToDataAccessAtProcess__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.core.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__component_conn_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__component_conn_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__component_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__connection_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__feature_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__feature_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__ref_connection_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__component_conn_destination_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__component_conn_source_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__component_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__data" lowerBound="1"
+        eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__dataaccess1"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__dataaccess2"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__feature1"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__feature2"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__refconnection1"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__refconnection2"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__c2c" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__f2f1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//FeatToFeat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__f2f2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//FeatToFeat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2a1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2a2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2d" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2r1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2r2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__sub2sub1"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__sub2sub2"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortConnectionToDataAccessAtSystem00__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.core.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__connection_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__feature_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__feature_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__process_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__process_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__ref_connection_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__ref_connection_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__system_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__thread_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__thread_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__data_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__data_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__dataaccess_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__dataaccess_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__feature_destination_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__feature_source_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__process_destination_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__process_source_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__ref_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__ref_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__system_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__thread_destination_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__thread_source_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__feature2feature1"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//FeatToFeat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__feature2feature2"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//FeatToFeat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2a1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2a2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2d1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2d2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__process2process1"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__process2process2"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__r2r1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__r2r2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__s2s" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//SystemToSystem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__thread2thread1"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__thread2thread2"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortConnectionToDataAccessAtSystem01__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.core.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__connection_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__feature_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__feature_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__process_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__process_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__ref_connection_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__ref_connection_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__system_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__thread_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__thread_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__data_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__data_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__dataaccess_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__dataaccess_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__feature_destination_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__feature_source_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__process_destination_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__process_source_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__ref_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__ref_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__system_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__thread_destination_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__thread_source_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__feature2feature1"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//FeatToFeat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__feature2feature2"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//FeatToFeat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2a1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2a2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2d1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2d2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__process2process1"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__process2process2"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__r2r1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__r2r2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__s2s" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//SystemToSystem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__thread2thread1"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__thread2thread2"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortConnectionToDataAccessAtSystem10__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.core.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__connection_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__feature_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__feature_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__process_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__process_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__ref_connection_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__ref_connection_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__system_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__thread_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__thread_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__data_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__data_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__dataaccess_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__dataaccess_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__feature_destination_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__feature_source_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__process_destination_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__process_source_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__ref_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__ref_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__system_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__thread_destination_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__thread_source_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__feature2feature1"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//FeatToFeat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__feature2feature2"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//FeatToFeat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2a1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2a2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2d1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2d2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__process2process1"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__process2process2"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__r2r1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__r2r2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__s2s" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//SystemToSystem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__thread2thread1"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__thread2thread2"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortConnectionToDataAccessAtSystem11__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.core.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__connection_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__feature_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__feature_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__process_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__process_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__ref_connection_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__ref_connection_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__system_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__thread_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__thread_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__data_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__data_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__dataaccess_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__dataaccess_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__feature_destination_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__feature_source_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__process_destination_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__process_source_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__ref_destination"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__ref_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__system_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__thread_destination_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__thread_source_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__feature2feature1"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//FeatToFeat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__feature2feature2"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//FeatToFeat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2a1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2a2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2d1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__p2d2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__process2process1"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__process2process2"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__r2r1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__r2r2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//PortConnectionToSharedData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__s2s" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//SystemToSystem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__thread2thread1"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__thread2thread2"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SubcomponentToSubcomponent__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.core.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__component_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__subcomponent_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__component_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__subcomponent_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__c2c" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__sub2sub"
+        lowerBound="1" eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//CompToComp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemToSystem__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.core.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__system_source"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__system_target"
+        lowerBound="1" eType="ecore:EClass http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__s2s" lowerBound="1"
+        eType="ecore:EClass platform:/resource/fr.tpt.mem4csd.mtbench.aadl2aadl.eMoflon.tgg/model/Tgg.ecore#//SystemToSystem"/>
+  </eClassifiers>
+</ecore:EPackage>

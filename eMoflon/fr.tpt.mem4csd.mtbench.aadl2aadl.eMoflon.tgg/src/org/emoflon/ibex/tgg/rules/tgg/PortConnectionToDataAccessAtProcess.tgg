@@ -1,0 +1,162 @@
+#using Tgg.*
+#using AttrCondDefLibrary.*
+
+#rule PortConnectionToDataAccessAtProcess 
+#with Tgg
+
+#source {
+	component_source:ComponentInstance{
+		category==enum::aadl2.ComponentCategory::process
+		-componentInstance -> component_conn_source
+		-componentInstance -> component_conn_destination
+		++ -connectionInstance -> connection_source
+	}
+
+	component_conn_source:ComponentInstance{
+		category==enum::aadl2.ComponentCategory::thread
+		++-featureInstance -> feature_source
+	}
+
+	component_conn_destination:ComponentInstance{
+		category==enum::aadl2.ComponentCategory::thread
+		++-featureInstance -> feature_destination
+	}
+
+	++feature_source:FeatureInstance
+
+	++feature_destination:FeatureInstance
+
+	++connection_source:ConnectionInstance{
+		kind :=enum::instance.ConnectionKind::portConnection
+		++-source -> feature_source
+		++-destination -> feature_destination
+		++-connectionReference -> ref_connection_source
+	}
+
+	++ref_connection_source:ConnectionReference{
+	}
+}
+
+#target {
+	component_target:ComponentInstance{
+		++ -componentInstance -> data
+		-componentInstance -> component_conn_destination_target
+		-componentInstance -> component_conn_source_target
+		++ -connectionInstance -> dataaccess1
+		++ -connectionInstance -> dataaccess2
+	}
+
+	component_conn_source_target:ComponentInstance{
+		++-featureInstance -> feature1
+	}
+
+	component_conn_destination_target:ComponentInstance{
+		++-featureInstance -> feature2
+	}
+
+	++feature1:FeatureInstance {	
+    }
+
+	++feature2:FeatureInstance { 
+    }
+
+	++data:ComponentInstance {
+		category:=enum::ComponentCategory::data
+	}
+
+	++dataaccess1:ConnectionInstance {
+		kind :=enum::ConnectionKind::accessConnection
+		++ -destination -> data
+		++ -source -> feature1
+		++-connectionReference -> refconnection1
+	}
+
+	++refconnection1:ConnectionReference{
+		++-context -> component_target
+		++ -destination -> data
+		++ -source -> feature1
+	}
+
+	++refconnection2:ConnectionReference{
+		++-context -> component_target
+		++ -destination -> feature2
+		++ -source -> data
+	}
+
+	++dataaccess2:ConnectionInstance {
+		kind:=enum::ConnectionKind::accessConnection
+		++ -destination -> feature2
+		++ -source -> data
+		++-connectionReference -> refconnection2
+	}
+}
+
+#correspondence {
+	c2c:CompToComp{
+		#src->component_source
+		#trg->component_target
+	}
+
+	sub2sub1:CompToComp{
+		#src->component_conn_source
+		#trg->component_conn_source_target
+	}
+
+	sub2sub2:CompToComp{
+		#src->component_conn_destination
+		#trg->component_conn_destination_target
+	}
+
+	++f2f1:FeatToFeat{
+		#src->feature_source
+		#trg->feature1
+	}
+
+	++f2f2:FeatToFeat{
+		#src->feature_destination
+		#trg->feature2
+	}
+
+	++ p2d:PortConnectionToSharedData {
+		#src->connection_source
+		#trg->data
+	}
+
+	++ p2a1:PortConnectionToSharedData {
+		#src->connection_source
+		#trg->dataaccess1
+	}
+
+	++ p2a2:PortConnectionToSharedData {
+		#src->connection_source
+		#trg->dataaccess2
+	}
+
+	++ p2r1:PortConnectionToSharedData {
+		#src->connection_source
+		#trg->refconnection1
+	}
+
+	++ p2r2:PortConnectionToSharedData {
+		#src->connection_source
+		#trg->refconnection2
+	}
+}
+
+#attributeConditions {
+	eq_string(feature_source.name, feature1.name)
+
+	eq_enum(feature_source.direction, feature1.direction)
+
+	eq_string(feature_destination.name, feature2.name)
+
+	eq_enum(feature_destination.direction, feature2.direction)
+
+	eq_string(data.name, connection_source.name)
+
+	eq_string(dataaccess1.name, connection_source.name)
+
+	eq_string(dataaccess2.name, connection_source.name)
+}
+
+

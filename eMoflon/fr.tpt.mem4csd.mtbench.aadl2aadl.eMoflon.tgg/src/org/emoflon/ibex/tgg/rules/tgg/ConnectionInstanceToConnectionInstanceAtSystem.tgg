@@ -1,0 +1,30 @@
+#using Tgg.*
+#using AttrCondDefLibrary.*
+
+#rule ConnectionInstanceToConnectionInstanceAtSystem  
+#extends ConnectionInstanceToConnectionInstance
+#with Tgg
+
+#source {
+	system_source:SystemInstance{
+		++ -connectionInstance -> connection_source
+	}
+}
+
+#target {
+	system_target:SystemInstance{
+		++ -connectionInstance -> connection_target
+	}
+}
+
+#correspondence {
+	s2s:SystemToSystem{
+		#src->system_source
+		#trg->system_target
+	}
+}
+
+#attributeConditions {
+}
+
+

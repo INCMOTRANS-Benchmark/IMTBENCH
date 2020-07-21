@@ -1,0 +1,202 @@
+#using Tgg.*
+#using AttrCondDefLibrary.*
+
+#rule PortConnectionToDataAccessAtSystem01
+#with Tgg
+
+#source {
+	system_source:SystemInstance{
+		++ -connectionInstance -> connection_source
+	}
+
+	process_source:ComponentInstance{
+		category==enum::aadl2.ComponentCategory::process
+		-componentInstance -> thread_source
+	}
+
+	process_destination:ComponentInstance{
+		category==enum::aadl2.ComponentCategory::process
+		-componentInstance -> thread_destination
+	}
+
+	thread_source:ComponentInstance{
+		category==enum::aadl2.ComponentCategory::thread
+		-featureInstance -> feature_source
+	}
+
+	thread_destination:ComponentInstance{
+		category==enum::aadl2.ComponentCategory::thread
+		++ -featureInstance -> feature_destination
+	}
+
+	feature_source:FeatureInstance
+
+	++feature_destination:FeatureInstance
+
+	++connection_source:ConnectionInstance{
+		kind :=enum::instance.ConnectionKind::portConnection
+		++-connectionReference -> ref_connection_source
+		++-connectionReference -> ref_connection_destination
+	}
+
+	++ref_connection_source:ConnectionReference{
+		++-source -> feature_source
+		++-context -> process_source
+	}
+
+	++ref_connection_destination:ConnectionReference{
+		++-destination -> feature_destination
+		++-context -> process_destination
+	}
+}
+
+#target {
+	system_target:SystemInstance{
+	}
+
+	process_source_target:ComponentInstance{
+		-componentInstance -> thread_source_target
+		++ -componentInstance -> data_source
+		++ -connectionInstance -> dataaccess_source
+	}
+
+	process_destination_target:ComponentInstance{
+		-componentInstance -> thread_destination_target
+		++ -componentInstance -> data_destination
+		++ -connectionInstance -> dataaccess_destination
+	}
+
+	thread_source_target:ComponentInstance{
+		-featureInstance -> feature_source_target
+	}
+
+	thread_destination_target:ComponentInstance{
+		++ -featureInstance -> feature_destination_target
+	}
+
+	feature_source_target:FeatureInstance{
+	}
+
+	++feature_destination_target:FeatureInstance{
+		// category :=enum::FeatureCategory::Parameter  // problem from OSATE
+	}
+
+	++data_source:ComponentInstance {
+		category:=enum::ComponentCategory::data
+	}
+
+	++dataaccess_source:ConnectionInstance {
+		kind :=enum::ConnectionKind::accessConnection
+		++ -destination -> data_source
+		++ -source -> feature_source_target
+		++-connectionReference -> ref_source
+	}
+
+	++ref_source:ConnectionReference {
+		++ -destination -> data_source
+		++ -source -> feature_source_target
+	}
+
+	++data_destination:ComponentInstance {
+		category:=enum::ComponentCategory::data
+	}
+
+	++dataaccess_destination:ConnectionInstance {
+		kind:=enum::ConnectionKind::accessConnection
+		++ -destination -> feature_destination_target
+		++ -source -> data_destination
+		++-connectionReference -> ref_destination
+	}
+
+	++ref_destination:ConnectionReference {
+		++ -destination -> feature_destination_target
+		++ -source -> data_destination
+	}
+}
+
+#correspondence {
+	s2s:SystemToSystem{
+		#src->system_source
+		#trg->system_target
+	}
+
+	process2process1:CompToComp{
+		#src->process_source
+		#trg->process_source_target
+	}
+
+	process2process2:CompToComp{
+		#src->process_destination
+		#trg->process_destination_target
+	}
+
+	thread2thread1:CompToComp{
+		#src->thread_source
+		#trg->thread_source_target
+	}
+
+	thread2thread2:CompToComp{
+		#src->thread_destination
+		#trg->thread_destination_target
+	}
+
+	feature2feature1:FeatToFeat{
+		#src->feature_source
+		#trg->feature_source_target
+	}
+
+	++feature2feature2:FeatToFeat{
+		#src->feature_destination
+		#trg->feature_destination_target
+	}
+
+	++ p2d1:PortConnectionToSharedData {
+		#src->connection_source
+		#trg->data_source
+	}
+
+	++ p2d2:PortConnectionToSharedData {
+		#src->connection_source
+		#trg->data_destination
+	}
+
+	++ p2a1:PortConnectionToSharedData {
+		#src->connection_source
+		#trg->dataaccess_source
+	}
+
+	++ p2a2:PortConnectionToSharedData {
+		#src->connection_source
+		#trg->dataaccess_destination
+	}
+
+	++r2r1:PortConnectionToSharedData{
+		#src->connection_source
+		#trg->ref_source
+	}
+
+	++r2r2:PortConnectionToSharedData{
+		#src->connection_source
+		#trg->ref_destination
+	}
+}
+
+#attributeConditions {
+	eq_string(feature_source.name, feature_source_target.name)
+
+	eq_enum(feature_source.direction, feature_source_target.direction)
+
+	eq_string(feature_destination.name, feature_destination_target.name)
+
+	eq_enum(feature_destination.direction, feature_destination_target.direction)
+
+	eq_string(data_source.name, connection_source.name)
+
+	eq_string(data_destination.name, connection_source.name)
+
+	eq_string(dataaccess_source.name, connection_source.name)
+
+	eq_string(dataaccess_destination.name, connection_source.name)
+}
+
+

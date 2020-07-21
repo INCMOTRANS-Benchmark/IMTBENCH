@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="PC_Simple_Native_Instance" category="system">
+  <componentInstance name="T" category="data"/>
+  <componentInstance name="prod_cons" category="process">
+    <componentInstance name="pr_A_1" category="thread"/>
+    <componentInstance name="pr_B_1" category="thread"/>
+  </componentInstance>
+  <componentInstance name="CPU" category="processor">
+    <featureInstance name="ETH" category="busAccess"/>
+  </componentInstance>
+  <componentInstance name="the_bus" category="bus"/>
+</instance:SystemInstance>

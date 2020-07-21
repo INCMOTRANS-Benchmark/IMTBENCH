@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ASCII"?>
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="PC_Simple_Native_Instance" category="system">
+  <componentInstance name="the_bus" category="bus"/>
+  <componentInstance name="pr_A_4" category="process">
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out"/>
+    </componentInstance>
+    <componentInstance name="pr_A_4.Producer.Data_Source -> pr_B_4.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_out" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.1" source="//@componentInstance.1/@componentInstance.0/@featureInstance.0">
+      <connectionReference source="//@componentInstance.1/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.1/@componentInstance.1"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="pr_B_2" category="process">
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink"/>
+    </componentInstance>
+    <componentInstance name="pr_A_2.Producer.Data_Source -> pr_B_2.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_in" kind="accessConnection" destination="//@componentInstance.2/@componentInstance.0/@featureInstance.0" source="//@componentInstance.2/@componentInstance.1">
+      <connectionReference source="//@componentInstance.2/@componentInstance.1" destination="//@componentInstance.2/@componentInstance.0/@featureInstance.0"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="pr_B_4" category="process">
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink"/>
+    </componentInstance>
+    <componentInstance name="pr_A_4.Producer.Data_Source -> pr_B_4.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_in" kind="accessConnection" destination="//@componentInstance.3/@componentInstance.0/@featureInstance.0" source="//@componentInstance.3/@componentInstance.1">
+      <connectionReference source="//@componentInstance.3/@componentInstance.1" destination="//@componentInstance.3/@componentInstance.0/@featureInstance.0"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="pr_B_3" category="process">
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink"/>
+    </componentInstance>
+    <componentInstance name="pr_A_3.Producer.Data_Source -> pr_B_3.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_in" kind="accessConnection" destination="//@componentInstance.4/@componentInstance.0/@featureInstance.0" source="//@componentInstance.4/@componentInstance.1">
+      <connectionReference source="//@componentInstance.4/@componentInstance.1" destination="//@componentInstance.4/@componentInstance.0/@featureInstance.0"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="pr_A_2" category="process">
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out"/>
+    </componentInstance>
+    <componentInstance name="pr_A_2.Producer.Data_Source -> pr_B_2.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_out" kind="accessConnection" destination="//@componentInstance.5/@componentInstance.1" source="//@componentInstance.5/@componentInstance.0/@featureInstance.0">
+      <connectionReference source="//@componentInstance.5/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.5/@componentInstance.1"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="pr_A_3" category="process">
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out"/>
+    </componentInstance>
+    <componentInstance name="pr_A_3.Producer.Data_Source -> pr_B_3.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_out" kind="accessConnection" destination="//@componentInstance.6/@componentInstance.1" source="//@componentInstance.6/@componentInstance.0/@featureInstance.0">
+      <connectionReference source="//@componentInstance.6/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.6/@componentInstance.1"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="pr_B_1" category="process">
+    <componentInstance name="Consumer" category="thread">
+      <featureInstance name="Data_Sink"/>
+    </componentInstance>
+    <componentInstance name="pr_A_1.Producer.Data_Source -> pr_B_1.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_in" kind="accessConnection" destination="//@componentInstance.7/@componentInstance.0/@featureInstance.0" source="//@componentInstance.7/@componentInstance.1">
+      <connectionReference source="//@componentInstance.7/@componentInstance.1" destination="//@componentInstance.7/@componentInstance.0/@featureInstance.0"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="T" category="data"/>
+  <componentInstance name="pr_A_1" category="process">
+    <componentInstance name="Producer" category="thread">
+      <featureInstance name="Data_Source" direction="out"/>
+    </componentInstance>
+    <componentInstance name="pr_A_1.Producer.Data_Source -> pr_B_1.Consumer.Data_Sink" category="data"/>
+    <connectionInstance name="connection_out" kind="accessConnection" destination="//@componentInstance.9/@componentInstance.1" source="//@componentInstance.9/@componentInstance.0/@featureInstance.0">
+      <connectionReference source="//@componentInstance.9/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.9/@componentInstance.1"/>
+    </connectionInstance>
+  </componentInstance>
+  <componentInstance name="CPU" category="processor">
+    <featureInstance name="ETH" category="busAccess"/>
+  </componentInstance>
+</instance:SystemInstance>

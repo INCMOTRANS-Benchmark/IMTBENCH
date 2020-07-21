@@ -1,0 +1,3188 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TGGAttributeConstraint="platform:/resource/org.emoflon.ibex.tgg.runtime.democles/model/TGGAttributeConstraint.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:emf="http://gervarro.org/democles/constraint/emf.ecore" xmlns:relational="http://gervarro.org/democles/specification/constraint/relational.ecore" xmlns:specification="http://gervarro.org/democles/specification.ecore">
+  <specification:Pattern name="ComponentToComponent__FWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="s2s">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//SystemToSystem"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="system_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="system_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/0/@symbolicParameters.1"/>
+        <parameters reference="/0/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/0/@symbolicParameters.0"/>
+        <parameters reference="/0/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//SystemToSystem/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/0/@symbolicParameters.0"/>
+        <parameters reference="/0/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//SystemToSystem/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/0/@symbolicParameters.1"/>
+        <parameters reference="/0/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="ConnectionInstanceToConnectionInstanceAtProcess__FWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="comp2comp">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e2e1">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//End2End"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e2e2">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//End2End"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="s_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="s_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="t_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="t_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="connection_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="__connection_source__kind__">
+        <eClassifier xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0/instance#//ConnectionKind"/>
+      </localVariables>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/1/@symbolicParameters.1"/>
+        <parameters reference="/1/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/1/@symbolicParameters.1"/>
+        <parameters reference="/1/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/1/@symbolicParameters.1"/>
+        <parameters reference="/1/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/1/@symbolicParameters.1"/>
+        <parameters reference="/1/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/1/@symbolicParameters.1"/>
+        <parameters reference="/1/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/1/@symbolicParameters.5"/>
+        <parameters reference="/1/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/1/@symbolicParameters.5"/>
+        <parameters reference="/1/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/1/@symbolicParameters.5"/>
+        <parameters reference="/1/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/1/@symbolicParameters.5"/>
+        <parameters reference="/1/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/1/@symbolicParameters.6"/>
+        <parameters reference="/1/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/1/@symbolicParameters.6"/>
+        <parameters reference="/1/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/1/@symbolicParameters.6"/>
+        <parameters reference="/1/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/1/@symbolicParameters.2"/>
+        <parameters reference="/1/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/1/@symbolicParameters.2"/>
+        <parameters reference="/1/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/1/@symbolicParameters.7"/>
+        <parameters reference="/1/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/1/@symbolicParameters.0"/>
+        <parameters reference="/1/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/1/@symbolicParameters.0"/>
+        <parameters reference="/1/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/1/@symbolicParameters.3"/>
+        <parameters reference="/1/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/1/@symbolicParameters.0"/>
+        <parameters reference="/1/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/1/@symbolicParameters.0"/>
+        <parameters reference="/1/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/1/@symbolicParameters.3"/>
+        <parameters reference="/1/@symbolicParameters.5"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/1/@symbolicParameters.3"/>
+        <parameters reference="/1/@symbolicParameters.7"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/1/@symbolicParameters.4"/>
+        <parameters reference="/1/@symbolicParameters.6"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/1/@symbolicParameters.4"/>
+        <parameters reference="/1/@symbolicParameters.8"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/1/@symbolicParameters.1"/>
+        <parameters reference="/1/@symbolicParameters.9"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/1/@symbolicParameters.5"/>
+        <parameters reference="/1/@symbolicParameters.9"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd/dstConnectionInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/1/@symbolicParameters.6"/>
+        <parameters reference="/1/@symbolicParameters.9"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd/srcConnectionInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/1/@symbolicParameters.9"/>
+        <parameters reference="/1/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+      </constraints>
+      <constraints xsi:type="TGGAttributeConstraint:AttributeConstraint" name="not_port_connection">
+        <parameters reference="/1/@bodies.0/@localVariables.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="ConnectionInstanceToConnectionInstanceAtSystem__FWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e2e1">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//End2End"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e2e2">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//End2End"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="s2s">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//SystemToSystem"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="s_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="s_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="system_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="system_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="t_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="t_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="connection_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="__connection_source__kind__">
+        <eClassifier xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0/instance#//ConnectionKind"/>
+      </localVariables>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/2/@symbolicParameters.3"/>
+        <parameters reference="/2/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/2/@symbolicParameters.3"/>
+        <parameters reference="/2/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/2/@symbolicParameters.3"/>
+        <parameters reference="/2/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/2/@symbolicParameters.3"/>
+        <parameters reference="/2/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/2/@symbolicParameters.3"/>
+        <parameters reference="/2/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/2/@symbolicParameters.4"/>
+        <parameters reference="/2/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/2/@symbolicParameters.4"/>
+        <parameters reference="/2/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/2/@symbolicParameters.4"/>
+        <parameters reference="/2/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/2/@symbolicParameters.4"/>
+        <parameters reference="/2/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/2/@symbolicParameters.5"/>
+        <parameters reference="/2/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/2/@symbolicParameters.5"/>
+        <parameters reference="/2/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/2/@symbolicParameters.5"/>
+        <parameters reference="/2/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/2/@symbolicParameters.6"/>
+        <parameters reference="/2/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/2/@symbolicParameters.6"/>
+        <parameters reference="/2/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/2/@symbolicParameters.7"/>
+        <parameters reference="/2/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/2/@symbolicParameters.0"/>
+        <parameters reference="/2/@symbolicParameters.1"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/2/@symbolicParameters.0"/>
+        <parameters reference="/2/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/2/@symbolicParameters.0"/>
+        <parameters reference="/2/@symbolicParameters.7"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/2/@symbolicParameters.1"/>
+        <parameters reference="/2/@symbolicParameters.4"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/2/@symbolicParameters.1"/>
+        <parameters reference="/2/@symbolicParameters.8"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/2/@symbolicParameters.2"/>
+        <parameters reference="/2/@symbolicParameters.5"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//SystemToSystem/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/2/@symbolicParameters.2"/>
+        <parameters reference="/2/@symbolicParameters.6"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//SystemToSystem/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/2/@symbolicParameters.3"/>
+        <parameters reference="/2/@symbolicParameters.9"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd/dstConnectionInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/2/@symbolicParameters.4"/>
+        <parameters reference="/2/@symbolicParameters.9"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd/srcConnectionInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/2/@symbolicParameters.5"/>
+        <parameters reference="/2/@symbolicParameters.9"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/2/@symbolicParameters.9"/>
+        <parameters reference="/2/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/kind"/>
+      </constraints>
+      <constraints xsi:type="TGGAttributeConstraint:AttributeConstraint" name="not_port_connection">
+        <parameters reference="/2/@bodies.0/@localVariables.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="ConnectionReferenceToConnectionReference__FWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="c2c">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//ConnectionToConnection"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="connection_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="connection_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e2e1">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//End2End"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e2e2">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//End2End"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="s_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="s_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="t_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="t_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="connectionRef_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/3/@symbolicParameters.1"/>
+        <parameters reference="/3/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/3/@symbolicParameters.5"/>
+        <parameters reference="/3/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/3/@symbolicParameters.5"/>
+        <parameters reference="/3/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/3/@symbolicParameters.5"/>
+        <parameters reference="/3/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/3/@symbolicParameters.6"/>
+        <parameters reference="/3/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/3/@symbolicParameters.6"/>
+        <parameters reference="/3/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/3/@symbolicParameters.7"/>
+        <parameters reference="/3/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/3/@symbolicParameters.3"/>
+        <parameters reference="/3/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/3/@symbolicParameters.0"/>
+        <parameters reference="/3/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//ConnectionToConnection/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/3/@symbolicParameters.0"/>
+        <parameters reference="/3/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//ConnectionToConnection/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/3/@symbolicParameters.3"/>
+        <parameters reference="/3/@symbolicParameters.5"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/3/@symbolicParameters.3"/>
+        <parameters reference="/3/@symbolicParameters.7"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/3/@symbolicParameters.4"/>
+        <parameters reference="/3/@symbolicParameters.6"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/3/@symbolicParameters.4"/>
+        <parameters reference="/3/@symbolicParameters.8"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/3/@symbolicParameters.9"/>
+        <parameters reference="/3/@symbolicParameters.5"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/3/@symbolicParameters.9"/>
+        <parameters reference="/3/@symbolicParameters.6"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/3/@symbolicParameters.1"/>
+        <parameters reference="/3/@symbolicParameters.9"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="DeviceConnectionInstanceToConnectionInstanceAtProcess__FWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="comp2comp">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="comp2comp1">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="comp2comp2">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_conn_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_conn_destination_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_conn_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_conn_source_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="connection_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="__component_conn_destination_target__category__">
+        <eClassifier xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__component_conn_source__category__">
+        <eClassifier xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+      </localVariables>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/4/@symbolicParameters.3"/>
+        <parameters reference="/4/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/4/@symbolicParameters.3"/>
+        <parameters reference="/4/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/4/@symbolicParameters.3"/>
+        <parameters reference="/4/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/4/@symbolicParameters.3"/>
+        <parameters reference="/4/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/4/@symbolicParameters.5"/>
+        <parameters reference="/4/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/4/@symbolicParameters.5"/>
+        <parameters reference="/4/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/4/@symbolicParameters.5"/>
+        <parameters reference="/4/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/4/@symbolicParameters.7"/>
+        <parameters reference="/4/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/4/@symbolicParameters.7"/>
+        <parameters reference="/4/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/4/@symbolicParameters.7"/>
+        <parameters reference="/4/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/4/@symbolicParameters.4"/>
+        <parameters reference="/4/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/4/@symbolicParameters.0"/>
+        <parameters reference="/4/@symbolicParameters.1"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/4/@symbolicParameters.0"/>
+        <parameters reference="/4/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/4/@symbolicParameters.1"/>
+        <parameters reference="/4/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/4/@symbolicParameters.1"/>
+        <parameters reference="/4/@symbolicParameters.5"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/4/@symbolicParameters.1"/>
+        <parameters reference="/4/@symbolicParameters.6"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/4/@symbolicParameters.2"/>
+        <parameters reference="/4/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/4/@symbolicParameters.2"/>
+        <parameters reference="/4/@symbolicParameters.4"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/4/@symbolicParameters.0"/>
+        <parameters reference="/4/@symbolicParameters.7"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/4/@symbolicParameters.0"/>
+        <parameters reference="/4/@symbolicParameters.8"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/4/@symbolicParameters.7"/>
+        <parameters reference="/4/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/4/@symbolicParameters.7"/>
+        <parameters reference="/4/@symbolicParameters.5"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/4/@symbolicParameters.8"/>
+        <parameters reference="/4/@symbolicParameters.4"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/4/@symbolicParameters.8"/>
+        <parameters reference="/4/@symbolicParameters.6"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/4/@symbolicParameters.3"/>
+        <parameters reference="/4/@symbolicParameters.10"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/4/@symbolicParameters.5"/>
+        <parameters reference="/4/@symbolicParameters.11"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/4/@symbolicParameters.7"/>
+        <parameters reference="/4/@symbolicParameters.9"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/4/@symbolicParameters.10"/>
+        <parameters reference="/4/@symbolicParameters.9"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd/dstConnectionInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/4/@symbolicParameters.11"/>
+        <parameters reference="/4/@symbolicParameters.9"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd/srcConnectionInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/4/@symbolicParameters.4"/>
+        <parameters reference="/4/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/4/@symbolicParameters.5"/>
+        <parameters reference="/4/@bodies.0/@localVariables.1"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+      </constraints>
+      <constraints xsi:type="TGGAttributeConstraint:AttributeConstraint" name="is_device">
+        <parameters reference="/4/@bodies.0/@localVariables.1"/>
+        <parameters reference="/4/@bodies.0/@localVariables.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="DeviceConnectionInstanceToConnectionInstanceAtSystem__FWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="comp2comp1">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="comp2comp2">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="comp_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="comp_destination_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="comp_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="comp_source_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="s2s">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//SystemToSystem"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="system_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="system_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="connection_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ref_connection_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ref_connection_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="__comp_source__category__">
+        <eClassifier xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__comp_destination__category__">
+        <eClassifier xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+      </localVariables>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/5/@symbolicParameters.2"/>
+        <parameters reference="/5/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/5/@symbolicParameters.2"/>
+        <parameters reference="/5/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/5/@symbolicParameters.2"/>
+        <parameters reference="/5/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/5/@symbolicParameters.2"/>
+        <parameters reference="/5/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/5/@symbolicParameters.2"/>
+        <parameters reference="/5/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/5/@symbolicParameters.4"/>
+        <parameters reference="/5/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/5/@symbolicParameters.4"/>
+        <parameters reference="/5/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/5/@symbolicParameters.4"/>
+        <parameters reference="/5/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/5/@symbolicParameters.4"/>
+        <parameters reference="/5/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/5/@symbolicParameters.10"/>
+        <parameters reference="/5/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/5/@symbolicParameters.12"/>
+        <parameters reference="/5/@symbolicParameters.13"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/5/@symbolicParameters.7"/>
+        <parameters reference="/5/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/5/@symbolicParameters.7"/>
+        <parameters reference="/5/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/5/@symbolicParameters.7"/>
+        <parameters reference="/5/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/5/@symbolicParameters.3"/>
+        <parameters reference="/5/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/5/@symbolicParameters.3"/>
+        <parameters reference="/5/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/5/@symbolicParameters.5"/>
+        <parameters reference="/5/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/5/@symbolicParameters.0"/>
+        <parameters reference="/5/@symbolicParameters.1"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/5/@symbolicParameters.0"/>
+        <parameters reference="/5/@symbolicParameters.4"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/5/@symbolicParameters.0"/>
+        <parameters reference="/5/@symbolicParameters.5"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/5/@symbolicParameters.1"/>
+        <parameters reference="/5/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/5/@symbolicParameters.1"/>
+        <parameters reference="/5/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/5/@symbolicParameters.6"/>
+        <parameters reference="/5/@symbolicParameters.7"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//SystemToSystem/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/5/@symbolicParameters.6"/>
+        <parameters reference="/5/@symbolicParameters.8"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//SystemToSystem/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/5/@symbolicParameters.2"/>
+        <parameters reference="/5/@symbolicParameters.10"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/5/@symbolicParameters.4"/>
+        <parameters reference="/5/@symbolicParameters.11"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/5/@symbolicParameters.9"/>
+        <parameters reference="/5/@symbolicParameters.12"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/5/@symbolicParameters.9"/>
+        <parameters reference="/5/@symbolicParameters.13"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/5/@symbolicParameters.12"/>
+        <parameters reference="/5/@symbolicParameters.10"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/5/@symbolicParameters.13"/>
+        <parameters reference="/5/@symbolicParameters.11"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/5/@symbolicParameters.7"/>
+        <parameters reference="/5/@symbolicParameters.9"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/5/@symbolicParameters.4"/>
+        <parameters reference="/5/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/5/@symbolicParameters.2"/>
+        <parameters reference="/5/@bodies.0/@localVariables.1"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+      </constraints>
+      <constraints xsi:type="TGGAttributeConstraint:AttributeConstraint" name="is_device">
+        <parameters reference="/5/@bodies.0/@localVariables.0"/>
+        <parameters reference="/5/@bodies.0/@localVariables.1"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="FeatureToFeature__FWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="c2c">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_source__category__">
+        <eClassifier xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0/instance#//FeatureCategory"/>
+      </localVariables>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/6/@symbolicParameters.1"/>
+        <parameters reference="/6/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/6/@symbolicParameters.0"/>
+        <parameters reference="/6/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/6/@symbolicParameters.0"/>
+        <parameters reference="/6/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/6/@symbolicParameters.1"/>
+        <parameters reference="/6/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/6/@symbolicParameters.3"/>
+        <parameters reference="/6/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/category"/>
+      </constraints>
+      <constraints xsi:type="TGGAttributeConstraint:AttributeConstraint" name="not_port_feature">
+        <parameters reference="/6/@bodies.0/@localVariables.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="FirstPortConnectionToDataAccessAtProcess__FWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="c2c">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_conn_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_conn_destination_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_conn_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_conn_source_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="sub2sub1">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="sub2sub2">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="connection_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ref_connection_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/7/@symbolicParameters.1"/>
+        <parameters reference="/7/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/7/@symbolicParameters.1"/>
+        <parameters reference="/7/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/7/@symbolicParameters.1"/>
+        <parameters reference="/7/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/7/@symbolicParameters.1"/>
+        <parameters reference="/7/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/7/@symbolicParameters.3"/>
+        <parameters reference="/7/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/7/@symbolicParameters.3"/>
+        <parameters reference="/7/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/7/@symbolicParameters.3"/>
+        <parameters reference="/7/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/7/@symbolicParameters.5"/>
+        <parameters reference="/7/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/7/@symbolicParameters.5"/>
+        <parameters reference="/7/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/7/@symbolicParameters.5"/>
+        <parameters reference="/7/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/7/@symbolicParameters.2"/>
+        <parameters reference="/7/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/7/@symbolicParameters.0"/>
+        <parameters reference="/7/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/7/@symbolicParameters.0"/>
+        <parameters reference="/7/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/7/@symbolicParameters.7"/>
+        <parameters reference="/7/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/7/@symbolicParameters.0"/>
+        <parameters reference="/7/@symbolicParameters.5"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/7/@symbolicParameters.0"/>
+        <parameters reference="/7/@symbolicParameters.6"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/7/@symbolicParameters.5"/>
+        <parameters reference="/7/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/7/@symbolicParameters.5"/>
+        <parameters reference="/7/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/7/@symbolicParameters.6"/>
+        <parameters reference="/7/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/7/@symbolicParameters.6"/>
+        <parameters reference="/7/@symbolicParameters.4"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/7/@symbolicParameters.7"/>
+        <parameters reference="/7/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/7/@symbolicParameters.7"/>
+        <parameters reference="/7/@symbolicParameters.4"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/7/@symbolicParameters.8"/>
+        <parameters reference="/7/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/7/@symbolicParameters.8"/>
+        <parameters reference="/7/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/7/@symbolicParameters.1"/>
+        <parameters reference="/7/@symbolicParameters.10"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/7/@symbolicParameters.3"/>
+        <parameters reference="/7/@symbolicParameters.11"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/7/@symbolicParameters.5"/>
+        <parameters reference="/7/@symbolicParameters.9"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/7/@symbolicParameters.9"/>
+        <parameters reference="/7/@symbolicParameters.12"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/7/@symbolicParameters.10"/>
+        <parameters reference="/7/@symbolicParameters.9"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd/dstConnectionInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/7/@symbolicParameters.11"/>
+        <parameters reference="/7/@symbolicParameters.9"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd/srcConnectionInstance"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="PortConnectionToDataAccessAtProcess__FWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="c2c">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_conn_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_conn_destination_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_conn_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_conn_source_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="f2f1">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//FeatToFeat"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="f2f2">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//FeatToFeat"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature1">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature2">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="sub2sub1">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="sub2sub2">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="connection_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ref_connection_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_destination__name__">
+        <eClassifier xsi:type="ecore:EDataType" href="http://aadl.info/AADL/2.0#//String"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_source__direction__">
+        <eClassifier xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0#//DirectionType"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_source__name__">
+        <eClassifier xsi:type="ecore:EDataType" href="http://aadl.info/AADL/2.0#//String"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature1__direction__">
+        <eClassifier xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0#//DirectionType"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature2__name__">
+        <eClassifier xsi:type="ecore:EDataType" href="http://aadl.info/AADL/2.0#//String"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature1__name__">
+        <eClassifier xsi:type="ecore:EDataType" href="http://aadl.info/AADL/2.0#//String"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_destination__direction__">
+        <eClassifier xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0#//DirectionType"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature2__direction__">
+        <eClassifier xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0#//DirectionType"/>
+      </localVariables>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/8/@symbolicParameters.1"/>
+        <parameters reference="/8/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/8/@symbolicParameters.1"/>
+        <parameters reference="/8/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/8/@symbolicParameters.1"/>
+        <parameters reference="/8/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/8/@symbolicParameters.1"/>
+        <parameters reference="/8/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/8/@symbolicParameters.3"/>
+        <parameters reference="/8/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/8/@symbolicParameters.3"/>
+        <parameters reference="/8/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/8/@symbolicParameters.3"/>
+        <parameters reference="/8/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/8/@symbolicParameters.5"/>
+        <parameters reference="/8/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/8/@symbolicParameters.5"/>
+        <parameters reference="/8/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/8/@symbolicParameters.5"/>
+        <parameters reference="/8/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/8/@symbolicParameters.11"/>
+        <parameters reference="/8/@symbolicParameters.9"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/8/@symbolicParameters.11"/>
+        <parameters reference="/8/@symbolicParameters.10"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/8/@symbolicParameters.12"/>
+        <parameters reference="/8/@symbolicParameters.9"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/8/@symbolicParameters.12"/>
+        <parameters reference="/8/@symbolicParameters.10"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/8/@symbolicParameters.2"/>
+        <parameters reference="/8/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/8/@symbolicParameters.0"/>
+        <parameters reference="/8/@symbolicParameters.13"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/8/@symbolicParameters.0"/>
+        <parameters reference="/8/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/8/@symbolicParameters.7"/>
+        <parameters reference="/8/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/8/@symbolicParameters.13"/>
+        <parameters reference="/8/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.0"/>
+        <parameters reference="/8/@symbolicParameters.5"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.0"/>
+        <parameters reference="/8/@symbolicParameters.6"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.1"/>
+        <parameters reference="/8/@symbolicParameters.11"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.2"/>
+        <parameters reference="/8/@symbolicParameters.10"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.3"/>
+        <parameters reference="/8/@symbolicParameters.12"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.4"/>
+        <parameters reference="/8/@symbolicParameters.9"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.5"/>
+        <parameters reference="/8/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.5"/>
+        <parameters reference="/8/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.6"/>
+        <parameters reference="/8/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.6"/>
+        <parameters reference="/8/@symbolicParameters.4"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.7"/>
+        <parameters reference="/8/@symbolicParameters.12"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.7"/>
+        <parameters reference="/8/@symbolicParameters.9"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.8"/>
+        <parameters reference="/8/@symbolicParameters.11"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.8"/>
+        <parameters reference="/8/@symbolicParameters.10"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.13"/>
+        <parameters reference="/8/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.13"/>
+        <parameters reference="/8/@symbolicParameters.4"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.14"/>
+        <parameters reference="/8/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.14"/>
+        <parameters reference="/8/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.5"/>
+        <parameters reference="/8/@symbolicParameters.15"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.15"/>
+        <parameters reference="/8/@symbolicParameters.16"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.11"/>
+        <parameters reference="/8/@symbolicParameters.15"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd/dstConnectionInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.12"/>
+        <parameters reference="/8/@symbolicParameters.15"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstanceEnd/srcConnectionInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/8/@symbolicParameters.11"/>
+        <parameters reference="/8/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/8/@symbolicParameters.12"/>
+        <parameters reference="/8/@bodies.0/@localVariables.1"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/8/@symbolicParameters.12"/>
+        <parameters reference="/8/@bodies.0/@localVariables.2"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/8/@symbolicParameters.9"/>
+        <parameters reference="/8/@bodies.0/@localVariables.3"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/8/@symbolicParameters.10"/>
+        <parameters reference="/8/@bodies.0/@localVariables.4"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/8/@symbolicParameters.9"/>
+        <parameters reference="/8/@bodies.0/@localVariables.5"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/8/@symbolicParameters.11"/>
+        <parameters reference="/8/@bodies.0/@localVariables.6"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/8/@symbolicParameters.10"/>
+        <parameters reference="/8/@bodies.0/@localVariables.7"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </constraints>
+      <constraints xsi:type="TGGAttributeConstraint:AttributeConstraint" name="eq_enum">
+        <parameters reference="/8/@bodies.0/@localVariables.6"/>
+        <parameters reference="/8/@bodies.0/@localVariables.7"/>
+      </constraints>
+      <constraints xsi:type="TGGAttributeConstraint:AttributeConstraint" name="eq_enum">
+        <parameters reference="/8/@bodies.0/@localVariables.1"/>
+        <parameters reference="/8/@bodies.0/@localVariables.3"/>
+      </constraints>
+      <constraints xsi:type="TGGAttributeConstraint:AttributeConstraint" name="eq_string">
+        <parameters reference="/8/@bodies.0/@localVariables.2"/>
+        <parameters reference="/8/@bodies.0/@localVariables.5"/>
+      </constraints>
+      <constraints xsi:type="TGGAttributeConstraint:AttributeConstraint" name="eq_string">
+        <parameters reference="/8/@bodies.0/@localVariables.0"/>
+        <parameters reference="/8/@bodies.0/@localVariables.4"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="PortConnectionToDataAccessAtSystem00__FWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process2process1">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process2process2">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process_destination_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process_source_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="s2s">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//SystemToSystem"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="system_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="system_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread2thread1">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread2thread2">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread_destination_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread_source_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="connection_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ref_connection_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ref_connection_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.16"/>
+        <parameters reference="/9/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.2"/>
+        <parameters reference="/9/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.2"/>
+        <parameters reference="/9/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.2"/>
+        <parameters reference="/9/@symbolicParameters.13"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.2"/>
+        <parameters reference="/9/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.2"/>
+        <parameters reference="/9/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.2"/>
+        <parameters reference="/9/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.2"/>
+        <parameters reference="/9/@symbolicParameters.12"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.2"/>
+        <parameters reference="/9/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.4"/>
+        <parameters reference="/9/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.4"/>
+        <parameters reference="/9/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.4"/>
+        <parameters reference="/9/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.4"/>
+        <parameters reference="/9/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.4"/>
+        <parameters reference="/9/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.4"/>
+        <parameters reference="/9/@symbolicParameters.12"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.4"/>
+        <parameters reference="/9/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.18"/>
+        <parameters reference="/9/@symbolicParameters.19"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.7"/>
+        <parameters reference="/9/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.7"/>
+        <parameters reference="/9/@symbolicParameters.13"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.7"/>
+        <parameters reference="/9/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.7"/>
+        <parameters reference="/9/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.7"/>
+        <parameters reference="/9/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.7"/>
+        <parameters reference="/9/@symbolicParameters.12"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.7"/>
+        <parameters reference="/9/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.11"/>
+        <parameters reference="/9/@symbolicParameters.13"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.11"/>
+        <parameters reference="/9/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.11"/>
+        <parameters reference="/9/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.11"/>
+        <parameters reference="/9/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.11"/>
+        <parameters reference="/9/@symbolicParameters.12"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.11"/>
+        <parameters reference="/9/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.13"/>
+        <parameters reference="/9/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.13"/>
+        <parameters reference="/9/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.13"/>
+        <parameters reference="/9/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.13"/>
+        <parameters reference="/9/@symbolicParameters.12"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.13"/>
+        <parameters reference="/9/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.3"/>
+        <parameters reference="/9/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.3"/>
+        <parameters reference="/9/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.3"/>
+        <parameters reference="/9/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.5"/>
+        <parameters reference="/9/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.5"/>
+        <parameters reference="/9/@symbolicParameters.12"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.8"/>
+        <parameters reference="/9/@symbolicParameters.12"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.8"/>
+        <parameters reference="/9/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.12"/>
+        <parameters reference="/9/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.0"/>
+        <parameters reference="/9/@symbolicParameters.1"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.0"/>
+        <parameters reference="/9/@symbolicParameters.9"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.0"/>
+        <parameters reference="/9/@symbolicParameters.10"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.1"/>
+        <parameters reference="/9/@symbolicParameters.9"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.1"/>
+        <parameters reference="/9/@symbolicParameters.10"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/9/@symbolicParameters.9"/>
+        <parameters reference="/9/@symbolicParameters.10"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.0"/>
+        <parameters reference="/9/@symbolicParameters.4"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.0"/>
+        <parameters reference="/9/@symbolicParameters.5"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.1"/>
+        <parameters reference="/9/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.1"/>
+        <parameters reference="/9/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.2"/>
+        <parameters reference="/9/@symbolicParameters.11"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.3"/>
+        <parameters reference="/9/@symbolicParameters.12"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.4"/>
+        <parameters reference="/9/@symbolicParameters.13"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.5"/>
+        <parameters reference="/9/@symbolicParameters.14"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.6"/>
+        <parameters reference="/9/@symbolicParameters.7"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//SystemToSystem/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.6"/>
+        <parameters reference="/9/@symbolicParameters.8"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//SystemToSystem/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.9"/>
+        <parameters reference="/9/@symbolicParameters.13"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.9"/>
+        <parameters reference="/9/@symbolicParameters.14"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.10"/>
+        <parameters reference="/9/@symbolicParameters.11"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.10"/>
+        <parameters reference="/9/@symbolicParameters.12"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.15"/>
+        <parameters reference="/9/@symbolicParameters.18"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.15"/>
+        <parameters reference="/9/@symbolicParameters.19"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.18"/>
+        <parameters reference="/9/@symbolicParameters.16"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.19"/>
+        <parameters reference="/9/@symbolicParameters.17"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.7"/>
+        <parameters reference="/9/@symbolicParameters.15"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.11"/>
+        <parameters reference="/9/@symbolicParameters.16"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/9/@symbolicParameters.13"/>
+        <parameters reference="/9/@symbolicParameters.17"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="PortConnectionToDataAccessAtSystem01__FWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature2feature1">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//FeatToFeat"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_source_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process2process1">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process2process2">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process_destination_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process_source_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="s2s">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//SystemToSystem"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="system_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="system_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread2thread1">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread2thread2">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread_destination_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread_source_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="connection_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ref_connection_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ref_connection_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_source__direction__">
+        <eClassifier xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0#//DirectionType"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_source__name__">
+        <eClassifier xsi:type="ecore:EDataType" href="http://aadl.info/AADL/2.0#//String"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_source_target__name__">
+        <eClassifier xsi:type="ecore:EDataType" href="http://aadl.info/AADL/2.0#//String"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_source_target__direction__">
+        <eClassifier xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0#//DirectionType"/>
+      </localVariables>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.1"/>
+        <parameters reference="/10/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.5"/>
+        <parameters reference="/10/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.5"/>
+        <parameters reference="/10/@symbolicParameters.10"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.5"/>
+        <parameters reference="/10/@symbolicParameters.16"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.5"/>
+        <parameters reference="/10/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.5"/>
+        <parameters reference="/10/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.5"/>
+        <parameters reference="/10/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.5"/>
+        <parameters reference="/10/@symbolicParameters.15"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.5"/>
+        <parameters reference="/10/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.7"/>
+        <parameters reference="/10/@symbolicParameters.10"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.7"/>
+        <parameters reference="/10/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.7"/>
+        <parameters reference="/10/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.7"/>
+        <parameters reference="/10/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.7"/>
+        <parameters reference="/10/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.7"/>
+        <parameters reference="/10/@symbolicParameters.15"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.7"/>
+        <parameters reference="/10/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.20"/>
+        <parameters reference="/10/@symbolicParameters.21"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.10"/>
+        <parameters reference="/10/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.10"/>
+        <parameters reference="/10/@symbolicParameters.16"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.10"/>
+        <parameters reference="/10/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.10"/>
+        <parameters reference="/10/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.10"/>
+        <parameters reference="/10/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.10"/>
+        <parameters reference="/10/@symbolicParameters.15"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.10"/>
+        <parameters reference="/10/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.14"/>
+        <parameters reference="/10/@symbolicParameters.16"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.14"/>
+        <parameters reference="/10/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.14"/>
+        <parameters reference="/10/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.14"/>
+        <parameters reference="/10/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.14"/>
+        <parameters reference="/10/@symbolicParameters.15"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.14"/>
+        <parameters reference="/10/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.16"/>
+        <parameters reference="/10/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.16"/>
+        <parameters reference="/10/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.16"/>
+        <parameters reference="/10/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.16"/>
+        <parameters reference="/10/@symbolicParameters.15"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.16"/>
+        <parameters reference="/10/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.6"/>
+        <parameters reference="/10/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.6"/>
+        <parameters reference="/10/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.6"/>
+        <parameters reference="/10/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.8"/>
+        <parameters reference="/10/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.8"/>
+        <parameters reference="/10/@symbolicParameters.15"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.11"/>
+        <parameters reference="/10/@symbolicParameters.15"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.11"/>
+        <parameters reference="/10/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.15"/>
+        <parameters reference="/10/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.3"/>
+        <parameters reference="/10/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.3"/>
+        <parameters reference="/10/@symbolicParameters.12"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.3"/>
+        <parameters reference="/10/@symbolicParameters.13"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.4"/>
+        <parameters reference="/10/@symbolicParameters.12"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.4"/>
+        <parameters reference="/10/@symbolicParameters.13"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/10/@symbolicParameters.12"/>
+        <parameters reference="/10/@symbolicParameters.13"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.0"/>
+        <parameters reference="/10/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.0"/>
+        <parameters reference="/10/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.3"/>
+        <parameters reference="/10/@symbolicParameters.7"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.3"/>
+        <parameters reference="/10/@symbolicParameters.8"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.4"/>
+        <parameters reference="/10/@symbolicParameters.5"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.4"/>
+        <parameters reference="/10/@symbolicParameters.6"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.5"/>
+        <parameters reference="/10/@symbolicParameters.14"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.6"/>
+        <parameters reference="/10/@symbolicParameters.15"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.7"/>
+        <parameters reference="/10/@symbolicParameters.16"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.8"/>
+        <parameters reference="/10/@symbolicParameters.17"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.9"/>
+        <parameters reference="/10/@symbolicParameters.10"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//SystemToSystem/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.9"/>
+        <parameters reference="/10/@symbolicParameters.11"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//SystemToSystem/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.12"/>
+        <parameters reference="/10/@symbolicParameters.16"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.12"/>
+        <parameters reference="/10/@symbolicParameters.17"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.13"/>
+        <parameters reference="/10/@symbolicParameters.14"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.13"/>
+        <parameters reference="/10/@symbolicParameters.15"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.16"/>
+        <parameters reference="/10/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.17"/>
+        <parameters reference="/10/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.18"/>
+        <parameters reference="/10/@symbolicParameters.20"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.18"/>
+        <parameters reference="/10/@symbolicParameters.21"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.20"/>
+        <parameters reference="/10/@symbolicParameters.19"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.21"/>
+        <parameters reference="/10/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.10"/>
+        <parameters reference="/10/@symbolicParameters.18"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/10/@symbolicParameters.14"/>
+        <parameters reference="/10/@symbolicParameters.19"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/10/@symbolicParameters.1"/>
+        <parameters reference="/10/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/10/@symbolicParameters.1"/>
+        <parameters reference="/10/@bodies.0/@localVariables.1"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/10/@symbolicParameters.2"/>
+        <parameters reference="/10/@bodies.0/@localVariables.2"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/10/@symbolicParameters.2"/>
+        <parameters reference="/10/@bodies.0/@localVariables.3"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </constraints>
+      <constraints xsi:type="TGGAttributeConstraint:AttributeConstraint" name="eq_string">
+        <parameters reference="/10/@bodies.0/@localVariables.1"/>
+        <parameters reference="/10/@bodies.0/@localVariables.2"/>
+      </constraints>
+      <constraints xsi:type="TGGAttributeConstraint:AttributeConstraint" name="eq_enum">
+        <parameters reference="/10/@bodies.0/@localVariables.0"/>
+        <parameters reference="/10/@bodies.0/@localVariables.3"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="PortConnectionToDataAccessAtSystem10__FWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature2feature2">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//FeatToFeat"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_destination_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process2process1">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process2process2">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process_destination_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process_source_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="s2s">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//SystemToSystem"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="system_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="system_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread2thread1">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread2thread2">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread_destination_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread_source_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="connection_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ref_connection_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ref_connection_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_destination_target__name__">
+        <eClassifier xsi:type="ecore:EDataType" href="http://aadl.info/AADL/2.0#//String"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_destination__name__">
+        <eClassifier xsi:type="ecore:EDataType" href="http://aadl.info/AADL/2.0#//String"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_destination_target__direction__">
+        <eClassifier xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0#//DirectionType"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_destination__direction__">
+        <eClassifier xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0#//DirectionType"/>
+      </localVariables>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.1"/>
+        <parameters reference="/11/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.5"/>
+        <parameters reference="/11/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.5"/>
+        <parameters reference="/11/@symbolicParameters.10"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.5"/>
+        <parameters reference="/11/@symbolicParameters.16"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.5"/>
+        <parameters reference="/11/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.5"/>
+        <parameters reference="/11/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.5"/>
+        <parameters reference="/11/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.5"/>
+        <parameters reference="/11/@symbolicParameters.15"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.5"/>
+        <parameters reference="/11/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.7"/>
+        <parameters reference="/11/@symbolicParameters.10"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.7"/>
+        <parameters reference="/11/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.7"/>
+        <parameters reference="/11/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.7"/>
+        <parameters reference="/11/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.7"/>
+        <parameters reference="/11/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.7"/>
+        <parameters reference="/11/@symbolicParameters.15"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.7"/>
+        <parameters reference="/11/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.20"/>
+        <parameters reference="/11/@symbolicParameters.21"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.10"/>
+        <parameters reference="/11/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.10"/>
+        <parameters reference="/11/@symbolicParameters.16"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.10"/>
+        <parameters reference="/11/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.10"/>
+        <parameters reference="/11/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.10"/>
+        <parameters reference="/11/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.10"/>
+        <parameters reference="/11/@symbolicParameters.15"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.10"/>
+        <parameters reference="/11/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.14"/>
+        <parameters reference="/11/@symbolicParameters.16"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.14"/>
+        <parameters reference="/11/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.14"/>
+        <parameters reference="/11/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.14"/>
+        <parameters reference="/11/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.14"/>
+        <parameters reference="/11/@symbolicParameters.15"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.14"/>
+        <parameters reference="/11/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.16"/>
+        <parameters reference="/11/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.16"/>
+        <parameters reference="/11/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.16"/>
+        <parameters reference="/11/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.16"/>
+        <parameters reference="/11/@symbolicParameters.15"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.16"/>
+        <parameters reference="/11/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.6"/>
+        <parameters reference="/11/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.6"/>
+        <parameters reference="/11/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.6"/>
+        <parameters reference="/11/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.8"/>
+        <parameters reference="/11/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.8"/>
+        <parameters reference="/11/@symbolicParameters.15"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.11"/>
+        <parameters reference="/11/@symbolicParameters.15"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.11"/>
+        <parameters reference="/11/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.15"/>
+        <parameters reference="/11/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.3"/>
+        <parameters reference="/11/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.3"/>
+        <parameters reference="/11/@symbolicParameters.12"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.3"/>
+        <parameters reference="/11/@symbolicParameters.13"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.4"/>
+        <parameters reference="/11/@symbolicParameters.12"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.4"/>
+        <parameters reference="/11/@symbolicParameters.13"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/11/@symbolicParameters.12"/>
+        <parameters reference="/11/@symbolicParameters.13"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.0"/>
+        <parameters reference="/11/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.0"/>
+        <parameters reference="/11/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.3"/>
+        <parameters reference="/11/@symbolicParameters.7"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.3"/>
+        <parameters reference="/11/@symbolicParameters.8"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.4"/>
+        <parameters reference="/11/@symbolicParameters.5"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.4"/>
+        <parameters reference="/11/@symbolicParameters.6"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.5"/>
+        <parameters reference="/11/@symbolicParameters.14"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.6"/>
+        <parameters reference="/11/@symbolicParameters.15"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.7"/>
+        <parameters reference="/11/@symbolicParameters.16"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.8"/>
+        <parameters reference="/11/@symbolicParameters.17"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.9"/>
+        <parameters reference="/11/@symbolicParameters.10"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//SystemToSystem/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.9"/>
+        <parameters reference="/11/@symbolicParameters.11"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//SystemToSystem/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.12"/>
+        <parameters reference="/11/@symbolicParameters.16"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.12"/>
+        <parameters reference="/11/@symbolicParameters.17"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.13"/>
+        <parameters reference="/11/@symbolicParameters.14"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.13"/>
+        <parameters reference="/11/@symbolicParameters.15"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.14"/>
+        <parameters reference="/11/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.15"/>
+        <parameters reference="/11/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.18"/>
+        <parameters reference="/11/@symbolicParameters.20"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.18"/>
+        <parameters reference="/11/@symbolicParameters.21"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.20"/>
+        <parameters reference="/11/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.21"/>
+        <parameters reference="/11/@symbolicParameters.19"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.10"/>
+        <parameters reference="/11/@symbolicParameters.18"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.16"/>
+        <parameters reference="/11/@symbolicParameters.19"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/11/@symbolicParameters.2"/>
+        <parameters reference="/11/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/11/@symbolicParameters.1"/>
+        <parameters reference="/11/@bodies.0/@localVariables.1"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/11/@symbolicParameters.2"/>
+        <parameters reference="/11/@bodies.0/@localVariables.2"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/11/@symbolicParameters.1"/>
+        <parameters reference="/11/@bodies.0/@localVariables.3"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </constraints>
+      <constraints xsi:type="TGGAttributeConstraint:AttributeConstraint" name="eq_enum">
+        <parameters reference="/11/@bodies.0/@localVariables.3"/>
+        <parameters reference="/11/@bodies.0/@localVariables.2"/>
+      </constraints>
+      <constraints xsi:type="TGGAttributeConstraint:AttributeConstraint" name="eq_string">
+        <parameters reference="/11/@bodies.0/@localVariables.1"/>
+        <parameters reference="/11/@bodies.0/@localVariables.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="PortConnectionToDataAccessAtSystem11__FWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature2feature1">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//FeatToFeat"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature2feature2">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//FeatToFeat"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_destination_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="feature_source_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process2process1">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process2process2">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process_destination_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="process_source_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="s2s">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//SystemToSystem"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="system_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="system_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread2thread1">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread2thread2">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread_destination_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="thread_source_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="connection_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ref_connection_destination">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ref_connection_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_destination_target__name__">
+        <eClassifier xsi:type="ecore:EDataType" href="http://aadl.info/AADL/2.0#//String"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_destination__name__">
+        <eClassifier xsi:type="ecore:EDataType" href="http://aadl.info/AADL/2.0#//String"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_source__direction__">
+        <eClassifier xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0#//DirectionType"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_source__name__">
+        <eClassifier xsi:type="ecore:EDataType" href="http://aadl.info/AADL/2.0#//String"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_destination_target__direction__">
+        <eClassifier xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0#//DirectionType"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_destination__direction__">
+        <eClassifier xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0#//DirectionType"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_source_target__name__">
+        <eClassifier xsi:type="ecore:EDataType" href="http://aadl.info/AADL/2.0#//String"/>
+      </localVariables>
+      <localVariables xsi:type="emf:EMFVariable" name="__feature_source_target__direction__">
+        <eClassifier xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0#//DirectionType"/>
+      </localVariables>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.2"/>
+        <parameters reference="/12/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.2"/>
+        <parameters reference="/12/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.2"/>
+        <parameters reference="/12/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.4"/>
+        <parameters reference="/12/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.4"/>
+        <parameters reference="/12/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.8"/>
+        <parameters reference="/12/@symbolicParameters.10"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.8"/>
+        <parameters reference="/12/@symbolicParameters.13"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.8"/>
+        <parameters reference="/12/@symbolicParameters.19"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.8"/>
+        <parameters reference="/12/@symbolicParameters.9"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.8"/>
+        <parameters reference="/12/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.8"/>
+        <parameters reference="/12/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.8"/>
+        <parameters reference="/12/@symbolicParameters.18"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.8"/>
+        <parameters reference="/12/@symbolicParameters.20"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.10"/>
+        <parameters reference="/12/@symbolicParameters.13"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.10"/>
+        <parameters reference="/12/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.10"/>
+        <parameters reference="/12/@symbolicParameters.9"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.10"/>
+        <parameters reference="/12/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.10"/>
+        <parameters reference="/12/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.10"/>
+        <parameters reference="/12/@symbolicParameters.18"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.10"/>
+        <parameters reference="/12/@symbolicParameters.20"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.22"/>
+        <parameters reference="/12/@symbolicParameters.23"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.13"/>
+        <parameters reference="/12/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.13"/>
+        <parameters reference="/12/@symbolicParameters.19"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.13"/>
+        <parameters reference="/12/@symbolicParameters.9"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.13"/>
+        <parameters reference="/12/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.13"/>
+        <parameters reference="/12/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.13"/>
+        <parameters reference="/12/@symbolicParameters.18"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.13"/>
+        <parameters reference="/12/@symbolicParameters.20"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.17"/>
+        <parameters reference="/12/@symbolicParameters.19"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.17"/>
+        <parameters reference="/12/@symbolicParameters.9"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.17"/>
+        <parameters reference="/12/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.17"/>
+        <parameters reference="/12/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.17"/>
+        <parameters reference="/12/@symbolicParameters.18"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.17"/>
+        <parameters reference="/12/@symbolicParameters.20"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.19"/>
+        <parameters reference="/12/@symbolicParameters.9"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.19"/>
+        <parameters reference="/12/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.19"/>
+        <parameters reference="/12/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.19"/>
+        <parameters reference="/12/@symbolicParameters.18"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.19"/>
+        <parameters reference="/12/@symbolicParameters.20"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.3"/>
+        <parameters reference="/12/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.9"/>
+        <parameters reference="/12/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.9"/>
+        <parameters reference="/12/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.9"/>
+        <parameters reference="/12/@symbolicParameters.20"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.11"/>
+        <parameters reference="/12/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.11"/>
+        <parameters reference="/12/@symbolicParameters.18"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.14"/>
+        <parameters reference="/12/@symbolicParameters.18"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.14"/>
+        <parameters reference="/12/@symbolicParameters.20"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.18"/>
+        <parameters reference="/12/@symbolicParameters.20"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.0"/>
+        <parameters reference="/12/@symbolicParameters.1"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.6"/>
+        <parameters reference="/12/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.6"/>
+        <parameters reference="/12/@symbolicParameters.15"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.6"/>
+        <parameters reference="/12/@symbolicParameters.16"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.7"/>
+        <parameters reference="/12/@symbolicParameters.15"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.7"/>
+        <parameters reference="/12/@symbolicParameters.16"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/12/@symbolicParameters.15"/>
+        <parameters reference="/12/@symbolicParameters.16"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.0"/>
+        <parameters reference="/12/@symbolicParameters.4"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.0"/>
+        <parameters reference="/12/@symbolicParameters.5"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.1"/>
+        <parameters reference="/12/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.1"/>
+        <parameters reference="/12/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.6"/>
+        <parameters reference="/12/@symbolicParameters.10"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.6"/>
+        <parameters reference="/12/@symbolicParameters.11"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.7"/>
+        <parameters reference="/12/@symbolicParameters.8"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.7"/>
+        <parameters reference="/12/@symbolicParameters.9"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.8"/>
+        <parameters reference="/12/@symbolicParameters.17"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.9"/>
+        <parameters reference="/12/@symbolicParameters.18"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.10"/>
+        <parameters reference="/12/@symbolicParameters.19"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.11"/>
+        <parameters reference="/12/@symbolicParameters.20"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.12"/>
+        <parameters reference="/12/@symbolicParameters.13"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//SystemToSystem/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.12"/>
+        <parameters reference="/12/@symbolicParameters.14"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//SystemToSystem/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.15"/>
+        <parameters reference="/12/@symbolicParameters.19"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.15"/>
+        <parameters reference="/12/@symbolicParameters.20"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.16"/>
+        <parameters reference="/12/@symbolicParameters.17"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.16"/>
+        <parameters reference="/12/@symbolicParameters.18"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.17"/>
+        <parameters reference="/12/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.18"/>
+        <parameters reference="/12/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.19"/>
+        <parameters reference="/12/@symbolicParameters.4"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.20"/>
+        <parameters reference="/12/@symbolicParameters.5"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/featureInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.21"/>
+        <parameters reference="/12/@symbolicParameters.22"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.21"/>
+        <parameters reference="/12/@symbolicParameters.23"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionInstance/connectionReference"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.22"/>
+        <parameters reference="/12/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/destination"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.23"/>
+        <parameters reference="/12/@symbolicParameters.4"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ConnectionReference/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.13"/>
+        <parameters reference="/12/@symbolicParameters.21"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/connectionInstance"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/12/@symbolicParameters.3"/>
+        <parameters reference="/12/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/12/@symbolicParameters.2"/>
+        <parameters reference="/12/@bodies.0/@localVariables.1"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/12/@symbolicParameters.4"/>
+        <parameters reference="/12/@bodies.0/@localVariables.2"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/12/@symbolicParameters.4"/>
+        <parameters reference="/12/@bodies.0/@localVariables.3"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/12/@symbolicParameters.3"/>
+        <parameters reference="/12/@bodies.0/@localVariables.4"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/12/@symbolicParameters.2"/>
+        <parameters reference="/12/@bodies.0/@localVariables.5"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/12/@symbolicParameters.5"/>
+        <parameters reference="/12/@bodies.0/@localVariables.6"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0#//NamedElement/name"/>
+      </constraints>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/12/@symbolicParameters.5"/>
+        <parameters reference="/12/@bodies.0/@localVariables.7"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//FeatureInstance/direction"/>
+      </constraints>
+      <constraints xsi:type="TGGAttributeConstraint:AttributeConstraint" name="eq_enum">
+        <parameters reference="/12/@bodies.0/@localVariables.5"/>
+        <parameters reference="/12/@bodies.0/@localVariables.4"/>
+      </constraints>
+      <constraints xsi:type="TGGAttributeConstraint:AttributeConstraint" name="eq_string">
+        <parameters reference="/12/@bodies.0/@localVariables.3"/>
+        <parameters reference="/12/@bodies.0/@localVariables.6"/>
+      </constraints>
+      <constraints xsi:type="TGGAttributeConstraint:AttributeConstraint" name="eq_enum">
+        <parameters reference="/12/@bodies.0/@localVariables.2"/>
+        <parameters reference="/12/@bodies.0/@localVariables.7"/>
+      </constraints>
+      <constraints xsi:type="TGGAttributeConstraint:AttributeConstraint" name="eq_string">
+        <parameters reference="/12/@bodies.0/@localVariables.1"/>
+        <parameters reference="/12/@bodies.0/@localVariables.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="SubcomponentToSubcomponent__FWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="c2c">
+      <eClassifier xsi:type="ecore:EClass" href="../model/Tgg.ecore#//CompToComp"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="component_target">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="subcomponent_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/13/@symbolicParameters.1"/>
+        <parameters reference="/13/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/13/@symbolicParameters.0"/>
+        <parameters reference="/13/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/13/@symbolicParameters.0"/>
+        <parameters reference="/13/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/Tgg.ecore#//End2End/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/13/@symbolicParameters.1"/>
+        <parameters reference="/13/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/componentInstance"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="SystemToSystem__FWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="system_source">
+      <eClassifier xsi:type="ecore:EClass" href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="system_source__category">
+        <eClassifier xsi:type="ecore:EEnum" href="http://aadl.info/AADL/2.0#//ComponentCategory"/>
+      </localVariables>
+      <constants value="ACED00057E7200216F72672E6F736174652E6161646C322E436F6D706F6E656E7443617465676F727900000000000000001200007872000E6A6176612E6C616E672E456E756D0000000000000000120000787074000653595354454D"/>
+      <constraints xsi:type="emf:Attribute">
+        <parameters reference="/14/@symbolicParameters.0"/>
+        <parameters reference="/14/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EAttribute" href="http://aadl.info/AADL/2.0/instance#//ComponentInstance/category"/>
+      </constraints>
+      <constraints xsi:type="relational:Equal">
+        <parameters reference="/14/@bodies.0/@localVariables.0"/>
+        <parameters reference="/14/@bodies.0/@constants.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+</xmi:XMI>

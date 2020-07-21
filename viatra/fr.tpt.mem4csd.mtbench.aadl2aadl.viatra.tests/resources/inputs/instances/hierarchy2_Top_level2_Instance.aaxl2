@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="ASCII"?>
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="Top_level2_Instance" category="system">
+  <componentInstance name="PC1" category="system">
+    <featureInstance name="Beta">
+      <feature xsi:type="aadl2:DataPort" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="Alpha" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="addedFeat_Alpha" direction="out"/>
+    <componentInstance name="C" category="system">
+      <featureInstance name="Beta">
+        <feature xsi:type="aadl2:DataPort" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.13/@ownedDataPort.0"/>
+      </featureInstance>
+      <componentInstance name="the_bus" category="bus">
+        <subcomponent xsi:type="aadl2:BusSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedBusSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:BusType" href="../hierarchy2.aadl#hierarchy2.Ethernet_Bus"/>
+      </componentInstance>
+      <componentInstance name="T" category="data">
+        <subcomponent xsi:type="aadl2:DataSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedDataSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DataType" href="../hierarchy2.aadl#hierarchy2.Alpha_Type"/>
+      </componentInstance>
+      <componentInstance name="pr_B_1" category="process">
+        <featureInstance name="Beta">
+          <feature xsi:type="aadl2:DataPort" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+        </featureInstance>
+        <componentInstance name="Consumer" category="thread">
+          <featureInstance name="Data_Sink">
+            <feature xsi:type="aadl2:DataPort" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedThreadSubcomponent.0"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadImplementation" href="../hierarchy2.aadl#hierarchy2.Q.Impl"/>
+        </componentInstance>
+        <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessImplementation" href="../hierarchy2.aadl#hierarchy2.B.Impl"/>
+      </componentInstance>
+      <componentInstance name="CPU" category="processor">
+        <featureInstance name="ETH" category="busAccess">
+          <feature xsi:type="aadl2:BusAccess" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessorSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessorType" href="../hierarchy2.aadl#hierarchy2.the_processor"/>
+      </componentInstance>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.18/@ownedSystemSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:SystemImplementation" href="../hierarchy2.aadl#hierarchy2.C_Simple.level0"/>
+    </componentInstance>
+    <componentInstance name="P" category="system">
+      <featureInstance name="Alpha" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="addedFeat_Alpha" direction="out"/>
+      <featureInstance name="addedFeat_Alpha" direction="out"/>
+      <componentInstance name="the_bus" category="bus">
+        <subcomponent xsi:type="aadl2:BusSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.16/@ownedBusSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:BusType" href="../hierarchy2.aadl#hierarchy2.Ethernet_Bus"/>
+      </componentInstance>
+      <componentInstance name="T" category="data">
+        <subcomponent xsi:type="aadl2:DataSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.16/@ownedDataSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DataType" href="../hierarchy2.aadl#hierarchy2.Alpha_Type"/>
+      </componentInstance>
+      <componentInstance name="pr_A_1" category="process">
+        <featureInstance name="Alpha" direction="out">
+          <feature xsi:type="aadl2:DataPort" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="addedFeat_Alpha" direction="out"/>
+        <featureInstance name="addedFeat_Alpha" direction="out"/>
+        <componentInstance name="Producer" category="thread">
+          <featureInstance name="Data_Source" direction="out">
+            <feature xsi:type="aadl2:DataPort" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="addedFeat_Data_Source" direction="out"/>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.0"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadImplementation" href="../hierarchy2.aadl#hierarchy2.P.Impl"/>
+        </componentInstance>
+        <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.16/@ownedProcessSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessImplementation" href="../hierarchy2.aadl#hierarchy2.A.Impl"/>
+      </componentInstance>
+      <componentInstance name="CPU" category="processor">
+        <featureInstance name="ETH" category="busAccess">
+          <feature xsi:type="aadl2:BusAccess" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.16/@ownedProcessorSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessorType" href="../hierarchy2.aadl#hierarchy2.the_processor"/>
+      </componentInstance>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.18/@ownedSystemSubcomponent.1"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:SystemImplementation" href="../hierarchy2.aadl#hierarchy2.P_Simple.level0"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.20/@ownedSystemSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:SystemImplementation" href="../hierarchy2.aadl#hierarchy2.PC_Complete.level1"/>
+  </componentInstance>
+  <componentInstance name="PC2" category="system">
+    <featureInstance name="Beta">
+      <feature xsi:type="aadl2:DataPort" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="Alpha" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="addedFeat_Beta"/>
+    <componentInstance name="C" category="system">
+      <featureInstance name="Beta">
+        <feature xsi:type="aadl2:DataPort" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.13/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="addedFeat_Beta"/>
+      <featureInstance name="addedFeat_Beta"/>
+      <componentInstance name="the_bus" category="bus">
+        <subcomponent xsi:type="aadl2:BusSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedBusSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:BusType" href="../hierarchy2.aadl#hierarchy2.Ethernet_Bus"/>
+      </componentInstance>
+      <componentInstance name="T" category="data">
+        <subcomponent xsi:type="aadl2:DataSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedDataSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DataType" href="../hierarchy2.aadl#hierarchy2.Alpha_Type"/>
+      </componentInstance>
+      <componentInstance name="pr_B_1" category="process">
+        <featureInstance name="Beta">
+          <feature xsi:type="aadl2:DataPort" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="addedFeat_Beta"/>
+        <featureInstance name="addedFeat_Beta"/>
+        <componentInstance name="Consumer" category="thread">
+          <featureInstance name="Data_Sink">
+            <feature xsi:type="aadl2:DataPort" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="addedFeat_Data_Sink"/>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedThreadSubcomponent.0"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadImplementation" href="../hierarchy2.aadl#hierarchy2.Q.Impl"/>
+        </componentInstance>
+        <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessImplementation" href="../hierarchy2.aadl#hierarchy2.B.Impl"/>
+      </componentInstance>
+      <componentInstance name="CPU" category="processor">
+        <featureInstance name="ETH" category="busAccess">
+          <feature xsi:type="aadl2:BusAccess" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedProcessorSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessorType" href="../hierarchy2.aadl#hierarchy2.the_processor"/>
+      </componentInstance>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.18/@ownedSystemSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:SystemImplementation" href="../hierarchy2.aadl#hierarchy2.C_Simple.level0"/>
+    </componentInstance>
+    <componentInstance name="P" category="system">
+      <featureInstance name="Alpha" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.0"/>
+      </featureInstance>
+      <componentInstance name="the_bus" category="bus">
+        <subcomponent xsi:type="aadl2:BusSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.16/@ownedBusSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:BusType" href="../hierarchy2.aadl#hierarchy2.Ethernet_Bus"/>
+      </componentInstance>
+      <componentInstance name="T" category="data">
+        <subcomponent xsi:type="aadl2:DataSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.16/@ownedDataSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DataType" href="../hierarchy2.aadl#hierarchy2.Alpha_Type"/>
+      </componentInstance>
+      <componentInstance name="pr_A_1" category="process">
+        <featureInstance name="Alpha" direction="out">
+          <feature xsi:type="aadl2:DataPort" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+        </featureInstance>
+        <componentInstance name="Producer" category="thread">
+          <featureInstance name="Data_Source" direction="out">
+            <feature xsi:type="aadl2:DataPort" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.0"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadImplementation" href="../hierarchy2.aadl#hierarchy2.P.Impl"/>
+        </componentInstance>
+        <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.16/@ownedProcessSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessImplementation" href="../hierarchy2.aadl#hierarchy2.A.Impl"/>
+      </componentInstance>
+      <componentInstance name="CPU" category="processor">
+        <featureInstance name="ETH" category="busAccess">
+          <feature xsi:type="aadl2:BusAccess" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.16/@ownedProcessorSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessorType" href="../hierarchy2.aadl#hierarchy2.the_processor"/>
+      </componentInstance>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.18/@ownedSystemSubcomponent.1"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:SystemImplementation" href="../hierarchy2.aadl#hierarchy2.P_Simple.level0"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.20/@ownedSystemSubcomponent.1"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:SystemImplementation" href="../hierarchy2.aadl#hierarchy2.PC_Complete.level1"/>
+  </componentInstance>
+  <connectionInstance name="PC1.P.pr_A_1.Producer.Data_Source -> PC2.C.pr_B_1.Consumer.Data_Sink" complete="true" kind="portConnection" destination="//@componentInstance.1/@componentInstance.0/@componentInstance.2/@componentInstance.0/@featureInstance.0" source="//@componentInstance.0/@componentInstance.1/@componentInstance.2/@componentInstance.0/@featureInstance.0">
+    <connectionReference context="//@componentInstance.0/@componentInstance.1/@componentInstance.2" source="//@componentInstance.0/@componentInstance.1/@componentInstance.2/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.0/@componentInstance.1/@componentInstance.2/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.0/@componentInstance.1" source="//@componentInstance.0/@componentInstance.1/@componentInstance.2/@featureInstance.0" destination="//@componentInstance.0/@componentInstance.1/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.16/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.0" source="//@componentInstance.0/@componentInstance.1/@featureInstance.0" destination="//@componentInstance.0/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.18/@ownedPortConnection.1"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.0/@featureInstance.1" destination="//@componentInstance.1/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.20/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@featureInstance.0" destination="//@componentInstance.1/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.18/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.1/@componentInstance.0" source="//@componentInstance.1/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.1/@componentInstance.0/@componentInstance.2/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.1/@componentInstance.0/@componentInstance.2" source="//@componentInstance.1/@componentInstance.0/@componentInstance.2/@featureInstance.0" destination="//@componentInstance.1/@componentInstance.0/@componentInstance.2/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../hierarchy2.aadl#//@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <systemOperationMode name="No Modes"/>
+  <componentImplementation xsi:type="aadl2:SystemImplementation" href="../hierarchy2.aadl#hierarchy2.Top.level2"/>
+</instance:SystemInstance>

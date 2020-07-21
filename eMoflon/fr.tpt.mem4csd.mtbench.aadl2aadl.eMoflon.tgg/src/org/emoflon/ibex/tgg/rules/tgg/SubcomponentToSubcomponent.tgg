@@ -1,0 +1,44 @@
+#using Tgg.*
+#using AttrCondDefLibrary.*
+
+#rule SubcomponentToSubcomponent
+ #with Tgg
+
+#source {
+	component_source:ComponentInstance{
+		++ -componentInstance -> subcomponent_source
+	}
+
+	++subcomponent_source:ComponentInstance {
+		
+	}
+}
+
+#target {
+	component_target:ComponentInstance{
+		++ -componentInstance -> subcomponent_target
+	}
+
+	++subcomponent_target:ComponentInstance{
+	}
+}
+
+#correspondence {
+	c2c:CompToComp{
+		#src->component_source
+		#trg->component_target
+	}
+
+	++sub2sub:CompToComp{
+		#src->subcomponent_source
+		#trg->subcomponent_target
+	}
+}
+
+#attributeConditions {
+	eq_string(subcomponent_source.name, subcomponent_target.name)
+
+	eq_enum(subcomponent_source.category, subcomponent_target.category)
+}
+
+

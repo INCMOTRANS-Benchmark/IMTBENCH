@@ -1,0 +1,46 @@
+#using Tgg.*
+#using AttrCondDefLibrary.*
+
+#rule FeatureToFeature
+ #with Tgg
+
+#source {
+	component_source:ComponentInstance{
+		++ -featureInstance -> feature_source
+	}
+
+	++feature_source:FeatureInstance{	
+	}
+}
+
+#target {
+	component_target:ComponentInstance{
+		++ -featureInstance -> feature_target
+	}
+
+	++feature_target:FeatureInstance
+}
+
+#correspondence {
+	c2c:CompToComp{
+		#src->component_source
+		#trg->component_target
+	}
+
+	++f2f2:FeatToFeat{
+		#src->feature_source
+		#trg->feature_target
+	}
+}
+
+#attributeConditions {
+	not_port_feature (feature_source.category)
+
+	eq_string(feature_source.name, feature_target.name)
+
+	eq_enum(feature_source.category, feature_target.category)
+
+	eq_enum(feature_source.direction, feature_target.direction)
+}
+
+
